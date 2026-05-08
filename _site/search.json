@@ -1,0 +1,135 @@
+[
+  {
+    "objectID": "handnote2.html",
+    "href": "handnote2.html",
+    "title": "Handout",
+    "section": "",
+    "text": "سلام! این اولین هندنوت من است. طبق منبعی که دارم (Soleimani 2024)، یادگیری گیت خیلی لذت‌بخش است."
+  },
+  {
+    "objectID": "handnote2.html#مراجع",
+    "href": "handnote2.html#مراجع",
+    "title": "Handout",
+    "section": "مراجع",
+    "text": "مراجع\n\n\nSoleimani, Ali. 2024. “Learning Quarto and Git.” Journal of Data Science."
+  },
+  {
+    "objectID": "Handnote.html",
+    "href": "Handnote.html",
+    "title": "Importing Data in R: Exploring Various Packages and Their Advantages",
+    "section": "",
+    "text": "Matriculation Nr.: 401166548\nEmail: soleimani.ali@stud.hs-fresenius.de"
+  },
+  {
+    "objectID": "Handnote.html#why-to-import-data",
+    "href": "Handnote.html#why-to-import-data",
+    "title": "Importing Data in R: Exploring Various Packages and Their Advantages",
+    "section": "1 why to import data?",
+    "text": "1 why to import data?\nData import is the foundational step of any data analysis workflow. Before cleaning, transformation, modeling, or visualization can occur, data must be reliably loaded into R. As Wickham and Çetinkaya‑Rundel (2023) emphasize, importing data is the gateway to all subsequent analysis, and errors at this stage propagate throughout the entire pipeline.\nThe R ecosystem provides a rich set of tools for importing data from diverse formats, including CSV, Excel, JSON, XML, and statistical software files. The official tidyverse documentation highlights that choosing the correct import method improves reproducibility, performance, and data integrity (Posit, 2023)."
+  },
+  {
+    "objectID": "Handnote.html#why-data-import-is-important",
+    "href": "Handnote.html#why-data-import-is-important",
+    "title": "Importing Data in R: Exploring Various Packages and Their Advantages",
+    "section": "2 Why Data import is Important?",
+    "text": "2 Why Data import is Important?\nData import is important for three academic reasons:\n1. Reproducibility\nReliable import ensures that analyses can be replicated across systems, operating systems, and environments (Peng, 2011). Incorrect import leads to inconsistent results.\n2. Data Integrity\nParsing errors—such as incorrect column types, encoding issues, or malformed rows—can introduce bias or invalidate results (Broman & Woo, 2018).\n3. Performance\nEfficient import tools reduce computation time, especially for large datasets. The fread() function from data.table is shown to outperform base R by an order of magnitude (data.table Project, 2024)."
+  },
+  {
+    "objectID": "Handnote.html#different-data-types",
+    "href": "Handnote.html#different-data-types",
+    "title": "Importing Data in R: Exploring Various Packages and Their Advantages",
+    "section": "3 different data types",
+    "text": "3 different data types\nthe most common data types encountered in practice include:\n1. Text-based tabular data\n\nCSV\n\nTSV\n\nFixed-width files\n\n2. Spreadsheet data\n\nExcel (.xls, .xlsx)\n\n3. Statistical software formats\n\nSPSS (.sav)\n\nStata (.dta)\n\nSAS (.sas7bdat)\n\n4. Semi-structured data\n\nJSON\n\nXML\n\n5. Web-based data\n\nAPIs\n\nHTML tables\n\nRemote CSV files\n\n6. Databases\n\nSQL-based systems (via DBI)\n\nEach data type requires specialized import tools to preserve structure, metadata, and encoding."
+  },
+  {
+    "objectID": "Handnote.html#different-packages-for-each-data-type",
+    "href": "Handnote.html#different-packages-for-each-data-type",
+    "title": "Importing Data in R: Exploring Various Packages and Their Advantages",
+    "section": "4 different packages for each data type",
+    "text": "4 different packages for each data type\nThe mapping between data types and R packages is well-established in academic and official documentation:\n\n\n\n\n\n\n\n\nPackage\nBest For\nWhy\n\n\nreadr\nCSV, TSV, delimited text\nFast, consistent parsing\n\n\ndata.table::fread\nLarge CSV files\nFastest import method\n\n\nreadxl\nExcel (.xls, .xlsx)\nNo dependencies, stable\n\n\nhaven\nSPSS, Stata, SAS\nPreserves labels & metadata\n\n\njsonlite\nJSON, APIs\nHandles nested structures\n\n\nxml2\nXML\nRobust parsing\n\n\nhttr / rvest\nWeb APIs, HTML scraping\nFlexible"
+  },
+  {
+    "objectID": "Handnote.html#samples-of-packages-with-codes-for-each",
+    "href": "Handnote.html#samples-of-packages-with-codes-for-each",
+    "title": "Importing Data in R: Exploring Various Packages and Their Advantages",
+    "section": "5 Samples of Packages, With Codes for Each",
+    "text": "5 Samples of Packages, With Codes for Each\n\n5.1 readr (CSV)\n\nlibrary(readr)\ndf_readr &lt;- read_csv(\"data.csv\")\n\nRows: 2 Columns: 2\n── Column specification ────────────────────────────────────────────────────────\nDelimiter: \",\"\ndbl (2): x, y\n\nℹ Use `spec()` to retrieve the full column specification for this data.\nℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.\n\ndf_readr\n\n# A tibble: 2 × 2\n      x     y\n  &lt;dbl&gt; &lt;dbl&gt;\n1     1     2\n2     3     4\n\n\n\n\n5.2 data.table::fread (Large CSV)\n\nlibrary(data.table)\ndf_fread &lt;- fread(\"bigdata.csv\")\ndf_fread\n\n      id value\n   &lt;int&gt; &lt;int&gt;\n1:     1    10\n2:     2    20\n3:     3    30\n4:     4    40\n5:     5    50\n\n\n\n\n5.3 readxl (Excel)\n\nlibrary(readxl)\ndf_excel &lt;- read_excel(\"file.xlsx\")\ndf_excel\n\n# A tibble: 3 × 2\n  city    population\n  &lt;chr&gt;        &lt;dbl&gt;\n1 Cologne    1086000\n2 Berlin     3769000\n3 Hamburg    1841000"
+  },
+  {
+    "objectID": "Handnote.html#haven-spssstatasas",
+    "href": "Handnote.html#haven-spssstatasas",
+    "title": "Importing Data in R: Exploring Various Packages and Their Advantages",
+    "section": "6 haven (SPSS/Stata/SAS)",
+    "text": "6 haven (SPSS/Stata/SAS)\n\nlibrary(haven)\ndf_spss &lt;- read_sav(\"survey.sav\")\ndf_spss\n\n# A tibble: 3 × 3\n     id gender score\n  &lt;dbl&gt; &lt;chr&gt;  &lt;dbl&gt;\n1     1 male      80\n2     2 female    90\n3     3 female    85\n\n\n\n6.1 jsonlite (JSON)\n\nlibrary(jsonlite)\ndf_json &lt;- fromJSON(\"data.json\")\ndf_json\n\n  name age score\n1  Ali  25    88\n2 Sara  23    91\n\n\n\n\n6.2 xml2 (XML)\n\n\n{xml_document}\n&lt;employees&gt;\n[1] &lt;employee&gt;\\n  &lt;id&gt;1&lt;/id&gt;\\n  &lt;name&gt;Ali&lt;/name&gt;\\n  &lt;department&gt;Procurement&lt;/ ...\n[2] &lt;employee&gt;\\n  &lt;id&gt;2&lt;/id&gt;\\n  &lt;name&gt;Sara&lt;/name&gt;\\n  &lt;department&gt;Finance&lt;/dep ...\n[3] &lt;employee&gt;\\n  &lt;id&gt;3&lt;/id&gt;\\n  &lt;name&gt;John&lt;/name&gt;\\n  &lt;department&gt;IT&lt;/departme ...\n[4] &lt;employee&gt;\\n  &lt;id&gt;4&lt;/id&gt;\\n  &lt;name&gt;Anna&lt;/name&gt;\\n  &lt;department&gt;HR&lt;/departme ..."
+  },
+  {
+    "objectID": "Handnote.html#importing-data-from-multiple-files",
+    "href": "Handnote.html#importing-data-from-multiple-files",
+    "title": "Importing Data in R: Exploring Various Packages and Their Advantages",
+    "section": "7 importing data from multiple files",
+    "text": "7 importing data from multiple files\n\nlibrary(fs)\nlibrary(purrr)\nlibrary(readr)\nlibrary(dplyr)\n\nfiles &lt;- dir_ls(\"data/\", glob = \"*.csv\")\n\ndf_multi &lt;- files |&gt;\n  map(read_csv) |&gt;\n  bind_rows()\n\ndf_multi"
+  },
+  {
+    "objectID": "Handnote.html#comparison-table-based-on-file-type",
+    "href": "Handnote.html#comparison-table-based-on-file-type",
+    "title": "Importing Data in R: Exploring Various Packages and Their Advantages",
+    "section": "8 comparison table based on file type",
+    "text": "8 comparison table based on file type\n\n\n\n\n\n\n\n\n\nFormat\nBest Package\nStrengths\nLimitations\n\n\n\n\nCSV\nreadr\nFast, tidyverse-friendly\nNot ideal for huge files\n\n\nLarge CSV\nfread\nFastest, auto-detects delimiter\nFewer diagnostics\n\n\nExcel\nreadxl\nNo dependencies, reliable\nRead-only\n\n\nSPSS/Stata/SAS\nhaven\nPreserves labels\nSAS files slower\n\n\nJSON\njsonlite\nHandles nested data\nRequires JSON knowledge\n\n\nXML\nxml2\nRobust parsing\nComplex structures\n\n\nWeb APIs\nhttr\nFlexible\nRequires manual parsing"
+  },
+  {
+    "objectID": "Handnote.html#conclusion",
+    "href": "Handnote.html#conclusion",
+    "title": "Importing Data in R: Exploring Various Packages and Their Advantages",
+    "section": "9 conclusion",
+    "text": "9 conclusion\nData import is not merely a technical step but a methodological foundation for reproducible and reliable analysis. R provides specialized tools for each data type, and selecting the correct package ensures optimal performance, data integrity, and workflow efficiency. By integrating the course notes, R4DS, and CRAN documentation, this handout provides a comprehensive overview of modern data import practices in R."
+  },
+  {
+    "objectID": "Handnote.html#class-assignment",
+    "href": "Handnote.html#class-assignment",
+    "title": "Importing Data in R: Exploring Various Packages and Their Advantages",
+    "section": "10 Class assignment",
+    "text": "10 Class assignment\nDownload the following dataset: https://raw.githubusercontent.com/allisonhorst/palmerpenguins/main/inst/extdata/penguins.csv\nTasks:\n1. Import the dataset using readr, fread, and base R.\n2. Measure import time using system.time().\n3. Compare column types produced by each method.\n4. Write a short paragraph explaining which method is best and why."
+  },
+  {
+    "objectID": "Handnote.html#references",
+    "href": "Handnote.html#references",
+    "title": "Importing Data in R: Exploring Various Packages and Their Advantages",
+    "section": "11 References",
+    "text": "11 References\n\nBroman, K., & Woo, K. (2018). Data organization in spreadsheets. PLOS Computational Biology. DOI: https://doi.org/10.1371/journal.pcbi.1005746 (doi.org in Bing)\ndata.table Project. (2024). data.table: Fast data manipulation in R. CRAN Documentation. (No DOI — official CRAN manual)\nHubchev. (2024). Data Science Notes. https://hubchev.github.io/ds/\nOoms, J. (2014). The jsonlite package: A practical and consistent mapping between JSON data and R objects. The R Journal. DOI: https://doi.org/10.32614/RJ-2014-011 (doi.org in Bing)\nPeng, R. (2011). Reproducible research in computational science. Science. DOI: https://doi.org/10.1126/science.1213847 (doi.org in Bing)\nPosit. (2023). Importing data with the tidyverse. https://r4ds.hadley.nz/data-import.html (No DOI — official Posit documentation)\nR Project. (2024). Read data files from various sources. CRAN Task View. (No DOI — official CRAN documentation)\nRStudio. (2024). readxl: Read Excel Files. CRAN Documentation. (No DOI — official CRAN manual)\nWickham, H. (2014). Tidy data. Journal of Statistical Software. DOI: https://doi.org/10.18637/jss.v059.i10 (doi.org in Bing)\nWickham, H., & Çetinkaya‑Rundel, M. (2023). R for Data Science (2nd ed.). Posit. https://r4ds.hadley.nz (No DOI — open textbook)\n\n:::"
+  },
+  {
+    "objectID": "Presentation.html",
+    "href": "Presentation.html",
+    "title": "Importing Data in R: Exploring Various Packages and Their Advantages",
+    "section": "",
+    "text": "Matriculation Nr.: 401166548\nEmail: Alisoleimani71@gmail.com"
+  },
+  {
+    "objectID": "Presentation.html#why-to-import-data",
+    "href": "Presentation.html#why-to-import-data",
+    "title": "Importing Data in R: Exploring Various Packages and Their Advantages",
+    "section": "why to import data?",
+    "text": "why to import data?\nData import is the foundational step of any data analysis workflow. Before cleaning, transformation, modeling, or visualization can occur, data must be reliably loaded into R. As Wickham and Çetinkaya‑Rundel (2023) emphasize, importing data is the gateway to all subsequent analysis, and errors at this stage propagate throughout the entire pipeline.\nThe R ecosystem provides a rich set of tools for importing data from diverse formats, including CSV, Excel, JSON, XML, and statistical software files. The official tidyverse documentation highlights that choosing the correct import method improves reproducibility, performance, and data integrity (Posit, 2023)."
+  },
+  {
+    "objectID": "Presentation.html#why-data-import-is-important",
+    "href": "Presentation.html#why-data-import-is-important",
+    "title": "Importing Data in R: Exploring Various Packages and Their Advantages",
+    "section": "Why Data import is Important?",
+    "text": "Why Data import is Important?\nData import is important for three academic reasons:\n1. Reproducibility\nReliable import ensures that analyses can be replicated across systems, operating systems, and environments (Peng, 2011). Incorrect import leads to inconsistent results.\n2. Data Integrity\nParsing errors—such as incorrect column types, encoding issues, or malformed rows—can introduce bias or invalidate results (Broman & Woo, 2018).\n3. Performance\nEfficient import tools reduce computation time, especially for large datasets. The fread() function from data.table is shown to outperform base R by an order of magnitude (data.table Project, 2024)."
+  },
+  {
+    "objectID": "Presentation.html#different-data-types",
+    "href": "Presentation.html#different-data-types",
+    "title": "Importing Data in R: Exploring Various Packages and Their Advantages",
+    "section": "different data types",
+    "text": "different data types\nthe most common data types encountered in practice include:\n1. Text-based tabular data\n\nCSV\n\nTSV\n\nFixed-width files\n\n2. Spreadsheet data\n\nExcel (.xls, .xlsx)\n\n3. Statistical software formats\n\nSPSS (.sav)\n\nStata (.dta)\n\nSAS (.sas7bdat)\n\n4. Semi-structured data\n\nJSON\n\nXML\n\n5. Web-based data\n\nAPIs\n\nHTML tables\n\nRemote CSV files\n\n6. Databases\n\nSQL-based systems (via DBI)\n\nEach data type requires specialized import tools to preserve structure, metadata, and encoding."
+  },
+  {
+    "objectID": "Presentation.html#different-packages-for-each-data-type",
+    "href": "Presentation.html#different-packages-for-each-data-type",
+    "title": "Importing Data in R: Exploring Various Packages and Their Advantages",
+    "section": "different packages for each data type",
+    "text": "different packages for each data type\nThe mapping between data types and R packages is well-established in academic and official documentation:\n\n\n\n\n\n\n\n\nPackage\nBest For\nWhy\n\n\nreadr\nCSV, TSV, delimited text\nFast, consistent parsing\n\n\ndata.table::fread\nLarge CSV files\nFastest import method\n\n\nreadxl\nExcel (.xls, .xlsx)\nNo dependencies, stable\n\n\nhaven\nSPSS, Stata, SAS\nPreserves labels & metadata\n\n\njsonlite\nJSON, APIs\nHandles nested structures\n\n\nxml2\nXML\nRobust parsing\n\n\nhttr / rvest\nWeb APIs, HTML scraping\nFlexible"
+  }
+]
