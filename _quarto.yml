@@ -1,0 +1,18 @@
+project:
+  type: website
+  output-dir: .
+
+website:
+  title: "My Research Project"
+  navbar:
+    left:
+      - href: index.html
+        text: "Home"
+      - href: Handnote.html    
+        text: "Handnote"
+
+format:
+  html:
+    theme: cosmo
+    embed-resources: true
+    toc: true
