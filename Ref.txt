@@ -1,0 +1,19 @@
+-   **Broman, K., & Woo, K. (2018).** *Data organization in spreadsheets.* PLOS Computational Biology. DOI: https://doi.org/10.1371/journal.pcbi.1005746 [(doi.org in Bing)](https://www.bing.com/search?q=%22https%3A%2F%2Fdoi.org%2F10.1371%2Fjournal.pcbi.1005746%22)
+
+-   **data.table Project. (2024).** *data.table: Fast data manipulation in R.* CRAN Documentation. (No DOI — official CRAN manual)
+
+-   **Hubchev. (2024).** *Data Science Notes.* <https://hubchev.github.io/ds/>
+
+-   **Ooms, J. (2014).** *The jsonlite package: A practical and consistent mapping between JSON data and R objects.* The R Journal. DOI: https://doi.org/10.32614/RJ-2014-011 [(doi.org in Bing)](https://www.bing.com/search?q=%22https%3A%2F%2Fdoi.org%2F10.32614%2FRJ-2014-011%22)
+
+-   **Peng, R. (2011).** *Reproducible research in computational science.* Science. DOI: https://doi.org/10.1126/science.1213847 [(doi.org in Bing)](https://www.bing.com/search?q=%22https%3A%2F%2Fdoi.org%2F10.1126%2Fscience.1213847%22)
+
+-   **Posit. (2023).** *Importing data with the tidyverse.* <https://r4ds.hadley.nz/data-import.html> (No DOI — official Posit documentation)
+
+-   **R Project. (2024).** *Read data files from various sources.* CRAN Task View. (No DOI — official CRAN documentation)
+
+-   **RStudio. (2024).** *readxl: Read Excel Files.* CRAN Documentation. (No DOI — official CRAN manual)
+
+-   **Wickham, H. (2014).** *Tidy data.* Journal of Statistical Software. DOI: https://doi.org/10.18637/jss.v059.i10 [(doi.org in Bing)](https://www.bing.com/search?q=%22https%3A%2F%2Fdoi.org%2F10.18637%2Fjss.v059.i10%22)
+
+-   **Wickham, H., & Çetinkaya‑Rundel, M. (2023).** *R for Data Science (2nd ed.).* Posit. <https://r4ds.hadley.nz> (No DOI — open textbook)
