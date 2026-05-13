@@ -1,42 +1,1057 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>My Files</title>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.37">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Ali Soleimani (Matriculation Nr.: 401166548)">
+<meta name="dcterms.date" content="2026-05-13">
+<meta name="description" content="IMPORTING DATA IN R: EXPLORING VARIOUS PACKAGES AND THEIR ADVANTAGES">
+
+<title>Importing Data in R: Exploring Various Packages and Their Advantages – My Research Project</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-fa693eda2e64dd3030857a2384436adc.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="site_libs\quarto-contrib\quarto-project\wjschne\apaquarto\apa.css">
 </head>
 
-<body style="font-family: Arial; text-align: center; margin-top: 60px;">
+<body class="floating nav-fixed quarto-light">
 
-    <h1>Hi! You can find the files in the below links!</h1>
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">My Research Project</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./Handnote.html" aria-current="page"> 
+<span class="menu-text">Handnote</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#links" id="toc-links" class="nav-link active" data-scroll-target="#links"><span class="header-section-number">1</span> Links</a></li>
+  <li><a href="#why-do-we-import-data" id="toc-why-do-we-import-data" class="nav-link" data-scroll-target="#why-do-we-import-data"><span class="header-section-number">2</span> Why Do We Import Data?</a></li>
+  <li><a href="#different-data-types" id="toc-different-data-types" class="nav-link" data-scroll-target="#different-data-types"><span class="header-section-number">3</span> Different Data Types</a></li>
+  <li><a href="#different-packages-for-each-data-type" id="toc-different-packages-for-each-data-type" class="nav-link" data-scroll-target="#different-packages-for-each-data-type"><span class="header-section-number">4</span> Different Packages For Each Data Type</a>
+  <ul class="collapse">
+  <li><a href="#graphical-and-programmatic-implementation-by-data-type" id="toc-graphical-and-programmatic-implementation-by-data-type" class="nav-link" data-scroll-target="#graphical-and-programmatic-implementation-by-data-type"><span class="header-section-number">4.1</span> Graphical and Programmatic Implementation by Data Type</a>
+  <ul class="collapse">
+  <li><a href="#standard-tabular-data-.csv-.tsv" id="toc-standard-tabular-data-.csv-.tsv" class="nav-link" data-scroll-target="#standard-tabular-data-.csv-.tsv"><span class="header-section-number">4.1.1</span> Standard Tabular Data (.csv, .tsv)</a></li>
+  <li><a href="#proprietary-excel-files-.xls-.xlsx" id="toc-proprietary-excel-files-.xls-.xlsx" class="nav-link" data-scroll-target="#proprietary-excel-files-.xls-.xlsx"><span class="header-section-number">4.1.2</span> Proprietary Excel Files (.xls, .xlsx)</a></li>
+  <li><a href="#statistical-software-files-.sav-.sas7bdat-.dta" id="toc-statistical-software-files-.sav-.sas7bdat-.dta" class="nav-link" data-scroll-target="#statistical-software-files-.sav-.sas7bdat-.dta"><span class="header-section-number">4.1.3</span> Statistical Software Files (.sav, .sas7bdat, .dta)</a></li>
+  <li><a href="#relational-databases-.db-.sqlite-.mdb" id="toc-relational-databases-.db-.sqlite-.mdb" class="nav-link" data-scroll-target="#relational-databases-.db-.sqlite-.mdb"><span class="header-section-number">4.1.4</span> Relational Databases (.db, .sqlite, .mdb)</a></li>
+  <li><a href="#spatial-gis-data-.shp-.tif-.kml" id="toc-spatial-gis-data-.shp-.tif-.kml" class="nav-link" data-scroll-target="#spatial-gis-data-.shp-.tif-.kml"><span class="header-section-number">4.1.5</span> Spatial / GIS Data (.shp, .tif, .kml)</a></li>
+  <li><a href="#base-text-and-fixed-width-files-.txt-.dat-.fwf" id="toc-base-text-and-fixed-width-files-.txt-.dat-.fwf" class="nav-link" data-scroll-target="#base-text-and-fixed-width-files-.txt-.dat-.fwf"><span class="header-section-number">4.1.6</span> Base Text and Fixed-Width Files (.txt, .dat, .fwf)</a></li>
+  <li><a href="#scientific-spectral-data-.jdx-.abs-.cnv-.nc" id="toc-scientific-spectral-data-.jdx-.abs-.cnv-.nc" class="nav-link" data-scroll-target="#scientific-spectral-data-.jdx-.abs-.cnv-.nc"><span class="header-section-number">4.1.7</span> Scientific Spectral Data (.jdx, .abs, .cnv, .nc)</a></li>
+  <li><a href="#interactive-import-speedr" id="toc-interactive-import-speedr" class="nav-link" data-scroll-target="#interactive-import-speedr"><span class="header-section-number">4.1.8</span> Interactive Import (speedR)</a></li>
+  <li><a href="#cloud-sheets-google-sheets-urls" id="toc-cloud-sheets-google-sheets-urls" class="nav-link" data-scroll-target="#cloud-sheets-google-sheets-urls"><span class="header-section-number">4.1.9</span> Cloud Sheets (Google Sheets/ URLs)</a></li>
+  <li><a href="#hierarchical-data-.json" id="toc-hierarchical-data-.json" class="nav-link" data-scroll-target="#hierarchical-data-.json"><span class="header-section-number">4.1.10</span> Hierarchical Data (.json)</a></li>
+  </ul></li>
+  <li><a href="#importing-data-from-multiple-files" id="toc-importing-data-from-multiple-files" class="nav-link" data-scroll-target="#importing-data-from-multiple-files"><span class="header-section-number">4.2</span> Importing Data From Multiple Files</a></li>
+  <li><a href="#the-comparison-between-packages" id="toc-the-comparison-between-packages" class="nav-link" data-scroll-target="#the-comparison-between-packages"><span class="header-section-number">4.3</span> The Comparison Between Packages</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion"><span class="header-section-number">4.4</span> Conclusion</a></li>
+  <li><a href="#class-assignment" id="toc-class-assignment" class="nav-link" data-scroll-target="#class-assignment"><span class="header-section-number">4.5</span> Class assignment</a></li>
+  </ul></li>
+  <li><span class="header-section-number">5</span> References</li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="Handnote.pdf"><i class="bi bi-file-pdf"></i>PDF (apaquarto)</a></li></ul></div></nav>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
-    <!-- Line after title -->
-    <hr style="width: 60%; margin: 25px auto;">
 
-    <p><a href="https://alisoleimani71.github.io/Handnote.pdf" target="_blank">📄 Handnote (PDF)</a></p>
-    <p><a href="https://alisoleimani71.github.io/Handnote.html" target="_blank">🌐 Handnote (HTML)</a></p>
 
-    <!-- Middle separator -->
-    <hr style="width: 60%; margin: 30px auto;">
 
-    <p><a href="https://alisoleimani71.github.io/Presentation.pdf" target="_blank">📄 Presentation (PDF)</a></p>
-    <p><a href="https://alisoleimani71.github.io/Presentation.html" target="_blank">🌐 Presentation (HTML)</a></p>
+<br>
 
-    <!-- Exercise separator -->
-    <hr style="width: 60%; margin: 30px auto;">
+<br>
 
-    <!-- Exercise link -->
-    <p><a href="exercise.html" target="_blank">📝 Exercise Page</a></p>
+<section id="title" class="level1 title unnumbered unlisted">
+<h1 class="title unnumbered unlisted">Importing Data in R: Exploring Various Packages and Their Advantages: Data Analysis for Decision-Making (SS 2026)</h1>
+<div class="Author">
+<br>
 
-    <!-- Bottom line -->
-    <hr style="width: 60%; margin: 40px auto;">
+<p>Ali Soleimani (Matriculation Nr.: 401166548)</p>
+<p>Fresenius University of Applied Science</p>
+</div>
+<br>
 
-    <!-- Website link -->
-    <p style="font-size: 20px; font-weight: bold;">
-        https://alisoleimani71.github.io/
-    </p>
+<br>
 
-    <!-- QR Code -->
-    <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://alisoleimani71.github.io/" alt="QR Code">
+</section>
+<section id="author-note" class="level1 unnumbered unlisted AuthorNote">
+<h1 class="unnumbered unlisted AuthorNote">Author Note</h1>
+<p>Correspondence concerning this article should be addressed to Ali Soleimani (Matriculation Nr.: 401166548), Fresenius University of Applied Science, Email: <a href="mailto:soleimani.ali@stud.hs-fresenius.de">soleimani.ali@stud.hs-fresenius.de</a></p>
+<br>
+</section>
+<section id="abstract" class="level1 unnumbered unlisted AuthorNote">
+<h1 class="unnumbered unlisted AuthorNote">Abstract</h1>
+<br>
+</section>
+<section id="firstheader" class="level1 title unnumbered unlisted">
+<h1 class="title unnumbered unlisted">Importing Data in R: Exploring Various Packages and Their Advantages: Data Analysis for Decision-Making (SS 2026)</h1>
+</section>
+<section id="links" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Links</h1>
+<p><a href="https://alisoleimani71.github.io/Presentation.pdf">Presentation</a></p>
+<p><img src="download.png" class="img-fluid"></p>
+</section>
+<section id="why-do-we-import-data" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Why Do We Import Data?</h1>
+<p>In the modern and dynamic report creation procedure, importing data is importnat to have quick and realaible access to the recent availabe data. R program help us to import these data easily and prepate the routine reports quickly. Also data import is the key for starting Data science, which is then followed by tidying data, transforming it, visualizing, and modeling it <span class="citation" data-cites="wickham2016r">Wickham and Grolemund (<a href="#ref-wickham2016r" role="doc-biblioref">2016</a>)</span>.</p>
+<ul>
+<li><p><strong>Accessing the “Raw” Reality:</strong> Decisions are based on data stored in diverse environments—from simple text files and legacy spreadsheets to massive relational databases and specialized scientific instruments <span class="citation" data-cites="rcore2015r">R Core Team (<a href="#ref-rcore2015r" role="doc-biblioref">2015</a>)</span>, <span class="citation" data-cites="gruson2019lightr">Gruson et al. (<a href="#ref-gruson2019lightr" role="doc-biblioref">2019</a>)</span>.</p></li>
+<li><p><strong>The Reproducibility Imperative:</strong> A core advantage of using R over “point-and-click” software is reproducibility. In fields like public health or climate change, where decisions have high stakes, open-source scripts allow every step of the data import and analysis to be audited and checked by others <span class="citation" data-cites="bivand2008applied">Bivand et al. (<a href="#ref-bivand2008applied" role="doc-biblioref">2008</a>)</span>, <span class="citation" data-cites="elsevier2019import"><span>“Chapter 2 - Data Import and Export in r and Python”</span> (<a href="#ref-elsevier2019import" role="doc-biblioref">2019</a>)</span>.</p></li>
+<li><p><strong>Efficiency and Automation:</strong> Manual data entry or GUI-based exports are prone to human error and are not scalable. R enables the creation of scripts that can be replayed and modified for new datasets with minimal effort, providing a high return on the initial “steep learning curve” investment <span class="citation" data-cites="bivand2008applied">Bivand et al. (<a href="#ref-bivand2008applied" role="doc-biblioref">2008</a>)</span>, <span class="citation" data-cites="huber2025how">Huber (<a href="#ref-huber2025how" role="doc-biblioref">2025</a>)</span>.</p></li>
+<li><p><strong>Handling Complexity:</strong> R allows decision-makers to overcome the limitations of traditional software like Excel, particularly when dealing with non-rectangular data, complex encodings, or datasets that exceed standard spreadsheet row limits <span class="citation" data-cites="huber2025how">Huber (<a href="#ref-huber2025how" role="doc-biblioref">2025</a>)</span>, <span class="citation" data-cites="rcore2015r">R Core Team (<a href="#ref-rcore2015r" role="doc-biblioref">2015</a>)</span>.</p></li>
+</ul>
+</section>
+<section id="different-data-types" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Different Data Types</h1>
+<p>Before choosing a package, a data scientist must understand the structure of the source material. Data generally falls into several categories:</p>
+<ol type="1">
+<li><p><strong>Rectangular/Tabular Data:</strong> This is the most common type, where data is organized into rows (observations) and columns (variables). Examples include Comma Separated Values (.csv) and Tab Delimited (.txt or .tsv) files <span class="citation" data-cites="rcore2015r">R Core Team (<a href="#ref-rcore2015r" role="doc-biblioref">2015</a>)</span>, <span class="citation" data-cites="wickham2016r">Wickham and Grolemund (<a href="#ref-wickham2016r" role="doc-biblioref">2016</a>)</span>.</p></li>
+<li><p><strong>Proprietary Spreadsheets:</strong> Formats like Microsoft Excel (.xls, .xlsx) are ubiquitous in business but complex because they contain multiple sheets, formulas, and macros rather than just raw data <span class="citation" data-cites="luraschi2023importing">Luraschi (<a href="#ref-luraschi2023importing" role="doc-biblioref">2023</a>)</span>, <span class="citation" data-cites="rcore2015r">R Core Team (<a href="#ref-rcore2015r" role="doc-biblioref">2015</a>)</span>.</p></li>
+<li><p><strong>Statistical Software Files:</strong> Data often originates from legacy systems like <strong>SAS</strong> (.sas7bdat), <strong>SPSS</strong> (.sav), or <strong>Stata</strong> (.dta). These files often contain important metadata, such as value labels, which must be preserved during import <span class="citation" data-cites="chapman2026importing">Chapman University (<a href="#ref-chapman2026importing" role="doc-biblioref">2026</a>)</span>, <span class="citation" data-cites="luraschi2023importing">Luraschi (<a href="#ref-luraschi2023importing" role="doc-biblioref">2023</a>)</span>.</p></li>
+<li><p><strong>Relational Databases:</strong> For very large-scale data that does not fit into a computer’s RAM, data is stored in RDBMS like <strong>MySQL</strong>, <strong>PostgreSQL</strong>, or <strong>SQLite</strong>. Accessing these requires specialized connection protocols <span class="citation" data-cites="rcore2015r">R Core Team (<a href="#ref-rcore2015r" role="doc-biblioref">2015</a>)</span>.</p></li>
+<li><p><strong>Spatial Data:</strong> Includes coordinates, bounding boxes, and reference systems. These are categorized into <strong>vector</strong> models (points, lines, polygons) and <strong>raster</strong> models (regular grids like satellite imagery) <span class="citation" data-cites="bivand2008applied">Bivand et al. (<a href="#ref-bivand2008applied" role="doc-biblioref">2008</a>)</span>.</p></li>
+<li><p><strong>Scientific/Specialized Data:</strong> Data from instruments like spectrophotometers often comes in proprietary formats that require specialized parsers to extract both measurements and critical metadata <span class="citation" data-cites="gruson2019lightr">Gruson et al. (<a href="#ref-gruson2019lightr" role="doc-biblioref">2019</a>)</span>.</p></li>
+</ol>
+</section>
+<section id="different-packages-for-each-data-type" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Different Packages For Each Data Type</h1>
+<p>R’s ecosystem offers a specialized collection of tools for data acquisition, ranging from built-in <strong>Base R</strong> functions to the modern, high-performance <strong>Tidyverse</strong> suite.</p>
+<p><a href="#tbl-packages" class="quarto-xref" aria-expanded="false">Table&nbsp;1</a> summarizes the primary packages used for various data formats in professional data science workflows.</p>
+<p>Using this specialized ecosystem ensures that data scientists can maintain <strong>reproducibility</strong>—a core advantage of R—by documenting every step of the import process in a script rather than relying on manual “point-and-click” methods <span class="citation" data-cites="bivand2008applied">Bivand et al. (<a href="#ref-bivand2008applied" role="doc-biblioref">2008</a>)</span>, <span class="citation" data-cites="huber2025how">Huber (<a href="#ref-huber2025how" role="doc-biblioref">2025</a>)</span>, <span class="citation" data-cites="elsevier2019import"><span>“Chapter 2 - Data Import and Export in r and Python”</span> (<a href="#ref-elsevier2019import" role="doc-biblioref">2019</a>)</span>.</p>
+<section id="graphical-and-programmatic-implementation-by-data-type" class="level2" data-number="4.1">
+<h2 data-number="4.1" data-anchor-id="graphical-and-programmatic-implementation-by-data-type"><span class="header-section-number">4.1</span> Graphical and Programmatic Implementation by Data Type</h2>
+<p>This section details the practical application of the tools identified in the previous page. For each category, we contrast the <strong>Graphical User Interface (GUI)</strong> approach—often best for initial exploration—with the <strong>Programmatic R Code</strong> required for reproducible scripts.</p>
+<section id="standard-tabular-data-.csv-.tsv" class="level3" data-number="4.1.1">
+<h3 data-number="4.1.1" data-anchor-id="standard-tabular-data-.csv-.tsv"><span class="header-section-number">4.1.1</span> Standard Tabular Data (.csv, .tsv)</h3>
+<ul>
+<li><p><strong>Graphical:</strong> Use the RStudio <strong>“Import Dataset”</strong> wizard and select <strong>“From Text (readr)”</strong>. This allows for a live preview where you can visually change delimiters, skip rows, and rename columns while the GUI generates the code automatically <span class="citation" data-cites="luraschi2023importing">Luraschi (<a href="#ref-luraschi2023importing" role="doc-biblioref">2023</a>)</span>.</p></li>
+<li><p><strong>Code <span class="citation" data-cites="wickham2016r">Wickham and Grolemund (<a href="#ref-wickham2016r" role="doc-biblioref">2016</a>)</span></strong> :</p></li>
+</ul>
+<div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>Rows: 2 Columns: 2
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+dbl (2): x, y
 
-</body>
-</html>
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+</div>
+</div>
+<p>large CSV:</p>
+</section>
+<section id="proprietary-excel-files-.xls-.xlsx" class="level3" data-number="4.1.2">
+<h3 data-number="4.1.2" data-anchor-id="proprietary-excel-files-.xls-.xlsx"><span class="header-section-number">4.1.2</span> Proprietary Excel Files (.xls, .xlsx)</h3>
+<ul>
+<li><p><strong>Graphical:</strong> Select <strong>“From Excel”</strong> in the RStudio wizard. This is crucial for navigating multi-sheet workbooks, as you can select specific sheets and define a cell range (e.g., “A1:E20”) graphically <span class="citation" data-cites="luraschi2023importing">Luraschi (<a href="#ref-luraschi2023importing" role="doc-biblioref">2023</a>)</span>.</p></li>
+<li><p><strong>Code</strong> <span class="citation" data-cites="chapman2026importing">Chapman University (<a href="#ref-chapman2026importing" role="doc-biblioref">2026</a>)</span>:</p></li>
+</ul>
+</section>
+<section id="statistical-software-files-.sav-.sas7bdat-.dta" class="level3" data-number="4.1.3">
+<h3 data-number="4.1.3" data-anchor-id="statistical-software-files-.sav-.sas7bdat-.dta"><span class="header-section-number">4.1.3</span> Statistical Software Files (.sav, .sas7bdat, .dta)</h3>
+<ul>
+<li><p><strong>Graphical:</strong> Select <strong>“From SPSS/SAS/Stata”</strong> in RStudio. This wizard is particularly helpful as it shows how proprietary labels and missing value codes will be translated into R factors <span class="citation" data-cites="luraschi2023importing">Luraschi (<a href="#ref-luraschi2023importing" role="doc-biblioref">2023</a>)</span>.</p></li>
+<li><p><strong>Code <span class="citation" data-cites="rcore2015r">R Core Team (<a href="#ref-rcore2015r" role="doc-biblioref">2015</a>)</span>:</strong></p></li>
+</ul>
+</section>
+<section id="relational-databases-.db-.sqlite-.mdb" class="level3" data-number="4.1.4">
+<h3 data-number="4.1.4" data-anchor-id="relational-databases-.db-.sqlite-.mdb"><span class="header-section-number">4.1.4</span> Relational Databases (.db, .sqlite, .mdb)</h3>
+<ul>
+<li><p><strong>Graphical:</strong> Access through the RStudio <strong>“Connections”</strong> pane. Once a DBI connection is established, you can browse table schemas and preview data before importing <span class="citation" data-cites="luraschi2023importing">Luraschi (<a href="#ref-luraschi2023importing" role="doc-biblioref">2023</a>)</span>.</p></li>
+<li><p><strong>Code <span class="citation" data-cites="rcore2015r">R Core Team (<a href="#ref-rcore2015r" role="doc-biblioref">2015</a>)</span>:</strong></p></li>
+</ul>
+</section>
+<section id="spatial-gis-data-.shp-.tif-.kml" class="level3" data-number="4.1.5">
+<h3 data-number="4.1.5" data-anchor-id="spatial-gis-data-.shp-.tif-.kml"><span class="header-section-number">4.1.5</span> Spatial / GIS Data (.shp, .tif, .kml)</h3>
+<ul>
+<li><p><strong>Graphical:</strong> Usually handled programmatically, though GIS software like GRASS can be linked to R to browse spatial layers.</p></li>
+<li><p><strong>Code <span class="citation" data-cites="bivand2008applied">Bivand et al. (<a href="#ref-bivand2008applied" role="doc-biblioref">2008</a>)</span> :</strong></p>
+<div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>Linking to GEOS 3.14.1, GDAL 3.12.1, PROJ 9.7.1; sf_use_s2() is TRUE</code></pre>
+</div>
+</div></li>
+</ul>
+</section>
+<section id="base-text-and-fixed-width-files-.txt-.dat-.fwf" class="level3" data-number="4.1.6">
+<h3 data-number="4.1.6" data-anchor-id="base-text-and-fixed-width-files-.txt-.dat-.fwf"><span class="header-section-number">4.1.6</span> Base Text and Fixed-Width Files (.txt, .dat, .fwf)</h3>
+<ul>
+<li><p><strong>Graphical:</strong> Use the <strong>“From Text (base)”</strong> option in the RStudio wizard for legacy text formats that require manual field-width definitions <span class="citation" data-cites="luraschi2023importing">Luraschi (<a href="#ref-luraschi2023importing" role="doc-biblioref">2023</a>)</span>.</p></li>
+<li><p><strong>Code <span class="citation" data-cites="rcore2015r">R Core Team (<a href="#ref-rcore2015r" role="doc-biblioref">2015</a>)</span>:</strong></p></li>
+</ul>
+</section>
+<section id="scientific-spectral-data-.jdx-.abs-.cnv-.nc" class="level3" data-number="4.1.7">
+<h3 data-number="4.1.7" data-anchor-id="scientific-spectral-data-.jdx-.abs-.cnv-.nc"><span class="header-section-number">4.1.7</span> Scientific Spectral Data (.jdx, .abs, .cnv, .nc)</h3>
+<ul>
+<li><p><strong>Graphical:</strong> Utilize specialized package GUIs or high-level functions that automate folder-wide imports <span class="citation" data-cites="gruson2019lightr">Gruson et al. (<a href="#ref-gruson2019lightr" role="doc-biblioref">2019</a>)</span>.</p></li>
+<li><p><strong>Code <span class="citation" data-cites="gruson2019lightr">Gruson et al. (<a href="#ref-gruson2019lightr" role="doc-biblioref">2019</a>)</span> :</strong></p>
+<div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: No files found. Try a different value for argument "ext".</code></pre>
+</div>
+</div></li>
+</ul>
+</section>
+<section id="interactive-import-speedr" class="level3" data-number="4.1.8">
+<h3 data-number="4.1.8" data-anchor-id="interactive-import-speedr"><span class="header-section-number">4.1.8</span> Interactive Import (speedR)</h3>
+<ul>
+<li><p><strong>Graphical:</strong> The <strong>speedR</strong> package provides a standalone GUI for filtering and subsetting large datasets before they are loaded into the R environment <span class="citation" data-cites="visne2012speedr">Visne et al. (<a href="#ref-visne2012speedr" role="doc-biblioref">2012</a>)</span>.</p></li>
+<li><p><strong>Code: <span class="citation" data-cites="visne2012speedr">Visne et al. (<a href="#ref-visne2012speedr" role="doc-biblioref">2012</a>)</span></strong></p></li>
+</ul>
+</section>
+<section id="cloud-sheets-google-sheets-urls" class="level3" data-number="4.1.9">
+<h3 data-number="4.1.9" data-anchor-id="cloud-sheets-google-sheets-urls"><span class="header-section-number">4.1.9</span> Cloud Sheets (Google Sheets/ URLs)</h3>
+<ul>
+<li><p><strong>Code: <span class="citation" data-cites="chapman2026importing">Chapman University (<a href="#ref-chapman2026importing" role="doc-biblioref">2026</a>)</span></strong></p>
+<div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>✔ Reading from "SS".</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>✔ Range 'sample_sheet'.</code></pre>
+</div>
+</div></li>
+</ul>
+</section>
+<section id="hierarchical-data-.json" class="level3" data-number="4.1.10">
+<h3 data-number="4.1.10" data-anchor-id="hierarchical-data-.json"><span class="header-section-number">4.1.10</span> Hierarchical Data (.json)</h3>
+<ul>
+<li><p><strong>Graphical:</strong> While RStudio does not have a dedicated “JSON Wizard” in the same way it does for Excel or CSV, users can often preview JSON structures through the <strong>File Pane</strong> or by using specialized viewing packages.</p></li>
+<li><p><strong>Code <span class="citation" data-cites="rcore2015r">R Core Team (<a href="#ref-rcore2015r" role="doc-biblioref">2015</a>)</span> :</strong></p></li>
+</ul>
+</section>
+</section>
+<section id="importing-data-from-multiple-files" class="level2" data-number="4.2">
+<h2 data-number="4.2" data-anchor-id="importing-data-from-multiple-files"><span class="header-section-number">4.2</span> Importing Data From Multiple Files</h2>
+<p>Decision-makers often face the need to import hundreds of files simultaneously. R provides several automation strategies <span class="citation" data-cites="wickham2016r">Wickham and Grolemund (<a href="#ref-wickham2016r" role="doc-biblioref">2016</a>)</span>, <span class="citation" data-cites="gruson2019lightr">Gruson et al. (<a href="#ref-gruson2019lightr" role="doc-biblioref">2019</a>)</span>.</p>
+<ul>
+<li><p><strong>Automated Recursive Import:</strong> Specialized tools like <strong>lightr</strong> use functions such as <strong><code>lr_get_spec()</code></strong> to search subfolders automatically for specific extensions and process them using <strong>parallelized loops</strong> to save time <span class="citation" data-cites="gruson2019lightr">Gruson et al. (<a href="#ref-gruson2019lightr" role="doc-biblioref">2019</a>)</span>.</p></li>
+<li><p><strong>The Tidyverse Approach (Iteration):</strong> The most flexible method combines <strong><code>list.files()</code></strong> with the <strong>purrr</strong> package. By using <strong><code>map()</code></strong> or <strong><code>map_df()</code></strong>, an analyst can apply a read function to every path in a list, automatically stacking them into a single unified tibble <span class="citation" data-cites="wickham2019welcome"><span class="nocase">Wickham et al.</span> (<a href="#ref-wickham2019welcome" role="doc-biblioref">2019</a>)</span>.</p></li>
+<li><p><strong>Complex Multi-File Formats:</strong> Some formats are naturally batch-oriented. For example, a single “Shapefile” is a collection of files (<strong><code>.shp</code></strong>, <strong><code>.dbf</code></strong>, etc.). The <strong><code>readOGR()</code></strong> function in <strong>rgdal</strong> uses a <strong>Data Source Name (DSN)</strong>—often a folder path—to treat these multiple files as a single spatial object <span class="citation" data-cites="bivand2008applied">Bivand et al. (<a href="#ref-bivand2008applied" role="doc-biblioref">2008</a>)</span>, <span class="citation" data-cites="rcore2015r">R Core Team (<a href="#ref-rcore2015r" role="doc-biblioref">2015</a>)</span>.</p></li>
+<li><p><strong>Custom Functions for Productivity:</strong> <strong>speedR</strong> can graphically define an import process and then <strong>generate a new R function</strong> containing those specific constraints. This “ready-to-use” code can be applied to any number of similar files to ensure a consistent pipeline <span class="citation" data-cites="visne2012speedr">Visne et al. (<a href="#ref-visne2012speedr" role="doc-biblioref">2012</a>)</span>.</p></li>
+</ul>
+</section>
+<section id="the-comparison-between-packages" class="level2" data-number="4.3">
+<h2 data-number="4.3" data-anchor-id="the-comparison-between-packages"><span class="header-section-number">4.3</span> The Comparison Between Packages</h2>
+<p>Selecting the appropriate import method is a strategic decision that impacts the speed, reliability, and reproducibility of the analytical pipeline <span class="citation" data-cites="wickham2016r">Wickham and Grolemund (<a href="#ref-wickham2016r" role="doc-biblioref">2016</a>)</span>. <a href="#tbl-packagescomp" class="quarto-xref" aria-expanded="false">Table&nbsp;2</a> provides a side-by-side comparison of the key packages discussed in this handnote to help choosing the right tool based on the specific data requirements.</p>
+<p><strong>Key Decision-Making Guidelines for the Presentation:</strong></p>
+<ul>
+<li><p><strong>The Reproducibility Standard:</strong> While graphical tools like the RStudio Wizard are excellent for initial exploration, final decision-making workflows should always use <strong>Programmatic Scripts</strong> to ensure every step is auditable and repeatable <span class="citation" data-cites="bivand2008applied">Bivand et al. (<a href="#ref-bivand2008applied" role="doc-biblioref">2008</a>)</span>, <span class="citation" data-cites="huber2025how">Huber (<a href="#ref-huber2025how" role="doc-biblioref">2025</a>)</span>.</p></li>
+<li><p><strong>Memory Management:</strong> For datasets larger than 2GB, avoid standard flat-file imports and prioritize <strong>Relational Databases (DBI)</strong> or <strong>Partial Reading (rgdal / GDAL.open)</strong> to prevent system crashes <span class="citation" data-cites="rcore2015r">R Core Team (<a href="#ref-rcore2015r" role="doc-biblioref">2015</a>)</span>, <span class="citation" data-cites="wickham2016r">Wickham and Grolemund (<a href="#ref-wickham2016r" role="doc-biblioref">2016</a>)</span>.</p></li>
+<li><p><strong>Structure Alignment:</strong> Always select the package that best respects your data’s inherent structure. For example, use <strong>haven</strong> for surveys to avoid losing categorical labels, or <strong>lightr</strong> for scientific spectrometry to preserve instrument metadata <span class="citation" data-cites="luraschi2023importing">Luraschi (<a href="#ref-luraschi2023importing" role="doc-biblioref">2023</a>)</span>, <span class="citation" data-cites="gruson2019lightr">Gruson et al. (<a href="#ref-gruson2019lightr" role="doc-biblioref">2019</a>)</span>.</p></li>
+</ul>
+</section>
+<section id="conclusion" class="level2" data-number="4.4">
+<h2 data-number="4.4" data-anchor-id="conclusion"><span class="header-section-number">4.4</span> Conclusion</h2>
+<p>Mastering data import is about matching the <strong>right package</strong> to the <strong>right data structure</strong> while respecting hardware limits. Choosing programmatic scripts ensures that the decision-making process is transparent, scalable, and reproducible <span class="citation" data-cites="bivand2008applied">Bivand et al. (<a href="#ref-bivand2008applied" role="doc-biblioref">2008</a>)</span>, <span class="citation" data-cites="huber2025how">Huber (<a href="#ref-huber2025how" role="doc-biblioref">2025</a>)</span>.</p>
+</section>
+<section id="class-assignment" class="level2" data-number="4.5">
+<h2 data-number="4.5" data-anchor-id="class-assignment"><span class="header-section-number">4.5</span> Class assignment</h2>
+<p>Download the following dataset from <a href="https://alisoleimani71.github.io/" class="uri">https://alisoleimani71.github.io/</a>.</p>
+<p>Tasks:</p>
+<p>1. Import the dataset using readr, fread, and base R.</p>
+<p>2. Measure import time using system.time().</p>
+<p>3. Compare column types produced by each method.</p>
+<p>4. Write a short paragraph explaining which method is best and why.</p>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="Affidavit">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Affidavit
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>I hereby affirm that this submitted paper was authored unaided and solely by me. Additionally, no other sources than those in the reference list were used. Parts of this paper, including tables and figures, that have been taken either verbatim or analogously from other works have in each case been properly cited with regard to their origin and authorship. This paper either in parts or in its entirety, be it in the same or similar form, has not been submitted to any other examination board and has not been published.</p>
+<p>I acknowledge that the university may use plagiarism detection software to check my thesis. I agree to cooperate with any investigation of suspected plagiarism and to provide any additional information or evidence requested by the university.</p>
+<p>Checklist:</p>
+<ul class="task-list">
+<li><label><input type="checkbox" checked="">The handout contains 3-5 pages of text.</label></li>
+<li><label><input type="checkbox">The submission contains the Quarto file of the handout.</label></li>
+<li><label><input type="checkbox">The submission contains the Quarto file of the presentation.</label></li>
+<li><label><input type="checkbox">The submission contains the HTML file of the handout.</label></li>
+<li><label><input type="checkbox">The submission contains the HTML file of the presentation.</label></li>
+<li><label><input type="checkbox">The submission contains the PDF file of the handout.</label></li>
+<li><label><input type="checkbox">The submission contains the PDF file of the presentation.</label></li>
+<li><label><input type="checkbox">The title page of the presentation and the handout contain personal details (name, email, matriculation number).</label></li>
+<li><label><input type="checkbox">The handout contains a bibliography, created using BibTeX with an APA citation style.</label></li>
+<li><label><input type="checkbox">Either the handout or the presentation contains R code that proofs the expertise in coding.</label></li>
+<li><label><input type="checkbox">The filled out Affidavit.</label></li>
+<li><label><input type="checkbox">The link to the presentation and the handout published on GitHub.</label></li>
+</ul>
+<p>Ali Soleimani, 10.05.2026, Cologne</p>
+</div>
+</div>
+
+
+<div id="tbl-packages" class="quarto-float quarto-figure quarto-figure-center FigureWithoutNote" prefix="" data-tblnum="1" data-custom-style="FigureWithoutNote">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-packages-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="FigureTitle" data-custom-style="FigureTitle">
+<p>Table&nbsp;1</p>
+</div>
+<div class="Caption" data-custom-style="Caption">
+<p>Overview of data import packages</p>
+</div>
+</figcaption>
+<div aria-describedby="tbl-packages-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table id="tbl-packages" class="caption-top table" prefix="" data-tblnum="1">
+<colgroup>
+<col style="width: 17%">
+<col style="width: 17%">
+<col style="width: 17%">
+<col style="width: 17%">
+<col style="width: 30%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Data Category</th>
+<th>File Extensions</th>
+<th>Key Package</th>
+<th>Primary Functions</th>
+<th>Advantages / Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Standard Tabular</td>
+<td><code>.csv</code>, <code>.tsv</code>, <code>.txt</code></td>
+<td>readr</td>
+<td><code>read_csv()</code>, <code>read_tsv()</code></td>
+<td>Fast import; creates tibbles and supports large-file progress bars. <span class="citation" data-cites="wickham2019welcome"><span class="nocase">Wickham et al.</span> (<a href="#ref-wickham2019welcome" role="doc-biblioref">2019</a>)</span>, <span class="citation" data-cites="chapman2026importing">Chapman University (<a href="#ref-chapman2026importing" role="doc-biblioref">2026</a>)</span>.</td>
+</tr>
+<tr class="even">
+<td>Proprietary Excel</td>
+<td><code>.xls</code>, <code>.xlsx</code></td>
+<td>readxl</td>
+<td><code>read_excel()</code>, <code>excel_sheets()</code></td>
+<td>Reads Excel files without Java; supports sheet selection. <span class="citation" data-cites="luraschi2023importing">Luraschi (<a href="#ref-luraschi2023importing" role="doc-biblioref">2023</a>)</span>, <span class="citation" data-cites="chapman2026importing">Chapman University (<a href="#ref-chapman2026importing" role="doc-biblioref">2026</a>)</span>.</td>
+</tr>
+<tr class="odd">
+<td>Statistical Files</td>
+<td><code>.sav</code>, <code>.sas7bdat</code>, <code>.dta</code></td>
+<td>haven</td>
+<td><code>read_sas()</code>, <code>read_sav()</code>, <code>read_dta()</code></td>
+<td>Preserves metadata and labels. <span class="citation" data-cites="chapman2026importing">Chapman University (<a href="#ref-chapman2026importing" role="doc-biblioref">2026</a>)</span>, <span class="citation" data-cites="luraschi2023importing">Luraschi (<a href="#ref-luraschi2023importing" role="doc-biblioref">2023</a>)</span>.</td>
+</tr>
+<tr class="even">
+<td>Relational DBs</td>
+<td><code>.db</code>, <code>.sqlite</code>, <code>.mdb</code></td>
+<td>DBI</td>
+<td><code>dbConnect()</code>, <code>dbGetQuery()</code></td>
+<td>SQL interface for large datasets. <span class="citation" data-cites="rcore2015r">R Core Team (<a href="#ref-rcore2015r" role="doc-biblioref">2015</a>)</span>.</td>
+</tr>
+<tr class="odd">
+<td>Spatial / GIS</td>
+<td><code>.shp</code>, <code>.tif</code>, <code>.kml</code></td>
+<td>sf</td>
+<td><code>st_read()</code></td>
+<td>Handles spatial data with CRS support. <span class="citation" data-cites="bivand2008applied">Bivand et al. (<a href="#ref-bivand2008applied" role="doc-biblioref">2008</a>)</span>.</td>
+</tr>
+<tr class="even">
+<td>Base Text</td>
+<td><code>.txt</code>, <code>.dat</code>, <code>.fwf</code></td>
+<td>utils</td>
+<td><code>read.table()</code>, <code>read.csv()</code>, <code>read.fwf()</code></td>
+<td>Base R functions for legacy formats. <span class="citation" data-cites="rcore2015r">R Core Team (<a href="#ref-rcore2015r" role="doc-biblioref">2015</a>)</span>.</td>
+</tr>
+<tr class="odd">
+<td>Scientific Data</td>
+<td><code>.jdx</code>, <code>.abs</code>, <code>.cnv</code>, <code>.nc</code></td>
+<td>lightr</td>
+<td><code>lr_get_spec()</code></td>
+<td>Spectral data import. <span class="citation" data-cites="gruson2019lightr">Gruson et al. (<a href="#ref-gruson2019lightr" role="doc-biblioref">2019</a>)</span>.</td>
+</tr>
+<tr class="even">
+<td>Interactive</td>
+<td>Various</td>
+<td>speedR</td>
+<td><code>speedR()</code></td>
+<td>GUI-based filtering and code generation. <span class="citation" data-cites="visne2012speedr">Visne et al. (<a href="#ref-visne2012speedr" role="doc-biblioref">2012</a>)</span>.</td>
+</tr>
+<tr class="odd">
+<td>Cloud Sheets</td>
+<td>URL</td>
+<td>googlesheets4</td>
+<td><code>read_sheet()</code></td>
+<td>Imports Google Sheets. <span class="citation" data-cites="chapman2026importing">Chapman University (<a href="#ref-chapman2026importing" role="doc-biblioref">2026</a>)</span>.</td>
+</tr>
+<tr class="even">
+<td>Hierarchical Data</td>
+<td><code>.json</code></td>
+<td>jsonlite</td>
+<td><code>fromJSON()</code></td>
+<td>JSON / API data handling. <span class="citation" data-cites="rcore2015r">R Core Team (<a href="#ref-rcore2015r" role="doc-biblioref">2015</a>)</span>.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<div id="tbl-packagescomp" class="quarto-float quarto-figure quarto-figure-center FigureWithoutNote" prefix="" data-tblnum="2" data-custom-style="FigureWithoutNote">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-packagescomp-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="FigureTitle" data-custom-style="FigureTitle">
+<p>Table&nbsp;2</p>
+</div>
+<div class="Caption" data-custom-style="Caption">
+<p>The Comparison Between Packages</p>
+</div>
+</figcaption>
+<div aria-describedby="tbl-packagescomp-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table id="tbl-packagescomp" class="caption-top table" prefix="" data-tblnum="2">
+<colgroup>
+<col style="width: 15%">
+<col style="width: 15%">
+<col style="width: 15%">
+<col style="width: 15%">
+<col style="width: 15%">
+<col style="width: 21%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Data Category</th>
+<th>File Formats</th>
+<th>Recommended Package</th>
+<th>Key Function</th>
+<th>Graphical Method (GUI)</th>
+<th>Main Advantage / Limitation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Tabular Data</td>
+<td><strong><code>.csv</code></strong>, <strong><code>.tsv</code></strong>, <strong><code>.txt</code></strong></td>
+<td>readr</td>
+<td>read_csv()</td>
+<td>Import Dataset -&gt; From Text (readr)</td>
+<td>Very fast import; creates tibbles / Limited by RAM. <span class="citation" data-cites="wickham2019welcome"><span class="nocase">Wickham et al.</span> (<a href="#ref-wickham2019welcome" role="doc-biblioref">2019</a>)</span> , <span class="citation" data-cites="luraschi2023importing">Luraschi (<a href="#ref-luraschi2023importing" role="doc-biblioref">2023</a>)</span></td>
+</tr>
+<tr class="even">
+<td>Excel Sheets</td>
+<td><code>.xls</code>, <code>.xlsx</code></td>
+<td>readxl</td>
+<td>read_excel()</td>
+<td>Import Dataset -&gt; From Excel</td>
+<td>No Java required; supports multiple sheets / Limited scalability. <span class="citation" data-cites="luraschi2023importing">Luraschi (<a href="#ref-luraschi2023importing" role="doc-biblioref">2023</a>)</span>, <span class="citation" data-cites="rcore2015r">R Core Team (<a href="#ref-rcore2015r" role="doc-biblioref">2015</a>)</span>.</td>
+</tr>
+<tr class="odd">
+<td>Statistical Files</td>
+<td><code>.sav</code>, <code>.dta</code>, <code>.sas7bdat</code></td>
+<td>haven</td>
+<td><code>read_sav()</code>, <code>read_dta()</code></td>
+<td>Import Dataset -&gt; From SPSS/Stata</td>
+<td>Preserves labels and metadata / Limited newest-version support. <span class="citation" data-cites="chapman2026importing">Chapman University (<a href="#ref-chapman2026importing" role="doc-biblioref">2026</a>)</span>, <span class="citation" data-cites="luraschi2023importing">Luraschi (<a href="#ref-luraschi2023importing" role="doc-biblioref">2023</a>)</span>.</td>
+</tr>
+<tr class="even">
+<td>Databases (SQL)</td>
+<td><code>.db</code>, <code>.sqlite</code>, MySQL</td>
+<td>DBI</td>
+<td><code>dbConnect()</code>, <code>dbGetQuery()</code></td>
+<td>RStudio “Connections” Pane</td>
+<td>Handles large datasets / Requires SQL knowledge. <span class="citation" data-cites="rcore2015r">R Core Team (<a href="#ref-rcore2015r" role="doc-biblioref">2015</a>)</span>, <span class="citation" data-cites="chapman2026importing">Chapman University (<a href="#ref-chapman2026importing" role="doc-biblioref">2026</a>)</span>.</td>
+</tr>
+<tr class="odd">
+<td>Spatial / GIS</td>
+<td><code>.shp</code>, <code>.tif</code>, <code>.kml</code></td>
+<td>rgdal</td>
+<td><code>readOGR()</code>, <code>readGDAL()</code></td>
+<td>External links (e.g., GRASS)</td>
+<td>Supports CRS metadata / Complex for beginners. <span class="citation" data-cites="bivand2008applied">Bivand et al. (<a href="#ref-bivand2008applied" role="doc-biblioref">2008</a>)</span>, <span class="citation" data-cites="rcore2015r">R Core Team (<a href="#ref-rcore2015r" role="doc-biblioref">2015</a>)</span>.</td>
+</tr>
+<tr class="even">
+<td>Hierarchical (Web)</td>
+<td>.json</td>
+<td>jsonlite</td>
+<td>fromJSON()</td>
+<td>N/A (Script-based)</td>
+<td>Standard for APIs and JSON / Nested data can be complex. <span class="citation" data-cites="ooms2014jsonlite">Ooms (<a href="#ref-ooms2014jsonlite" role="doc-biblioref">2014</a>)</span>, <span class="citation" data-cites="elsevier2019import"><span>“Chapter 2 - Data Import and Export in r and Python”</span> (<a href="#ref-elsevier2019import" role="doc-biblioref">2019</a>)</span>, <span class="citation" data-cites="rcore2015r">R Core Team (<a href="#ref-rcore2015r" role="doc-biblioref">2015</a>)</span>.</td>
+</tr>
+<tr class="odd">
+<td>Batch Import</td>
+<td>Multiple Files</td>
+<td>purrr or lightr</td>
+<td><code>map()</code>, <code>lr_get_spec()</code></td>
+<td>N/A (Script-based)</td>
+<td>Automates multi-file import / Requires functional programming. <span class="citation" data-cites="wickham2016r">Wickham and Grolemund (<a href="#ref-wickham2016r" role="doc-biblioref">2016</a>)</span>, <span class="citation" data-cites="gruson2019lightr">Gruson et al. (<a href="#ref-gruson2019lightr" role="doc-biblioref">2019</a>)</span>.</td>
+</tr>
+<tr class="even">
+<td>Interactive</td>
+<td>Various</td>
+<td>speedR</td>
+<td>speedR()</td>
+<td>Stand-alone GUI</td>
+<td>Visual filtering with code generation / Higher package overhead. <span class="citation" data-cites="visne2012speedr">Visne et al. (<a href="#ref-visne2012speedr" role="doc-biblioref">2012</a>)</span>.</td>
+</tr>
+<tr class="odd">
+<td>Cloud Services</td>
+<td>Google Sheets</td>
+<td>googlesheets4</td>
+<td>read_sheet()</td>
+<td>N/A</td>
+<td>Direct cloud access / Requires OAuth authentication.@chapman2026importing.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+</section>
+</section>
+<section class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> References</h1>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-bivand2008applied" class="csl-entry" role="listitem">
+Bivand, R. S., Pebesma, E. J., &amp; Gómez-Rubio, V. (2008). <em>Applied spatial data analysis with r</em>. Springer Science &amp; Business Media. https://doi.org/<a href="https://doi.org/10.1007/978-0-387-78171-6">https://doi.org/10.1007/978-0-387-78171-6</a>
+</div>
+<div id="ref-chapman2026importing" class="csl-entry" role="listitem">
+Chapman University. (2026). <em>R programming: Importing data files into r</em>. <a href="https://libguides.chapman.edu/R/import">https://libguides.chapman.edu/R/import</a>
+</div>
+<div id="ref-elsevier2019import" class="csl-entry" role="listitem">
+Chapter 2 - data import and export in r and python. (2019). In <em>R and python for oceanographers: A practical guide with applications</em> (pp. 23–47). Elsevier. <a href="https://doi.org/10.1016/B978-0-12-813491-7.00002-6">https://doi.org/10.1016/B978-0-12-813491-7.00002-6</a>
+</div>
+<div id="ref-gruson2019lightr" class="csl-entry" role="listitem">
+Gruson, H., White, T., &amp; Maia, R. (2019). Lightr: Import spectral data and metadata in r. <em>Journal of Open Source Software</em>, <em>4</em>(43), 1857. <a href="https://doi.org/10.21105/joss.01857">https://doi.org/10.21105/joss.01857</a>
+</div>
+<div id="ref-huber2025how" class="csl-entry" role="listitem">
+Huber, S. (2025). <em>How to use r for data science</em>. <a href="https://hubchev.github.io/ds/">https://hubchev.github.io/ds/</a>
+</div>
+<div id="ref-luraschi2023importing" class="csl-entry" role="listitem">
+Luraschi, J. (2023). <em>Importing data with the RStudio IDE</em>. Posit Support. <a href="https://support.posit.co/hc/en-us/articles/218611977-Importing-Data-with-the-RStudio-IDE">https://support.posit.co/hc/en-us/articles/218611977-Importing-Data-with-the-RStudio-IDE</a>
+</div>
+<div id="ref-ooms2014jsonlite" class="csl-entry" role="listitem">
+Ooms, J. (2014). The jsonlite package: A practical and consistent mapping between JSON data and r objects. <em>arXiv Preprint arXiv:1403.2805</em>.
+</div>
+<div id="ref-rcore2015r" class="csl-entry" role="listitem">
+R Core Team. (2015). <em>R data import/export</em>. <a href="https://cran.r-project.org/doc/manuals/r-release/R-data.pdf">https://cran.r-project.org/doc/manuals/r-release/R-data.pdf</a>
+</div>
+<div id="ref-visne2012speedr" class="csl-entry" role="listitem">
+Visne, I., Yildiz, A., Dilaveroglu, E., Vierlinger, K., Nöhammer, C., Leisch, F., &amp; Kriegner, A. (2012). speedR: An r package for interactive data import, filtering and ready-to-use code generation. <em>Journal of Statistical Software</em>, <em>51</em>(2), 1–12. <a href="https://doi.org/10.18637/jss.v051.i02">https://doi.org/10.18637/jss.v051.i02</a>
+</div>
+<div id="ref-wickham2019welcome" class="csl-entry" role="listitem">
+<span class="nocase">Wickham, H., Averick, M., Bryan, J., Chang, W., McGowan, L. D., François, R., Grolemund, G., Hayes, A., Henry, L., Hester, J., et al.</span> (2019). Welcome to the tidyverse. <em>Journal of Open Source Software</em>, <em>4</em>(43), 1686. <a href="https://doi.org/10.21105/joss.01686">https://doi.org/10.21105/joss.01686</a>
+</div>
+<div id="ref-wickham2016r" class="csl-entry" role="listitem">
+Wickham, H., &amp; Grolemund, G. (2016). <em>R for data science: Import, tidy, transform, visualize, and model data</em>. O’Reilly Media, Inc.
+</div>
+</div>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
