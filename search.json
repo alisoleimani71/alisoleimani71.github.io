@@ -80,8 +80,8 @@
     "objectID": "Handnote.html#importing-data-from-multiple-files",
     "href": "Handnote.html#importing-data-from-multiple-files",
     "title": "Importing Data in R: Exploring Various Packages and Their Advantages: Data Analysis for Decision-Making (SS 2026)",
-    "section": "4.2 Importing Data From Multiple Files",
-    "text": "4.2 Importing Data From Multiple Files\nDecision-makers often face the need to import hundreds of files simultaneously. R provides several automation strategies Wickham and Grolemund (2016), Gruson et al. (2019).\n\nAutomated Recursive Import: Specialized tools like lightr use functions such as lr_get_spec() to search subfolders automatically for specific extensions and process them using parallelized loops to save time Gruson et al. (2019).\nThe Tidyverse Approach (Iteration): The most flexible method combines list.files() with the purrr package. By using map() or map_df(), an analyst can apply a read function to every path in a list, automatically stacking them into a single unified tibble Wickham et al. (2019).\nComplex Multi-File Formats: Some formats are naturally batch-oriented. For example, a single “Shapefile” is a collection of files (.shp, .dbf, etc.). The readOGR() function in rgdal uses a Data Source Name (DSN)—often a folder path—to treat these multiple files as a single spatial object Bivand et al. (2008), R Core Team (2015).\nCustom Functions for Productivity: speedR can graphically define an import process and then generate a new R function containing those specific constraints. This “ready-to-use” code can be applied to any number of similar files to ensure a consistent pipeline Visne et al. (2012)."
+    "section": "5.10 Importing Data From Multiple Files",
+    "text": "5.10 Importing Data From Multiple Files\nDecision-makers often face the need to import hundreds of files simultaneously. R provides several automation strategies Wickham and Grolemund (2016), Gruson et al. (2019).\n\nAutomated Recursive Import: Specialized tools like lightr use functions such as lr_get_spec() to search subfolders automatically for specific extensions and process them using parallelized loops to save time Gruson et al. (2019).\nThe Tidyverse Approach (Iteration): The most flexible method combines list.files() with the purrr package. By using map() or map_df(), an analyst can apply a read function to every path in a list, automatically stacking them into a single unified tibble Wickham et al. (2019).\nComplex Multi-File Formats: Some formats are naturally batch-oriented. For example, a single “Shapefile” is a collection of files (.shp, .dbf, etc.). The readOGR() function in rgdal uses a Data Source Name (DSN)—often a folder path—to treat these multiple files as a single spatial object Bivand et al. (2008), R Core Team (2015).\nCustom Functions for Productivity: speedR can graphically define an import process and then generate a new R function containing those specific constraints. This “ready-to-use” code can be applied to any number of similar files to ensure a consistent pipeline Visne et al. (2012)."
   },
   {
     "objectID": "Handnote.html#comparison-table-based-on-file-type",
@@ -131,5 +131,75 @@
     "title": "Importing Data in R: Exploring Various Packages and Their Advantages: Data Analysis for Decision-Making (SS 2026)",
     "section": "4.3 The Comparison Between Packages",
     "text": "4.3 The Comparison Between Packages\nSelecting the appropriate import method is a strategic decision that impacts the speed, reliability, and reproducibility of the analytical pipeline Wickham and Grolemund (2016). Table 2 provides a side-by-side comparison of the key packages discussed in this handnote to help choosing the right tool based on the specific data requirements.\nKey Decision-Making Guidelines for the Presentation:\n\nThe Reproducibility Standard: While graphical tools like the RStudio Wizard are excellent for initial exploration, final decision-making workflows should always use Programmatic Scripts to ensure every step is auditable and repeatable Bivand et al. (2008), Huber (2025).\nMemory Management: For datasets larger than 2GB, avoid standard flat-file imports and prioritize Relational Databases (DBI) or Partial Reading (rgdal / GDAL.open) to prevent system crashes R Core Team (2015), Wickham and Grolemund (2016).\nStructure Alignment: Always select the package that best respects your data’s inherent structure. For example, use haven for surveys to avoid losing categorical labels, or lightr for scientific spectrometry to preserve instrument metadata Luraschi (2023), Gruson et al. (2019)."
+  },
+  {
+    "objectID": "Handnote.html#standard-tabular-data-.csv-.tsv",
+    "href": "Handnote.html#standard-tabular-data-.csv-.tsv",
+    "title": "Importing Data in R: Exploring Various Packages and Their Advantages: Data Analysis for Decision-Making (SS 2026)",
+    "section": "5.1 Standard Tabular Data (.csv, .tsv)",
+    "text": "5.1 Standard Tabular Data (.csv, .tsv)\n\nGraphical: Use the RStudio “Import Dataset” wizard and select “From Text (readr)”. This allows for a live preview where you can visually change delimiters, skip rows, and rename columns while the GUI generates the code automatically Luraschi (2023).\nCode Wickham and Grolemund (2016) :\n\nlarge CSV:"
+  },
+  {
+    "objectID": "Handnote.html#proprietary-excel-files-.xls-.xlsx",
+    "href": "Handnote.html#proprietary-excel-files-.xls-.xlsx",
+    "title": "Importing Data in R: Exploring Various Packages and Their Advantages: Data Analysis for Decision-Making (SS 2026)",
+    "section": "5.2 Proprietary Excel Files (.xls, .xlsx)",
+    "text": "5.2 Proprietary Excel Files (.xls, .xlsx)\n\nGraphical: Select “From Excel” in the RStudio wizard. This is crucial for navigating multi-sheet workbooks, as you can select specific sheets and define a cell range (e.g.,”A1:E20”) graphically Luraschi (2023).\nCode Chapman University (2026):"
+  },
+  {
+    "objectID": "Handnote.html#statistical-software-files-.sav-.sas7bdat-.dta",
+    "href": "Handnote.html#statistical-software-files-.sav-.sas7bdat-.dta",
+    "title": "Importing Data in R: Exploring Various Packages and Their Advantages: Data Analysis for Decision-Making (SS 2026)",
+    "section": "5.3 Statistical Software Files (.sav, .sas7bdat, .dta)",
+    "text": "5.3 Statistical Software Files (.sav, .sas7bdat, .dta)\n\nGraphical: Select “From SPSS/SAS/Stata” in RStudio. This wizard is particularly helpful as it shows how proprietary labels and missing value codes will be translated into R factors Luraschi (2023).\nCode R Core Team (2015):"
+  },
+  {
+    "objectID": "Handnote.html#relational-databases-.db-.sqlite-.mdb",
+    "href": "Handnote.html#relational-databases-.db-.sqlite-.mdb",
+    "title": "Importing Data in R: Exploring Various Packages and Their Advantages: Data Analysis for Decision-Making (SS 2026)",
+    "section": "5.4 Relational Databases (.db, .sqlite, .mdb)",
+    "text": "5.4 Relational Databases (.db, .sqlite, .mdb)\n\nGraphical: Access through the RStudio “Connections” pane. Once a DBI connection is established, you can browse table schemas and preview data before importing Luraschi (2023).\nCode R Core Team (2015):"
+  },
+  {
+    "objectID": "Handnote.html#spatial-gis-data-.shp-.tif-.kml",
+    "href": "Handnote.html#spatial-gis-data-.shp-.tif-.kml",
+    "title": "Importing Data in R: Exploring Various Packages and Their Advantages: Data Analysis for Decision-Making (SS 2026)",
+    "section": "5.5 Spatial / GIS Data (.shp, .tif, .kml)",
+    "text": "5.5 Spatial / GIS Data (.shp, .tif, .kml)\n\nGraphical: Usually handled programmatically, though GIS software like GRASS can be linked to R to browse spatial layers.\nCode Bivand et al. (2008) :"
+  },
+  {
+    "objectID": "Handnote.html#base-text-and-fixed-width-files-.txt-.dat-.fwf",
+    "href": "Handnote.html#base-text-and-fixed-width-files-.txt-.dat-.fwf",
+    "title": "Importing Data in R: Exploring Various Packages and Their Advantages: Data Analysis for Decision-Making (SS 2026)",
+    "section": "5.6 Base Text and Fixed-Width Files (.txt, .dat, .fwf)",
+    "text": "5.6 Base Text and Fixed-Width Files (.txt, .dat, .fwf)\n\nGraphical: Use the “From Text (base)” option in the RStudio wizard for legacy text formats that require manual field-width definitions Luraschi (2023).\nCode R Core Team (2015):"
+  },
+  {
+    "objectID": "Handnote.html#scientific-spectral-data-.jdx-.abs-.cnv-.nc",
+    "href": "Handnote.html#scientific-spectral-data-.jdx-.abs-.cnv-.nc",
+    "title": "Importing Data in R: Exploring Various Packages and Their Advantages: Data Analysis for Decision-Making (SS 2026)",
+    "section": "5.7 Scientific Spectral Data (.jdx, .abs, .cnv, .nc)",
+    "text": "5.7 Scientific Spectral Data (.jdx, .abs, .cnv, .nc)\n\nGraphical: Utilize specialized package GUIs or high-level functions that automate folder-wide imports Gruson et al. (2019).\nCode Gruson et al. (2019) :"
+  },
+  {
+    "objectID": "Handnote.html#interactive-import-speedr",
+    "href": "Handnote.html#interactive-import-speedr",
+    "title": "Importing Data in R: Exploring Various Packages and Their Advantages: Data Analysis for Decision-Making (SS 2026)",
+    "section": "5.8 Interactive Import (speedR)",
+    "text": "5.8 Interactive Import (speedR)\n\nGraphical: The speedR package provides a standalone GUI for filtering and subsetting large datasets before they are loaded into the R environment Visne et al. (2012).\nCode: Visne et al. (2012)"
+  },
+  {
+    "objectID": "Handnote.html#cloud-sheets-google-sheets-urls",
+    "href": "Handnote.html#cloud-sheets-google-sheets-urls",
+    "title": "Importing Data in R: Exploring Various Packages and Their Advantages: Data Analysis for Decision-Making (SS 2026)",
+    "section": "5.8 Cloud Sheets (Google Sheets/ URLs)",
+    "text": "5.8 Cloud Sheets (Google Sheets/ URLs)\n\nCode: Chapman University (2026)"
+  },
+  {
+    "objectID": "Handnote.html#hierarchical-data-.json",
+    "href": "Handnote.html#hierarchical-data-.json",
+    "title": "Importing Data in R: Exploring Various Packages and Their Advantages: Data Analysis for Decision-Making (SS 2026)",
+    "section": "5.9 Hierarchical Data (.json)",
+    "text": "5.9 Hierarchical Data (.json)\n\nGraphical: While RStudio does not have a dedicated “JSON Wizard” in the same way it does for Excel or CSV, users can often preview JSON structures through the File Pane or by using specialized viewing packages.\nCode R Core Team (2015) :"
   }
 ]
