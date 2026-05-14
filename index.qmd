@@ -26,7 +26,6 @@ csl: apa.csl
 
 number-sections: true
 reference-location: document
-
 ---
 
 # Links
@@ -76,7 +75,7 @@ R’s ecosystem offers a specialized collection of tools for data acquisition, r
 @tbl-packages summarizes the primary packages used for various data formats in professional data science workflows. @wickham2019welcome, @chapman2026importing, @luraschi2023importing, @rcore2015r,@bivand2008applied, @visne2012speedr, @gruson2019lightr.
 
 | Data Category | File Extensions | Key Package | Primary Functions |
-|------------------|------------------|------------------|------------------|
+|------------------|------------------|------------------|------------------------------|
 | Standard Tabular | `.csv`, `.tsv`, `.txt` | readr | `read_csv`, `read_tsv` |
 | Proprietary Excel | `.xls`, `.xlsx` | readxl | `read_excel`, `excel_sheets` |
 | Statistical Files | `.sav`, `.sas7bdat`, `.dta` | haven | `read_sas`, `read_sav`, `read_dta` |
@@ -281,12 +280,15 @@ Mastering data import is about matching the right package to the right data stru
 Download the files from here [link](https://drive.google.com/file/d/17co85tSnV84tRCVxreNODKs_2N6F92Xc/view?usp=sharing){.uri}.
 
 ## Help The HR Manager!
+
 1.  You are helping a HR manager in the company. She has given you CSV file about the personnel information (off-course after signing relative Non-disclusure agreement!). This data file is changing every month and it is a real pain for her to create the report every time! She knows you have R knowledge! and ask you to prepare a dynamic file by import the data into R, so she can easily prepare report very quickly in the beginning of every month. go ahead and do first step which is importing the [exe1.csv](exe1.csv) file into R Studio.
 
 ## Everyday Sales Report!
+
 2.  You are a manager in a company and the sale department gives you sales reports in excel file every morning. consider that you have recieved [exe2.xlsx](exe2.xlsx) file today. Import it to R Studio.
 
 ## Spare Parts Sheet
+
 3.  Imagine that you and your colleagues in the company are working on a google spreadsheet, together. now you want to import data from it into R. Use this [Link](https://docs.google.com/spreadsheets/d/1BoD9bXwbxm1NJWhEnk6BVXUxuxWbWArQWVT3LIKk2PQ/edit?usp=sharing) and import it in the R Studio. if you had problem with the link to Google spreadsheet, upload it (it is available in the exercise zip folder) in your own account, and then use your own link.
 
 ::: {.callout-tip appearance="default" title="Affidavit" icon="false"}
