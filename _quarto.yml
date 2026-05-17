@@ -3,13 +3,21 @@ project:
   output-dir: .
 
 website:
-  title: "My Research Project"
+  title: "Importing Data in R"
   navbar:
     left:
       - href: index.html
         text: "Home"
-      - href: Handnote.html    
-        text: "Handnote"
+      - href: index.pdf
+        text: "Handout PDF"
+      - href: presentation.html    
+        text: "Presentation"
+      - href: presentation.pdf
+        text: "Presentation PDF"
+      - href: Exercises.zip
+        text: "Exercises"
+
+
 
 format:
   html:

@@ -205,72 +205,72 @@
   {
     "objectID": "index.html#standard-tabular-data-.csv-.tsv",
     "href": "index.html#standard-tabular-data-.csv-.tsv",
-    "title": "Importing Data in R: Exploring Various Packages and Their Advantages: Data Analysis for Decision-Making (SS 2026)",
-    "section": "5.1 Standard Tabular Data (.csv, .tsv)",
-    "text": "5.1 Standard Tabular Data (.csv, .tsv)\n\nGraphical: Use the RStudio “Import Dataset” wizard and select “From Text (readr)”. This allows for a live preview where you can visually change delimiters, skip rows, and rename columns while the GUI generates the code automatically Luraschi (2023).\nCode Wickham and Grolemund (2016) :\n\nlarge CSV:"
+    "title": "Importing Data in R: Exploring Various Packages and Their Advantages",
+    "section": "4.1 Standard Tabular Data (.csv, .tsv)",
+    "text": "4.1 Standard Tabular Data (.csv, .tsv)\n\nGraphical: Use the RStudio “Import Dataset” wizard and select “From Text (readr)”. This allows for a live preview where you can visually change delimiters, skip rows, and rename columns while the GUI generates the code automatically Luraschi (2023).\nCode Wickham & Grolemund (2016) :\n\n\nlibrary(readr)\ndf_readr &lt;- read_csv(\"data.csv\")\ndf_readr\n\nlarge CSV:\n\nlibrary(data.table)\ndf_fread &lt;- fread(\"bigdata.csv\")\ndf_fread"
   },
   {
     "objectID": "index.html#proprietary-excel-files-.xls-.xlsx",
     "href": "index.html#proprietary-excel-files-.xls-.xlsx",
-    "title": "Importing Data in R: Exploring Various Packages and Their Advantages: Data Analysis for Decision-Making (SS 2026)",
-    "section": "5.2 Proprietary Excel Files (.xls, .xlsx)",
-    "text": "5.2 Proprietary Excel Files (.xls, .xlsx)\n\nGraphical: Select “From Excel” in the RStudio wizard. This is crucial for navigating multi-sheet workbooks, as you can select specific sheets and define a cell range (e.g.,”A1:E20”) graphically Luraschi (2023).\nCode Chapman University (2026):"
+    "title": "Importing Data in R: Exploring Various Packages and Their Advantages",
+    "section": "4.2 Proprietary Excel Files (.xls, .xlsx)",
+    "text": "4.2 Proprietary Excel Files (.xls, .xlsx)\n\nGraphical: Select “From Excel” in the RStudio wizard. This is crucial for navigating multi-sheet workbooks, as you can select specific sheets and define a cell range (e.g.,”A1:E20”) graphically Luraschi (2023).\nCode Chapman University (2026):\n\n\nlibrary(readxl)\ndf_excel &lt;- read_excel(\"file.xlsx\")\ndf_excel"
   },
   {
     "objectID": "index.html#statistical-software-files-.sav-.sas7bdat-.dta",
     "href": "index.html#statistical-software-files-.sav-.sas7bdat-.dta",
-    "title": "Importing Data in R: Exploring Various Packages and Their Advantages: Data Analysis for Decision-Making (SS 2026)",
-    "section": "5.3 Statistical Software Files (.sav, .sas7bdat, .dta)",
-    "text": "5.3 Statistical Software Files (.sav, .sas7bdat, .dta)\n\nGraphical: Select “From SPSS/SAS/Stata” in RStudio. This wizard is particularly helpful as it shows how proprietary labels and missing value codes will be translated into R factors Luraschi (2023).\nCode R Core Team (2015):"
+    "title": "Importing Data in R: Exploring Various Packages and Their Advantages",
+    "section": "4.3 Statistical Software Files (.sav, .sas7bdat, .dta)",
+    "text": "4.3 Statistical Software Files (.sav, .sas7bdat, .dta)\n\nGraphical: Select “From SPSS/SAS/Stata” in RStudio. This wizard is particularly helpful as it shows how proprietary labels and missing value codes will be translated into R factors Luraschi (2023).\nCode R Core Team (2015):\n\nlibrary(haven)\n# Import SPSS file\ndf_spss &lt;- read_sav(\"survey_data.sav\")\n# Import Stata file\ndf_stata &lt;- read_dta(\"economic_data.dta\")\n# Preview imported data\nhead(df_spss)\nhead(df_stata)"
   },
   {
     "objectID": "index.html#relational-databases-.db-.sqlite-.mdb",
     "href": "index.html#relational-databases-.db-.sqlite-.mdb",
-    "title": "Importing Data in R: Exploring Various Packages and Their Advantages: Data Analysis for Decision-Making (SS 2026)",
-    "section": "5.4 Relational Databases (.db, .sqlite, .mdb)",
-    "text": "5.4 Relational Databases (.db, .sqlite, .mdb)\n\nGraphical: Access through the RStudio “Connections” pane. Once a DBI connection is established, you can browse table schemas and preview data before importing Luraschi (2023).\nCode R Core Team (2015):"
+    "title": "Importing Data in R: Exploring Various Packages and Their Advantages",
+    "section": "4.4 Relational Databases (.db, .sqlite, .mdb)",
+    "text": "4.4 Relational Databases (.db, .sqlite, .mdb)\n\nGraphical: Access through the RStudio “Connections” pane. Once a DBI connection is established, you can browse table schemas and preview data before importing Luraschi (2023).\nCode R Core Team (2015):\n\nlibrary(DBI)\nlibrary(RSQLite)\n# Connect to SQLite database\ncon &lt;- dbConnect(RSQLite::SQLite(), \"company.db\")\n# Read table\ndf_db &lt;- dbGetQuery(con, \"SELECT * FROM employees\")\n# Show data\ndf_db\n# Disconnect\ndbDisconnect(con)"
   },
   {
     "objectID": "index.html#spatial-gis-data-.shp-.tif-.kml",
     "href": "index.html#spatial-gis-data-.shp-.tif-.kml",
-    "title": "Importing Data in R: Exploring Various Packages and Their Advantages: Data Analysis for Decision-Making (SS 2026)",
-    "section": "5.5 Spatial / GIS Data (.shp, .tif, .kml)",
-    "text": "5.5 Spatial / GIS Data (.shp, .tif, .kml)\n\nGraphical: Usually handled programmatically, though GIS software like GRASS can be linked to R to browse spatial layers.\nCode Bivand et al. (2008) :"
+    "title": "Importing Data in R: Exploring Various Packages and Their Advantages",
+    "section": "4.5 Spatial / GIS Data (.shp, .tif, .kml)",
+    "text": "4.5 Spatial / GIS Data (.shp, .tif, .kml)\n\nGraphical: Usually handled programmatically, though GIS software like GRASS can be linked to R to browse spatial layers.\nCode Bivand et al. (2008) :\n\nlibrary(sf)\n# Read shapefile\nspatial_data &lt;- st_read(\"sample_shapefile.shp\")\n# Preview spatial object\nprint(spatial_data)"
   },
   {
     "objectID": "index.html#base-text-and-fixed-width-files-.txt-.dat-.fwf",
     "href": "index.html#base-text-and-fixed-width-files-.txt-.dat-.fwf",
-    "title": "Importing Data in R: Exploring Various Packages and Their Advantages: Data Analysis for Decision-Making (SS 2026)",
-    "section": "5.6 Base Text and Fixed-Width Files (.txt, .dat, .fwf)",
-    "text": "5.6 Base Text and Fixed-Width Files (.txt, .dat, .fwf)\n\nGraphical: Use the “From Text (base)” option in the RStudio wizard for legacy text formats that require manual field-width definitions Luraschi (2023).\nCode R Core Team (2015):"
+    "title": "Importing Data in R: Exploring Various Packages and Their Advantages",
+    "section": "4.6 Base Text and Fixed-Width Files (.txt, .dat, .fwf)",
+    "text": "4.6 Base Text and Fixed-Width Files (.txt, .dat, .fwf)\n\nGraphical: Use the “From Text (base)” option in the RStudio wizard for legacy text formats that require manual field-width definitions Luraschi (2023).\nCode R Core Team (2015):\n\n# Import fixed-width file\ndf_fwf &lt;- read.fwf(\n  \"legacy_data.fwf\",\n  widths = c(3, 6, 5),\n  col.names = c(\"ID\", \"Name\", \"Score\")\n)\n\ndf_fwf"
   },
   {
     "objectID": "index.html#scientific-spectral-data-.jdx-.abs-.cnv-.nc",
     "href": "index.html#scientific-spectral-data-.jdx-.abs-.cnv-.nc",
-    "title": "Importing Data in R: Exploring Various Packages and Their Advantages: Data Analysis for Decision-Making (SS 2026)",
-    "section": "5.7 Scientific Spectral Data (.jdx, .abs, .cnv, .nc)",
-    "text": "5.7 Scientific Spectral Data (.jdx, .abs, .cnv, .nc)\n\nGraphical: Utilize specialized package GUIs or high-level functions that automate folder-wide imports Gruson et al. (2019).\nCode Gruson et al. (2019) :"
+    "title": "Importing Data in R: Exploring Various Packages and Their Advantages",
+    "section": "4.7 Scientific Spectral Data (.jdx, .abs, .cnv, .nc)",
+    "text": "4.7 Scientific Spectral Data (.jdx, .abs, .cnv, .nc)\n\nGraphical: Utilize specialized package GUIs or high-level functions that automate folder-wide imports Gruson et al. (2019).\nCode Gruson et al. (2019) :\n\nlibrary(lightr)\n\n# Import spectral data\nspec_data &lt;- lr_get_spec(\"spectrum.jdx\")\n\n# Show spectral data\nhead(spec_data)"
   },
   {
     "objectID": "index.html#cloud-sheets-google-sheets-urls",
     "href": "index.html#cloud-sheets-google-sheets-urls",
-    "title": "Importing Data in R: Exploring Various Packages and Their Advantages: Data Analysis for Decision-Making (SS 2026)",
-    "section": "5.8 Cloud Sheets (Google Sheets/ URLs)",
-    "text": "5.8 Cloud Sheets (Google Sheets/ URLs)\n\nCode: Chapman University (2026)"
+    "title": "Importing Data in R: Exploring Various Packages and Their Advantages",
+    "section": "4.8 Cloud Sheets (Google Sheets/ URLs)",
+    "text": "4.8 Cloud Sheets (Google Sheets/ URLs)\n\nCode: Chapman University (2026)\n\nlibrary(googlesheets4)\n# Import Google Sheet\ngs4_deauth()\nsheet_data &lt;- read_sheet(\n  \"https://docs.google.com/spreadsheets/d/19Z6SowrQtCS_NsIAZ9ZcaZeb532cSlOOTPCSqfKKsSw/edit?usp=sharing\"\n)\n\nsheet_data"
   },
   {
     "objectID": "index.html#hierarchical-data-.json",
     "href": "index.html#hierarchical-data-.json",
-    "title": "Importing Data in R: Exploring Various Packages and Their Advantages: Data Analysis for Decision-Making (SS 2026)",
-    "section": "5.9 Hierarchical Data (.json)",
-    "text": "5.9 Hierarchical Data (.json)\n\nGraphical: While RStudio does not have a dedicated “JSON Wizard” in the same way it does for Excel or CSV, users can often preview JSON structures through the File Pane or by using specialized viewing packages.\nCode R Core Team (2015) :"
+    "title": "Importing Data in R: Exploring Various Packages and Their Advantages",
+    "section": "4.9 Hierarchical Data (.json)",
+    "text": "4.9 Hierarchical Data (.json)\n\nGraphical: While RStudio does not have a dedicated “JSON Wizard” in the same way it does for Excel or CSV, users can often preview JSON structures through the File Pane or by using specialized viewing packages.\nCode R Core Team (2015) :\n\n\nlibrary(jsonlite)\ndf_json &lt;- fromJSON(\"data.json\")\ndf_json"
   },
   {
     "objectID": "index.html#importing-data-from-multiple-files",
     "href": "index.html#importing-data-from-multiple-files",
-    "title": "Importing Data in R: Exploring Various Packages and Their Advantages: Data Analysis for Decision-Making (SS 2026)",
-    "section": "5.10 Importing Data From Multiple Files",
-    "text": "5.10 Importing Data From Multiple Files\nDecision-makers often face the need to import hundreds of files simultaneously. R provides several automation strategies Wickham and Grolemund (2016), Gruson et al. (2019).\n\nAutomated Recursive Import: Specialized tools like lightr use functions such as lr_get_spec() to search subfolders automatically for specific extensions and process them using parallelized loops to save time Gruson et al. (2019).\nThe Tidyverse Approach (Iteration): The most flexible method combines list.files() with the purrr package. By using map() or map_df(), an analyst can apply a read function to every path in a list, automatically stacking them into a single unified tibble Wickham et al. (2019).\nComplex Multi-File Formats: Some formats are naturally batch-oriented. For example, a single “Shapefile” is a collection of files (.shp, .dbf, etc.). The readOGR() function in rgdal uses a Data Source Name (DSN)—often a folder path—to treat these multiple files as a single spatial object Bivand et al. (2008), R Core Team (2015).\nCustom Functions for Productivity: speedR can graphically define an import process and then generate a new R function containing those specific constraints. This “ready-to-use” code can be applied to any number of similar files to ensure a consistent pipeline Visne et al. (2012)."
+    "title": "Importing Data in R: Exploring Various Packages and Their Advantages",
+    "section": "4.10 Importing Data From Multiple Files",
+    "text": "4.10 Importing Data From Multiple Files\nDecision-makers often face the need to import hundreds of files simultaneously. R provides several automation strategies Wickham & Grolemund (2016), Gruson et al. (2019).\n\nAutomated Recursive Import: Specialized tools like lightr use functions such as lr_get_spec() to search subfolders automatically for specific extensions and process them using parallelized loops to save time Gruson et al. (2019).\nThe Tidyverse Approach (Iteration): The most flexible method combines list.files() with the purrr package. By using map() or map_df(), an analyst can apply a read function to every path in a list, automatically stacking them into a single unified tibble Wickham et al. (2019).\nComplex Multi-File Formats: Some formats are naturally batch-oriented. For example, a single “Shapefile” is a collection of files (.shp, .dbf, etc.). The readOGR() function in rgdal uses a Data Source Name (DSN)—often a folder path—to treat these multiple files as a single spatial object Bivand et al. (2008), R Core Team (2015).\nCustom Functions for Productivity: speedR can graphically define an import process and then generate a new R function containing those specific constraints. This “ready-to-use” code can be applied to any number of similar files to ensure a consistent pipeline Visne et al. (2012)."
   },
   {
     "objectID": "Presentation.html#standard-tabular-data-.csv-.tsv",
@@ -362,5 +362,33 @@
     "title": "Importing Data in R: Exploring Various Packages and Their Advantages",
     "section": "7.3 Spare Parts Sheet",
     "text": "7.3 Spare Parts Sheet\n\nImagine that you and your colleagues in the company are working on a google spreadsheet, together. now you want to import data from it into R. Use this Link and import it in the R Studio. if you had problem with the link to Google spreadsheet, upload it (it is available in the exercise zip folder) in your own account, and then use your own link."
+  },
+  {
+    "objectID": "index.html#help-the-hr-manager",
+    "href": "index.html#help-the-hr-manager",
+    "title": "Importing Data in R: Exploring Various Packages and Their Advantages",
+    "section": "7.1 Help The HR Manager!",
+    "text": "7.1 Help The HR Manager!\n\nYou are helping a HR manager in the company. She has given you CSV file about the personnel information (off-course after signing relative Non-disclusure agreement!). This data file is changing every month and it is a real pain for her to create the report every time! She knows you have R knowledge! and ask you to prepare a dynamic file by import the data into R, so she can easily prepare report very quickly in the beginning of every month. go ahead and do first step which is importing the exe1.csv file into R Studio."
+  },
+  {
+    "objectID": "index.html#everyday-sales-report",
+    "href": "index.html#everyday-sales-report",
+    "title": "Importing Data in R: Exploring Various Packages and Their Advantages",
+    "section": "7.2 Everyday Sales Report!",
+    "text": "7.2 Everyday Sales Report!\n\nYou are a manager in a company and the sale department gives you sales reports in excel file every morning. consider that you have recieved exe2.xlsx file today. Import it to R Studio."
+  },
+  {
+    "objectID": "index.html#spare-parts-sheet",
+    "href": "index.html#spare-parts-sheet",
+    "title": "Importing Data in R: Exploring Various Packages and Their Advantages",
+    "section": "7.3 Spare Parts Sheet",
+    "text": "7.3 Spare Parts Sheet\n\nImagine that you and your colleagues in the company are working on a google spreadsheet, together. now you want to import data from it into R. Use this Link and import it in the R Studio. if you had problem with the link to Google spreadsheet, upload it (it is available in the exercise zip folder) in your own account, and then use your own link.\n\n\n\n\n\n\n\nTipAffidavit\n\n\n\nI hereby affirm that this submitted paper was authored unaided and solely by me. Additionally, no other sources than those in the reference list were used. Parts of this paper, including tables and figures, that have been taken either verbatim or analogously from other works have in each case been properly cited with regard to their origin and authorship. This paper either in parts or in its entirety, be it in the same or similar form, has not been submitted to any other examination board and has not been published.\nI acknowledge that the university may use plagiarism detection software to check my thesis. I agree to cooperate with any investigation of suspected plagiarism and to provide any additional information or evidence requested by the university.\nChecklist:\n\nThe handout contains 3-5 pages of text.\nThe submission contains the Quarto file of the handout.\nThe submission contains the Quarto file of the presentation.\nThe submission contains the HTML file of the handout.\nThe submission contains the HTML file of the presentation.\nThe submission contains the PDF file of the handout.\nThe submission contains the PDF file of the presentation.\nThe title page of the presentation and the handout contain personal details (name, email, matriculation number).\nThe handout contains a bibliography, created using BibTeX with an APA citation style.\nEither the handout or the presentation contains R code that proofs the expertise in coding.\nThe filled out Affidavit.\nThe link to the presentation and the handout published on GitHub.\n\nAli Soleimani, 17.05.2026, Cologne"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Importing Data in R: Exploring Various Packages and Their Advantages",
+    "section": "",
+    "text": "Presentation Html\nPresentation PDF\nExercises"
   }
 ]

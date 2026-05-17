@@ -2,6 +2,12 @@
 title: "Importing Data in R: Exploring Various Packages and Their Advantages"
 subtitle: "Data Analysis for Decision-Making (SS 2026)"
 
+lang: en
+
+header-includes:
+  - \providecommand{\lastauthorseparator}{and}
+  - \providecommand{\notelabel}{Note}
+
 author:
   - name: "Ali Soleimani (Matriculation Nr.: 401166548)"
     corresponding: true
@@ -12,30 +18,26 @@ author:
 date: today
 date-format: long
 
-abstract: |
-  This document describes the importance of importing data in R,
-  introducing the packages and their advantages.
+abstract:
+  "This document describes the importance of importing data in R,
+  introducing the packages and their advantages."
 
 format:
   apaquarto-pdf:
     documentmode: doc
-  apaquarto-html: default
+    mainfont: "Times New Roman"
+    suppress-short-title: true
+  html:
+    embed-resources: true
+    page-layout: article
 
+a4paper: true
 bibliography: references.bib
 csl: apa.csl
 
 number-sections: true
 reference-location: document
 ---
-
-# Links
-
--   [Presentation Html](https://alisoleimani71.github.io/Presentation.html)
-
--   [Presentation PDF](https://alisoleimani71.github.io/Presentation.pdf)
-
--   [Exercises](https://drive.google.com/file/d/17co85tSnV84tRCVxreNODKs_2N6F92Xc/view?usp=sharing)
-
 ![](download.png)
 
 # Why Do We Import Data? Why with R?
@@ -311,5 +313,5 @@ Checklist:
 -   [x] The filled out Affidavit.
 -   [x] The link to the presentation and the handout published on GitHub.
 
-Ali Soleimani, 15.05.2026, Cologne
+Ali Soleimani, 17.05.2026, Cologne
 :::
