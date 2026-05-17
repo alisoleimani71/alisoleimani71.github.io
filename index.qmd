@@ -4,10 +4,8 @@ subtitle: "Data Analysis for Decision-Making (SS 2026)"
 
 lang: en
 
-header-includes:
-  - \providecommand{\lastauthorseparator}{and}
-  - \providecommand{\notelabel}{Note}
-
+include-in-header: _preamble.tex
+    
 author:
   - name: "Ali Soleimani (Matriculation Nr.: 401166548)"
     corresponding: true
@@ -15,10 +13,10 @@ author:
       - name: Fresenius University of Applied Science
     email: soleimani.ali@stud.hs-fresenius.de
 
-date: today
+date: 2026-05-17
 date-format: long
 
-abstract:
+abstract: |
   "This document describes the importance of importing data in R,
   introducing the packages and their advantages."
 
@@ -30,7 +28,12 @@ format:
   html:
     embed-resources: true
     page-layout: article
-
+    
+execute:
+  echo: true
+  warning: false
+  message: false
+  
 a4paper: true
 bibliography: references.bib
 csl: apa.csl
@@ -39,7 +42,7 @@ number-sections: true
 reference-location: document
 ---
 
-![](download.png)
+![](download.png){width=60% fig-align="center"}
 
 # Why Do We Import Data? Why with R?
 
