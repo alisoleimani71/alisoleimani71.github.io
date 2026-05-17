@@ -277,21 +277,21 @@
     "href": "Presentation.html#standard-tabular-data-.csv-.tsv",
     "title": "Importing Data in R: Exploring Various Packages and Their Advantages",
     "section": "4.1 Standard Tabular Data (.csv, .tsv)",
-    "text": "4.1 Standard Tabular Data (.csv, .tsv)\n\nGraphical: Use the RStudio “Import Dataset” wizard and select “From Text (readr)”. This allows for a live preview where you can visually change delimiters, skip rows, and rename columns while the GUI generates the code automatically Luraschi (2023).\nCode Wickham & Grolemund (2016) :\n\n\nlibrary(readr)\ndf_readr &lt;- read_csv(\"data.csv\")\ndf_readr\n\nlarge CSV:\n\nlibrary(data.table)\ndf_fread &lt;- fread(\"bigdata.csv\")\ndf_fread"
+    "text": "4.1 Standard Tabular Data (.csv, .tsv)\n\nGraphical: In R studio click on the File and then Import dataset and then you can see two options for importing text file, as shown in the handout.\nCode:\n\nFrom text Base\n\ndf_base &lt;- read.csv(\"data.csv\")\ndf_base\n\nFrom text readr\n\nlibrary(readr)\ndf_readr &lt;- read_csv(\"data.csv\")\ndf_readr"
   },
   {
     "objectID": "Presentation.html#proprietary-excel-files-.xls-.xlsx",
     "href": "Presentation.html#proprietary-excel-files-.xls-.xlsx",
     "title": "Importing Data in R: Exploring Various Packages and Their Advantages",
     "section": "4.2 Proprietary Excel Files (.xls, .xlsx)",
-    "text": "4.2 Proprietary Excel Files (.xls, .xlsx)\n\nGraphical: Select “From Excel” in the RStudio wizard. This is crucial for navigating multi-sheet workbooks, as you can select specific sheets and define a cell range (e.g.,”A1:E20”) graphically Luraschi (2023).\nCode Chapman University (2026):\n\n\nlibrary(readxl)\ndf_excel &lt;- read_excel(\"file.xlsx\")\ndf_excel"
+    "text": "4.2 Proprietary Excel Files (.xls, .xlsx)\ninstall Tideyverse\n\nGraphical: Select “From Excel” in the RStudio wizard. Then you you can select from which sheet you want to import data, and also define a cell range (e.g., “A1:E20”) graphically.\nCode Chapman University (2026):\n\n\nlibrary(readxl)\ndf_excel &lt;- read_excel(\"file.xlsx\")\ndf_excel"
   },
   {
     "objectID": "Presentation.html#statistical-software-files-.sav-.sas7bdat-.dta",
     "href": "Presentation.html#statistical-software-files-.sav-.sas7bdat-.dta",
     "title": "Importing Data in R: Exploring Various Packages and Their Advantages",
     "section": "4.3 Statistical Software Files (.sav, .sas7bdat, .dta)",
-    "text": "4.3 Statistical Software Files (.sav, .sas7bdat, .dta)\n\nGraphical: Select “From SPSS/SAS/Stata” in RStudio. This wizard is particularly helpful as it shows how proprietary labels and missing value codes will be translated into R factors Luraschi (2023).\nCode R Core Team (2015):\n\n\n    library(haven)\n    # Import SPSS file\n    df_spss &lt;- read_sav(\"survey_data.sav\")\n    # Import Stata file\n    df_stata &lt;- read_dta(\"economic_data.dta\")\n    # Preview imported data\n    head(df_spss)\n    head(df_stata)"
+    "text": "4.3 Statistical Software Files (.sav, .sas7bdat, .dta)\n\nGraphical: Select “From SPSS/SAS/Stata” in RStudio.\n\n\n\nFigure 1: Importing from .sav or .dta files\n\nCode R Core Team (2015):\n\nlibrary(haven)\n# Import SPSS file\ndf_spss &lt;- read_sav(\"survey_data.sav\")\n# Import Stata file\ndf_stata &lt;- read_dta(\"economic_data.dta\")\n# Preview imported data\nhead(df_spss)\nhead(df_stata)"
   },
   {
     "objectID": "Presentation.html#relational-databases-.db-.sqlite-.mdb",
@@ -304,36 +304,36 @@
     "objectID": "Presentation.html#spatial-gis-data-.shp-.tif-.kml",
     "href": "Presentation.html#spatial-gis-data-.shp-.tif-.kml",
     "title": "Importing Data in R: Exploring Various Packages and Their Advantages",
-    "section": "4.5 Spatial / GIS Data (.shp, .tif, .kml)",
-    "text": "4.5 Spatial / GIS Data (.shp, .tif, .kml)\n\nGraphical: Usually handled programmatically, though GIS software like GRASS can be linked to R to browse spatial layers.\nCode Bivand et al. (2008) :\n\n\n    library(sf)\n    # Read shapefile\n    spatial_data &lt;- st_read(\"sample_shapefile.shp\")\n    # Preview spatial object\n    print(spatial_data)"
+    "section": "4.4 Spatial / GIS Data (.shp, .tif, .kml)",
+    "text": "4.4 Spatial / GIS Data (.shp, .tif, .kml)\n\nCode Bivand et al. (2008) :\n\nlibrary(sf)\n# Read shapefile\nspatial_data &lt;- st_read(\"sample_shapefile.shp\")\n# Preview spatial object\nprint(spatial_data)"
   },
   {
     "objectID": "Presentation.html#base-text-and-fixed-width-files-.txt-.dat-.fwf",
     "href": "Presentation.html#base-text-and-fixed-width-files-.txt-.dat-.fwf",
     "title": "Importing Data in R: Exploring Various Packages and Their Advantages",
-    "section": "4.6 Base Text and Fixed-Width Files (.txt, .dat, .fwf)",
-    "text": "4.6 Base Text and Fixed-Width Files (.txt, .dat, .fwf)\n\nGraphical: Use the “From Text (base)” option in the RStudio wizard for legacy text formats that require manual field-width definitions Luraschi (2023).\nCode R Core Team (2015):\n\n\n    # Import fixed-width file\n    df_fwf &lt;- read.fwf(\n      \"legacy_data.fwf\",\n      widths = c(3, 6, 5),\n      col.names = c(\"ID\", \"Name\", \"Score\")\n    )\n\n    df_fwf"
+    "section": "4.5 Base Text and Fixed-Width Files (.txt, .dat, .fwf)",
+    "text": "4.5 Base Text and Fixed-Width Files (.txt, .dat, .fwf)\n\nGraphical: Use the “From Text (base)” option in the RStudio wizard.\nCode R Core Team (2015):\n\n# Import fixed-width file\ndf_fwf &lt;- read.fwf(\n  \"legacy_data.fwf\",\n  widths = c(3, 6, 5),\n  col.names = c(\"ID\", \"Name\", \"Score\")\n)\n\ndf_fwf"
   },
   {
     "objectID": "Presentation.html#scientific-spectral-data-.jdx-.abs-.cnv-.nc",
     "href": "Presentation.html#scientific-spectral-data-.jdx-.abs-.cnv-.nc",
     "title": "Importing Data in R: Exploring Various Packages and Their Advantages",
-    "section": "4.7 Scientific Spectral Data (.jdx, .abs, .cnv, .nc)",
-    "text": "4.7 Scientific Spectral Data (.jdx, .abs, .cnv, .nc)\n\nGraphical: Utilize specialized package GUIs or high-level functions that automate folder-wide imports Gruson et al. (2019).\nCode Gruson et al. (2019) :\n\n\n    library(lightr)\n\n    # Import spectral data\n    spec_data &lt;- lr_get_spec(\"spectrum.jdx\")\n\n    # Show spectral data\n    head(spec_data)"
+    "section": "4.6 Scientific Spectral Data (.jdx, .abs, .cnv, .nc)",
+    "text": "4.6 Scientific Spectral Data (.jdx, .abs, .cnv, .nc)\n\nGraphical: Utilize specialized package GUIs or high-level functions that automate folder-wide imports Gruson et al. (2019).\nCode Gruson et al. (2019) :\n\nlibrary(lightr)\n\n# Import spectral data\nspec_data &lt;- lr_get_spec(\"spectrum.jdx\")\n\n# Show spectral data\nhead(spec_data)"
   },
   {
     "objectID": "Presentation.html#cloud-sheets-google-sheets-urls",
     "href": "Presentation.html#cloud-sheets-google-sheets-urls",
     "title": "Importing Data in R: Exploring Various Packages and Their Advantages",
-    "section": "4.8 Cloud Sheets (Google Sheets/ URLs)",
-    "text": "4.8 Cloud Sheets (Google Sheets/ URLs)\n\nCode: Chapman University (2026)\n\n\n    library(googlesheets4)\n    # Import Google Sheet\n    gs4_deauth()\n    sheet_data &lt;- read_sheet(\n      \"https://docs.google.com/spreadsheets/d/19Z6SowrQtCS_NsIAZ9ZcaZeb532cSlOOTPCSqfKKsSw/edit?usp=sharing\"\n    )\n\n    sheet_data"
+    "section": "4.7 Cloud Sheets (Google Sheets/ URLs)",
+    "text": "4.7 Cloud Sheets (Google Sheets/ URLs)\n\nCode: Chapman University (2026)\n\nlibrary(googlesheets4)\n# Import Google Sheet\ngs4_deauth()\nsheet_data &lt;- read_sheet(\n  \"https://docs.google.com/spreadsheets/d/1BoD9bXwbxm1NJWhEnk6BVXUxuxWbWArQWVT3LIKk2PQ/edit?gid=827746275#gid=827746275\"\n)\n\nsheet_data"
   },
   {
     "objectID": "Presentation.html#hierarchical-data-.json",
     "href": "Presentation.html#hierarchical-data-.json",
     "title": "Importing Data in R: Exploring Various Packages and Their Advantages",
-    "section": "4.9 Hierarchical Data (.json)",
-    "text": "4.9 Hierarchical Data (.json)\n\nGraphical: While RStudio does not have a dedicated “JSON Wizard” in the same way it does for Excel or CSV, users can often preview JSON structures through the File Pane or by using specialized viewing packages.\nCode R Core Team (2015) :\n\n\nlibrary(jsonlite)\ndf_json &lt;- fromJSON(\"data.json\")\ndf_json"
+    "section": "4.8 Hierarchical Data (.json)",
+    "text": "4.8 Hierarchical Data (.json)\n\nGraphical: While RStudio does not have a dedicated “JSON Wizard” in the same way it does for Excel or CSV, users can often preview JSON structures through the File Pane or by using specialized viewing packages.\nCode R Core Team (2015) :\n\n\nlibrary(jsonlite)\ndf_json &lt;- fromJSON(\"data.json\")\ndf_json"
   },
   {
     "objectID": "Presentation.html#importing-data-from-multiple-files",
@@ -346,22 +346,22 @@
     "objectID": "Presentation.html#help-the-hr-manager",
     "href": "Presentation.html#help-the-hr-manager",
     "title": "Importing Data in R: Exploring Various Packages and Their Advantages",
-    "section": "6.1 Help The HR Manager!",
-    "text": "6.1 Help The HR Manager!\n\nYou are helping a HR manager in the company. She has given you CSV file about the personnel information (off-course after signing relative Non-disclusure agreement!). This data file is changing every month and it is a real pain for her to create the report every time! She knows you have R knowledge! and ask you to prepare a dynamic file by import the data into R, so she can easily prepare report very quickly in the beginning of every month. go ahead and do first step which is importing the exe1.csv file into R Studio."
+    "section": "7.1 Help The HR Manager!",
+    "text": "7.1 Help The HR Manager!\n\nYou are helping a HR manager in the company. She has given you CSV file about the personnel information (off-course after signing relative Non-disclusure agreement!). This data file is changing every month and it is a real pain for her to create the report every time! She knows you have R knowledge! and ask you to prepare a dynamic file by import the data into R, so she can easily prepare report very quickly in the beginning of every month. go ahead and do first step which is importing the exe1.csv file into R Studio."
   },
   {
     "objectID": "Presentation.html#everyday-sales-report",
     "href": "Presentation.html#everyday-sales-report",
     "title": "Importing Data in R: Exploring Various Packages and Their Advantages",
-    "section": "6.2 Everyday Sales Report!",
-    "text": "6.2 Everyday Sales Report!\n\nYou are a manager in a company and the sale department gives you sales reports in excel file every morning. consider that you have recieved exe2.xlsx file today. Import it to R Studio."
+    "section": "7.2 Everyday Sales Report!",
+    "text": "7.2 Everyday Sales Report!\n\nYou are a manager in a company and the sale department gives you sales reports in excel file every morning. consider that you have recieved exe2.xlsx file today. Import it to R Studio."
   },
   {
     "objectID": "Presentation.html#spare-parts-sheet",
     "href": "Presentation.html#spare-parts-sheet",
     "title": "Importing Data in R: Exploring Various Packages and Their Advantages",
-    "section": "6.3 Spare Parts Sheet",
-    "text": "6.3 Spare Parts Sheet\n\nImagine that you and your colleagues in the company are working on a google spreadsheet, together. now you want to import data from it into R. Use this Link and import it in the R Studio. if you had problem with the link to Google spreadsheet, upload it (it is available in the exercise zip folder) in your own account, and then use your own link."
+    "section": "7.3 Spare Parts Sheet",
+    "text": "7.3 Spare Parts Sheet\n\nImagine that you and your colleagues in the company are working on a google spreadsheet, together. now you want to import data from it into R. Use this Link and import it in the R Studio. if you had problem with the link to Google spreadsheet, upload it (it is available in the exercise zip folder) in your own account, and then use your own link."
   },
   {
     "objectID": "index.html#help-the-hr-manager",
