@@ -207,21 +207,21 @@
     "href": "index.html#standard-tabular-data-.csv-.tsv",
     "title": "Importing Data in R: Exploring Various Packages and Their Advantages",
     "section": "4.1 Standard Tabular Data (.csv, .tsv)",
-    "text": "4.1 Standard Tabular Data (.csv, .tsv)\n\nGraphical: Use the RStudio “Import Dataset” wizard and select “From Text (readr)”. This allows for a live preview where you can visually change delimiters, skip rows, and rename columns while the GUI generates the code automatically Luraschi (2023).\nCode Wickham & Grolemund (2016) :\n\n\nlibrary(readr)\ndf_readr &lt;- read_csv(\"data.csv\")\ndf_readr\n\nlarge CSV:\n\nlibrary(data.table)\ndf_fread &lt;- fread(\"bigdata.csv\")\ndf_fread"
+    "text": "4.1 Standard Tabular Data (.csv, .tsv)\n\nGraphical: In R studio click on the File and then Import dataset and then you can see two options for importing text file, as shown in the Figure 2.\n\n\n\n\n\n\n\nFigure 2: Opening Import section in R studio\n\n\n\nThen you have option for base or readr packages. base package (see Figure 3) is the basic package which is slower. however, readr which is a part of tidyverse (see Figure 4) pacakge and requires installation prior to use, allows for a live preview where you can visually change delimiters, skip rows, and rename columns while the GUI generates the code automatically.\n\n\n\n\n\n\nFigure 3: Importing from text base window\n\n\n\n\n\n\n\n\n\nFigure 4: Imporing From text readr window\n\n\n\n\nCode :\n\nFrom text Base\n\ndf_base &lt;- read.csv(\"data.csv\")\ndf_base\n\nFrom text readr\n\nlibrary(readr)\ndf_readr &lt;- read_csv(\"data.csv\")\ndf_readr"
   },
   {
     "objectID": "index.html#proprietary-excel-files-.xls-.xlsx",
     "href": "index.html#proprietary-excel-files-.xls-.xlsx",
     "title": "Importing Data in R: Exploring Various Packages and Their Advantages",
     "section": "4.2 Proprietary Excel Files (.xls, .xlsx)",
-    "text": "4.2 Proprietary Excel Files (.xls, .xlsx)\n\nGraphical: Select “From Excel” in the RStudio wizard. This is crucial for navigating multi-sheet workbooks, as you can select specific sheets and define a cell range (e.g.,”A1:E20”) graphically Luraschi (2023).\nCode Chapman University (2026):\n\n\nlibrary(readxl)\ndf_excel &lt;- read_excel(\"file.xlsx\")\ndf_excel"
+    "text": "4.2 Proprietary Excel Files (.xls, .xlsx)\nFor Excel files, you have to install a package. Tideyverse is recommended for it. it is easy to use.\n\nGraphical: Select “From Excel” in the RStudio wizard. Then you will see a window like Figure 5 and you can select from which sheet you want to import data, and also define a cell range (e.g., “A1:E20”) graphically.\n\n\n\n\n\n\n\nFigure 5: Importing from Excel\n\n\n\n\nCode Chapman University (2026):\n\n\nlibrary(readxl)\ndf_excel &lt;- read_excel(\"file.xlsx\")\ndf_excel"
   },
   {
     "objectID": "index.html#statistical-software-files-.sav-.sas7bdat-.dta",
     "href": "index.html#statistical-software-files-.sav-.sas7bdat-.dta",
     "title": "Importing Data in R: Exploring Various Packages and Their Advantages",
     "section": "4.3 Statistical Software Files (.sav, .sas7bdat, .dta)",
-    "text": "4.3 Statistical Software Files (.sav, .sas7bdat, .dta)\n\nGraphical: Select “From SPSS/SAS/Stata” in RStudio. This wizard is particularly helpful as it shows how proprietary labels and missing value codes will be translated into R factors Luraschi (2023).\nCode R Core Team (2015):\n\nlibrary(haven)\n# Import SPSS file\ndf_spss &lt;- read_sav(\"survey_data.sav\")\n# Import Stata file\ndf_stata &lt;- read_dta(\"economic_data.dta\")\n# Preview imported data\nhead(df_spss)\nhead(df_stata)"
+    "text": "4.3 Statistical Software Files (.sav, .sas7bdat, .dta)\n\nGraphical: Select “From SPSS/SAS/Stata” in RStudio.\n\n\n\n\n\n\n\nFigure 6: Importing from .sav or .dta files\n\n\n\n\nCode R Core Team (2015):\n\nlibrary(haven)\n# Import SPSS file\ndf_spss &lt;- read_sav(\"survey_data.sav\")\n# Import Stata file\ndf_stata &lt;- read_dta(\"economic_data.dta\")\n# Preview imported data\nhead(df_spss)\nhead(df_stata)"
   },
   {
     "objectID": "index.html#relational-databases-.db-.sqlite-.mdb",
@@ -235,14 +235,14 @@
     "href": "index.html#spatial-gis-data-.shp-.tif-.kml",
     "title": "Importing Data in R: Exploring Various Packages and Their Advantages",
     "section": "4.5 Spatial / GIS Data (.shp, .tif, .kml)",
-    "text": "4.5 Spatial / GIS Data (.shp, .tif, .kml)\n\nGraphical: Usually handled programmatically, though GIS software like GRASS can be linked to R to browse spatial layers.\nCode Bivand et al. (2008) :\n\nlibrary(sf)\n# Read shapefile\nspatial_data &lt;- st_read(\"sample_shapefile.shp\")\n# Preview spatial object\nprint(spatial_data)"
+    "text": "4.5 Spatial / GIS Data (.shp, .tif, .kml)\n\nCode Bivand et al. (2008) :\n\nlibrary(sf)\n# Read shapefile\nspatial_data &lt;- st_read(\"sample_shapefile.shp\")\n# Preview spatial object\nprint(spatial_data)"
   },
   {
     "objectID": "index.html#base-text-and-fixed-width-files-.txt-.dat-.fwf",
     "href": "index.html#base-text-and-fixed-width-files-.txt-.dat-.fwf",
     "title": "Importing Data in R: Exploring Various Packages and Their Advantages",
     "section": "4.6 Base Text and Fixed-Width Files (.txt, .dat, .fwf)",
-    "text": "4.6 Base Text and Fixed-Width Files (.txt, .dat, .fwf)\n\nGraphical: Use the “From Text (base)” option in the RStudio wizard for legacy text formats that require manual field-width definitions Luraschi (2023).\nCode R Core Team (2015):\n\n# Import fixed-width file\ndf_fwf &lt;- read.fwf(\n  \"legacy_data.fwf\",\n  widths = c(3, 6, 5),\n  col.names = c(\"ID\", \"Name\", \"Score\")\n)\n\ndf_fwf"
+    "text": "4.6 Base Text and Fixed-Width Files (.txt, .dat, .fwf)\n\nGraphical: Use the “From Text (base)” option in the RStudio wizard.\nCode R Core Team (2015):\n\n# Import fixed-width file\ndf_fwf &lt;- read.fwf(\n  \"legacy_data.fwf\",\n  widths = c(3, 6, 5),\n  col.names = c(\"ID\", \"Name\", \"Score\")\n)\n\ndf_fwf"
   },
   {
     "objectID": "index.html#scientific-spectral-data-.jdx-.abs-.cnv-.nc",
@@ -256,7 +256,7 @@
     "href": "index.html#cloud-sheets-google-sheets-urls",
     "title": "Importing Data in R: Exploring Various Packages and Their Advantages",
     "section": "4.8 Cloud Sheets (Google Sheets/ URLs)",
-    "text": "4.8 Cloud Sheets (Google Sheets/ URLs)\n\nCode: Chapman University (2026)\n\nlibrary(googlesheets4)\n# Import Google Sheet\ngs4_deauth()\nsheet_data &lt;- read_sheet(\n  \"https://docs.google.com/spreadsheets/d/19Z6SowrQtCS_NsIAZ9ZcaZeb532cSlOOTPCSqfKKsSw/edit?usp=sharing\"\n)\n\nsheet_data"
+    "text": "4.8 Cloud Sheets (Google Sheets/ URLs)\n\nCode: Chapman University (2026)\n\nlibrary(googlesheets4)\n# Import Google Sheet\ngs4_deauth()\nsheet_data &lt;- read_sheet(\n  \"https://docs.google.com/spreadsheets/d/1BoD9bXwbxm1NJWhEnk6BVXUxuxWbWArQWVT3LIKk2PQ/edit?gid=827746275#gid=827746275\"\n)\n\nsheet_data"
   },
   {
     "objectID": "index.html#hierarchical-data-.json",
@@ -382,13 +382,13 @@
     "href": "index.html#spare-parts-sheet",
     "title": "Importing Data in R: Exploring Various Packages and Their Advantages",
     "section": "7.3 Spare Parts Sheet",
-    "text": "7.3 Spare Parts Sheet\n\nImagine that you and your colleagues in the company are working on a google spreadsheet, together. now you want to import data from it into R. Use this Link and import it in the R Studio. if you had problem with the link to Google spreadsheet, upload it (it is available in the exercise zip folder) in your own account, and then use your own link.\n\n\n\n\n\n\n\nTipAffidavit\n\n\n\nI hereby affirm that this submitted paper was authored unaided and solely by me. Additionally, no other sources than those in the reference list were used. Parts of this paper, including tables and figures, that have been taken either verbatim or analogously from other works have in each case been properly cited with regard to their origin and authorship. This paper either in parts or in its entirety, be it in the same or similar form, has not been submitted to any other examination board and has not been published.\nI acknowledge that the university may use plagiarism detection software to check my thesis. I agree to cooperate with any investigation of suspected plagiarism and to provide any additional information or evidence requested by the university.\nChecklist:\n\nThe handout contains 3-5 pages of text.\nThe submission contains the Quarto file of the handout.\nThe submission contains the Quarto file of the presentation.\nThe submission contains the HTML file of the handout.\nThe submission contains the HTML file of the presentation.\nThe submission contains the PDF file of the handout.\nThe submission contains the PDF file of the presentation.\nThe title page of the presentation and the handout contain personal details (name, email, matriculation number).\nThe handout contains a bibliography, created using BibTeX with an APA citation style.\nEither the handout or the presentation contains R code that proofs the expertise in coding.\nThe filled out Affidavit.\nThe link to the presentation and the handout published on GitHub.\n\nAli Soleimani, 17.05.2026, Cologne"
+    "text": "7.3 Spare Parts Sheet\n\nImagine that you and your colleagues in the company are working on a google spreadsheet, together. now you want to import data from it into R. Use this Link and import it in the R Studio. if you had problem with the link to Google spreadsheet, upload it (it is available in the exercise zip folder) in your own account, and then use your own link.\n\n\n\n\n\n\n\nTipAffidavit\n\n\n\nI hereby affirm that this submitted paper was authored unaided and solely by me. Additionally, no other sources than those in the reference list were used. Parts of this paper, including tables and figures, that have been taken either verbatim or analogously from other works have in each case been properly cited with regard to their origin and authorship. This paper either in parts or in its entirety, be it in the same or similar form, has not been submitted to any other examination board and has not been published.\nI acknowledge that the university may use plagiarism detection software to check my thesis. I agree to cooperate with any investigation of suspected plagiarism and to provide any additional information or evidence requested by the university.\nChecklist:\n\nThe handout contains 3-5 pages of text.\nThe submission contains the Quarto file of the handout.\nThe submission contains the Quarto file of the presentation.\nThe submission contains the HTML file of the handout.\nThe submission contains the HTML file of the presentation.\nThe submission contains the PDF file of the handout.\nThe submission contains the PDF file of the presentation.\nThe title page of the presentation and the handout contain personal details (name, email, matriculation number).\nThe handout contains a bibliography, created using BibTeX with an APA citation style.\nEither the handout or the presentation contains R code that proofs the expertise in coding.\nThe filled out Affidavit.\nThe link to the presentation and the handout published on GitHub.\n\nAli Soleimani, 18.05.2026, Cologne"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Importing Data in R: Exploring Various Packages and Their Advantages",
     "section": "",
-    "text": "Presentation Html\nPresentation PDF\nExercises"
+    "text": "Figure 1: QRCode"
   }
 ]

@@ -1,1 +1,0 @@
-Place a .shp shapefile here if needed for rgdal/sf examples.

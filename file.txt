@@ -1,0 +1,6 @@
+ID	Name	Department	Salary	Experience
+1	Ali	Procurement	5200	5
+2	Sara	Marketing	4800	3
+3	John	Engineering	6100	7
+4	Mina	Finance	5500	6
+5	David	Operations	4700	2

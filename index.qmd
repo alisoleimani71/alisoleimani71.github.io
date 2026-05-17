@@ -39,12 +39,11 @@ csl: apa.csl
 
 number-sections: true
 reference-location: document
-embed-resources: true
 self-contained-math: true
-
+tbl-cap-location: top
+fig-cap-location: bottom
 ---
-
-![](download.png)
+![QRCode](download.png){#fig-qr fig-cap="QRCode"}
 
 # Why Do We Import Data? Why with R?
 
@@ -80,31 +79,48 @@ Before choosing a package, a data scientist must understand the structure of the
 
 R’s ecosystem offers a specialized collection of tools for data acquisition, ranging from built-in Base R functions to the modern, high-performance Tidyverse suite.
 
-@tbl-packages summarizes the primary packages used for various data formats in professional data science workflows. @wickham2019welcome, @chapman2026importing, @luraschi2023importing, @rcore2015r,@bivand2008applied, @visne2012speedr, @gruson2019lightr.
+@tbl-packages summarizes the primary packages used for various data formats in professional data science workflows.
 
-| Data Category | File Extensions | Key Package | Primary Functions |
-|------------------|------------------|------------------|------------------|
-| Standard Tabular | `.csv`, `.tsv`, `.txt` | readr | `read_csv`, `read_tsv` |
-| Proprietary Excel | `.xls`, `.xlsx` | readxl | `read_excel`, `excel_sheets` |
-| Statistical Files | `.sav`, `.sas7bdat`, `.dta` | haven | `read_sas`, `read_sav`, `read_dta` |
-| Relational DBs | `.db`, `.sqlite`, `.mdb` | DBI | `dbConnect`, `dbGetQuery` |
-| Spatial / GIS | `.shp`, `.tif`, `.kml` | sf | `st_read` |
-| Base Text | `.txt`, `.dat`, `.fwf` | utils | `read.table`, `read.csv`, `read.fwf` |
-| Scientific Data | `.jdx`, `.abs`, `.cnv`, `.nc` | lightr | `lr_get_spec` |
-| Cloud Sheets | URL | googlesheets4 | `read_sheet` |
-| Hierarchical Data | `.json` | jsonlite | `fromJSON` |
+Table: Overview of data import packages {#tbl-packages}
 
-: Overview of data import packages {#tbl-packages}
+| Data Category | File Extensions | Primary Functions |
+|-------------------|-----------------------|------------------------------|
+| Standard Tabular | `.csv`, `.tsv`, `.txt` | `read_csv`, `read_tsv` |
+| Proprietary Excel | `.xls`, `.xlsx` | `read_excel`, `excel_sheets` |
+| Statistical Files | `.sav`, `.sas7bdat`, `.dta` | `read_sas`, `read_sav`, `read_dta` |
+| Relational DBs | `.db`, `.sqlite`, `.mdb` | `dbConnect`, `dbGetQuery` |
+| Spatial / GIS | `.shp`, `.tif`, `.kml` | `st_read` |
+| Base Text | `.txt`, `.dat`, `.fwf` | `read.table`, `read.csv`, `read.fwf` |
+| Scientific Data | `.jdx`, `.abs`, `.cnv`, `.nc` | `lr_get_spec` |
+| Cloud Sheets | URL | `read_sheet` |
+| Hierarchical Data | `.json` | `fromJSON` |
 
 # Graphical and Programmatic Implementation by Data Type
 
-This section details the practical application of the tools identified in the previous page. For each category, we contrast the Graphical User Interface (GUI) approach—often best for initial exploration—with the Programmatic R Code required for reproducible scripts.
+This section details the practical application of the tools identified in the previous pages. For each category, we contrast the Graphical User Interface (GUI) approach—often best for initial exploration—with the Programmatic R Code required for reproducible scripts.
 
 ## Standard Tabular Data (.csv, .tsv)
 
--   **Graphical:** Use the RStudio "Import Dataset" wizard and select "From Text (readr)". This allows for a live preview where you can visually change delimiters, skip rows, and rename columns while the GUI generates the code automatically @luraschi2023importing.
+-   **Graphical:** In R studio click on the File and then Import dataset and then you can see two options for importing text file, as shown in the @fig-1.
 
--   **Code @wickham2016r** :
+![Opening Import section in R studio](1.png){#fig-1 fig-cap="Opening Import section in R studio" width="50%"}
+
+Then you have option for base or readr packages. base package (see @fig-2) is the basic package which is slower. however, readr which is a part of tidyverse (see @fig-3) pacakge and requires installation prior to use, allows for a live preview where you can visually change delimiters, skip rows, and rename columns while the GUI generates the code automatically.
+
+![Importing from text base window](2.png){#fig-2 width="50%"}
+
+![Imporing From text readr window](3.png){#fig-3 width="50%"}
+
+-   **Code** :
+
+From text Base
+
+```{r, eval=FALSE}
+df_base <- read.csv("data.csv")
+df_base
+```
+
+From text readr
 
 ```{r, eval=FALSE}
 library(readr)
@@ -112,17 +128,13 @@ df_readr <- read_csv("data.csv")
 df_readr
 ```
 
-large CSV:
-
-```{r, eval=FALSE}
-library(data.table)
-df_fread <- fread("bigdata.csv")
-df_fread
-```
-
 ## Proprietary Excel Files (.xls, .xlsx)
 
--   **Graphical:** Select "From Excel**"** in the RStudio wizard. This is crucial for navigating multi-sheet workbooks, as you can select specific sheets and define a cell range (e.g., "A1:E20") graphically @luraschi2023importing.
+For Excel files, you have to install a package. Tideyverse is recommended for it. it is easy to use.
+
+-   **Graphical:** Select "From Excel" in the RStudio wizard. Then you will see a window like @fig-4 and you can select from which sheet you want to import data, and also define a cell range (e.g., "A1:E20") graphically.
+
+![Importing from Excel](4.png){#fig-4 width="50%"}
 
 -   **Code** @chapman2026importing:
 
@@ -134,7 +146,9 @@ df_excel
 
 ## Statistical Software Files (.sav, .sas7bdat, .dta)
 
--   **Graphical:** Select "From SPSS/SAS/Stata" in RStudio. This wizard is particularly helpful as it shows how proprietary labels and missing value codes will be translated into R factors @luraschi2023importing.
+-   **Graphical:** Select "From SPSS/SAS/Stata" in RStudio.
+
+![Importing from .sav or .dta files](5.png){#fig-5 width="50%"}
 
 -   **Code @rcore2015r:**
 
@@ -170,8 +184,6 @@ df_excel
 
 ## Spatial / GIS Data (.shp, .tif, .kml)
 
--   **Graphical:** Usually handled programmatically, though GIS software like GRASS can be linked to R to browse spatial layers.
-
 -   **Code @bivand2008applied :**
 
     ```{r, eval=FALSE}
@@ -184,7 +196,7 @@ df_excel
 
 ## Base Text and Fixed-Width Files (.txt, .dat, .fwf)
 
--   **Graphical:** Use the "From Text (base)" option in the RStudio wizard for legacy text formats that require manual field-width definitions @luraschi2023importing.
+-   **Graphical:** Use the "From Text (base)" option in the RStudio wizard.
 
 -   **Code @rcore2015r:**
 
@@ -224,7 +236,7 @@ df_excel
     # Import Google Sheet
     gs4_deauth()
     sheet_data <- read_sheet(
-      "https://docs.google.com/spreadsheets/d/19Z6SowrQtCS_NsIAZ9ZcaZeb532cSlOOTPCSqfKKsSw/edit?usp=sharing"
+      "https://docs.google.com/spreadsheets/d/1BoD9bXwbxm1NJWhEnk6BVXUxuxWbWArQWVT3LIKk2PQ/edit?gid=827746275#gid=827746275"
     )
 
     sheet_data
@@ -256,7 +268,9 @@ Decision-makers often face the need to import hundreds of files simultaneously. 
 
 # The Comparison Between Packages
 
-Selecting the appropriate import method is a strategic decision that impacts the speed, reliability, and reproducibility of the analytical pipeline. @tbl-packagescomp provides a side-by-side comparison of the key packages discussed in this handnote to help choosing the right tool based on the specific data requirements. @wickham2019welcome , @luraschi2023importing, @rcore2015r, @chapman2026importing, @luraschi2023importing,
+Selecting the appropriate import method is a strategic decision that impacts the speed, reliability, and reproducibility of the analytical pipeline. @tbl-comparison provides a side-by-side comparison of the key packages discussed in this handnote to help choosing the right tool based on the specific data requirements.
+
+Table: The Comparison Between Packages {#tbl-comparison}
 
 | Data Category | File Formats | Recommended Package | Key Function | Graphical Method (GUI) | Main Advantage / Limitation |
 |------------|------------|------------|------------|------------|------------|
@@ -268,8 +282,6 @@ Selecting the appropriate import method is a strategic decision that impacts the
 | Hierarchical (Web) | .json | jsonlite | fromJSON() | N/A (Script-based) | Standard for APIs and JSON / Nested data can be complex. |
 | Batch Import | Multiple Files | purrr or lightr | `map()`, `lr_get_spec()` | N/A (Script-based) | Automates multi-file import / Requires functional programming. |
 | Cloud Services | Google Sheets | googlesheets4 | read_sheet() | N/A | Direct cloud access / Requires OAuth authentication. |
-
-: The Comparison Between Packages {#tbl-packagescomp}
 
 **Key Decision-Making Guidelines for the Presentation:**
 
@@ -319,5 +331,5 @@ Checklist:
 -   [x] The filled out Affidavit.
 -   [x] The link to the presentation and the handout published on GitHub.
 
-Ali Soleimani, 17.05.2026, Cologne
+Ali Soleimani, 18.05.2026, Cologne
 :::
