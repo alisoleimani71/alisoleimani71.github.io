@@ -291,7 +291,7 @@
     "href": "Presentation.html#statistical-software-files-.sav-.sas7bdat-.dta",
     "title": "Importing Data in R: Exploring Various Packages and Their Advantages",
     "section": "4.3 Statistical Software Files (.sav, .sas7bdat, .dta)",
-    "text": "4.3 Statistical Software Files (.sav, .sas7bdat, .dta)\n\nGraphical: Select “From SPSS/SAS/Stata” in RStudio.\n\n\n\nFigure 1: Importing from .sav or .dta files\n\nCode R Core Team (2015):\n\nlibrary(haven)\n# Import SPSS file\ndf_spss &lt;- read_sav(\"survey_data.sav\")\n# Import Stata file\ndf_stata &lt;- read_dta(\"economic_data.dta\")\n# Preview imported data\nhead(df_spss)\nhead(df_stata)"
+    "text": "4.3 Statistical Software Files (.sav, .sas7bdat, .dta)\n\nGraphical: Select “From SPSS/SAS/Stata” in RStudio.\nCode R Core Team (2015):\n\nlibrary(haven)\n# Import SPSS file\ndf_spss &lt;- read_sav(\"survey_data.sav\")\n# Import Stata file\ndf_stata &lt;- read_dta(\"economic_data.dta\")\n# Preview imported data\nhead(df_spss)\nhead(df_stata)"
   },
   {
     "objectID": "Presentation.html#relational-databases-.db-.sqlite-.mdb",
