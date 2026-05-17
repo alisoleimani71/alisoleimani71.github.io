@@ -38,6 +38,7 @@ csl: apa.csl
 number-sections: true
 reference-location: document
 ---
+
 ![](download.png)
 
 # Why Do We Import Data? Why with R?
@@ -77,7 +78,7 @@ R’s ecosystem offers a specialized collection of tools for data acquisition, r
 @tbl-packages summarizes the primary packages used for various data formats in professional data science workflows. @wickham2019welcome, @chapman2026importing, @luraschi2023importing, @rcore2015r,@bivand2008applied, @visne2012speedr, @gruson2019lightr.
 
 | Data Category | File Extensions | Key Package | Primary Functions |
-|------------------|------------------|------------------|------------------------------|
+|------------------|------------------|------------------|------------------|
 | Standard Tabular | `.csv`, `.tsv`, `.txt` | readr | `read_csv`, `read_tsv` |
 | Proprietary Excel | `.xls`, `.xlsx` | readxl | `read_excel`, `excel_sheets` |
 | Statistical Files | `.sav`, `.sas7bdat`, `.dta` | haven | `read_sas`, `read_sav`, `read_dta` |
