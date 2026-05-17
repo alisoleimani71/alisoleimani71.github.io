@@ -1,0 +1,1052 @@
+\documentclass[
+  doc,
+  longtable,
+  a4paper,
+  nolmodern,
+  notxfonts,
+  notimes,
+  colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{apa7}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{setspace}
+\geometry{inner=1in, outer=1in}
+\fancyhfoffset[LE,RO]{0cm}
+
+
+\usepackage[bidi=default]{babel}
+\babelprovide[main,import]{english}
+
+
+\babelfont{rm}[,RawFeature={fallback=mainfontfallback}]{Times New Roman}
+% get rid of language-specific shorthands (see #6817):
+\let\LanguageShortHands\languageshorthands
+\def\languageshorthands#1{}
+
+\RequirePackage{longtable}
+\RequirePackage{threeparttablex}
+
+\usepackage{framed}
+
+
+\makeatletter
+\renewcommand{\paragraph}{\@startsection{paragraph}{4}{\parindent}%
+	{0\baselineskip \@plus 0.2ex \@minus 0.2ex}%
+	{-.5em}%
+	{\normalfont\normalsize\bfseries\typesectitle}}
+
+\renewcommand{\subparagraph}[1]{\@startsection{subparagraph}{5}{0.5em}%
+	{0\baselineskip \@plus 0.2ex \@minus 0.2ex}%
+	{-\z@\relax}%
+	{\normalfont\normalsize\bfseries\itshape\hspace{\parindent}{#1}\textit{\addperi}}{\relax}}
+\makeatother
+
+
+
+
+\usepackage{longtable, booktabs, multirow, multicol, colortbl, hhline, caption, array, float, xpatch}
+\usepackage{subcaption}
+
+
+\renewcommand\thesubfigure{\Alph{subfigure}}
+\setcounter{topnumber}{2}
+\setcounter{bottomnumber}{2}
+\setcounter{totalnumber}{4}
+\renewcommand{\topfraction}{0.85}
+\renewcommand{\bottomfraction}{0.85}
+\renewcommand{\textfraction}{0.15}
+\renewcommand{\floatpagefraction}{0.7}
+
+\usepackage{tcolorbox}
+\tcbuselibrary{listings,theorems, breakable, skins}
+\usepackage{fontawesome5}
+
+\definecolor{quarto-callout-color}{HTML}{909090}
+\definecolor{quarto-callout-note-color}{HTML}{0758E5}
+\definecolor{quarto-callout-important-color}{HTML}{CC1914}
+\definecolor{quarto-callout-warning-color}{HTML}{EB9113}
+\definecolor{quarto-callout-tip-color}{HTML}{00A047}
+\definecolor{quarto-callout-caution-color}{HTML}{FC5300}
+\definecolor{quarto-callout-color-frame}{HTML}{ACACAC}
+\definecolor{quarto-callout-note-color-frame}{HTML}{4582EC}
+\definecolor{quarto-callout-important-color-frame}{HTML}{D9534F}
+\definecolor{quarto-callout-warning-color-frame}{HTML}{F0AD4E}
+\definecolor{quarto-callout-tip-color-frame}{HTML}{02B875}
+\definecolor{quarto-callout-caution-color-frame}{HTML}{FD7E14}
+
+%\newlength\Oldarrayrulewidth
+%\newlength\Oldtabcolsep
+
+
+\usepackage{hyperref}
+\usepackage[protrusion=true]{microtype}
+
+
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{241,243,245}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.40,0.45,0.13}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\BuiltInTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\ExtensionTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.28,0.35,0.67}{#1}}
+\newcommand{\ImportTok}[1]{\textcolor[rgb]{0.00,0.46,0.62}{#1}}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\RegionMarkerTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.07,0.07,0.07}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage{longtable,booktabs,array}
+\newcounter{none} % for unnumbered tables
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+
+\usepackage{graphicx}
+\makeatletter
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
+% Set default figure placement to htbp
+\def\fps@figure{htbp}
+\makeatother
+
+
+% definitions for citeproc citations
+\NewDocumentCommand\citeproctext{}{}
+\NewDocumentCommand\citeproc{mm}{%
+  \begingroup\def\citeproctext{#2}\cite{#1}\endgroup}
+\makeatletter
+ % allow citations to break across lines
+ \let\@cite@ofmt\@firstofone
+ % avoid brackets around text for \cite:
+ \def\@biblabel#1{}
+ \def\@cite#1#2{{#1\if@tempswa , #2\fi}}
+\makeatother
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newenvironment{CSLReferences}[2] % #1 hanging-indent, #2 entry-spacing
+ {\begin{list}{}{%
+  \setlength{\itemindent}{0pt}
+  \setlength{\leftmargin}{0pt}
+  \setlength{\parsep}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1
+   \setlength{\leftmargin}{\cslhangindent}
+   \setlength{\itemindent}{-1\cslhangindent}
+  \fi
+  % set entry spacing
+  \setlength{\itemsep}{#2\baselineskip}}}
+ {\end{list}}
+\usepackage{calc}
+\newcommand{\CSLBlock}[1]{\hfill\break\parbox[t]{\linewidth}{\strut\ignorespaces#1\strut}}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{\strut#1\strut}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{\strut#1\strut}}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+
+
+
+
+
+\usepackage{fontspec} 
+
+\defaultfontfeatures{Scale=MatchLowercase}
+\defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+
+  \setmainfont[,RawFeature={fallback=mainfontfallback}]{Times New Roman}
+
+
+
+
+\title{Importing Data in R: Exploring Various Packages and Their
+Advantages: Data Analysis for Decision-Making (SS 2026)}
+
+
+\shorttitle{}
+
+
+\usepackage{etoolbox}
+
+
+
+
+
+
+\author{Ali Soleimani (Matriculation Nr.: 401166548)}
+
+
+
+\affiliation{
+{Fresenius University of Applied Science}}
+
+
+
+
+\leftheader{Nr.: 401166548)}
+
+\date{May 17, 2026}
+
+
+\abstract{This document describes the importance of importing data in R,
+introducing the packages and their advantages. }
+
+
+
+\authornote{ 
+
+\par{       }
+\par{Correspondence concerning this article should be addressed to Ali
+Soleimani (Matriculation Nr.:
+401166548), Email: \href{mailto:soleimani.ali@stud.hs-fresenius.de}{soleimani.ali@stud.hs-fresenius.de}}
+}
+
+\makeatletter
+\let\endoldlt\endlongtable
+\def\endlongtable{
+\hline
+\endoldlt
+}
+\makeatother
+
+\urlstyle{same}
+
+
+
+\providecommand{\lastauthorseparator}{and}
+\providecommand{\notelabel}{Note}
+\makeatletter
+\@ifpackageloaded{tcolorbox}{}{\usepackage[skins,breakable]{tcolorbox}}
+\@ifpackageloaded{fontawesome5}{}{\usepackage{fontawesome5}}
+\definecolor{quarto-callout-color}{HTML}{909090}
+\definecolor{quarto-callout-note-color}{HTML}{0758E5}
+\definecolor{quarto-callout-important-color}{HTML}{CC1914}
+\definecolor{quarto-callout-warning-color}{HTML}{EB9113}
+\definecolor{quarto-callout-tip-color}{HTML}{00A047}
+\definecolor{quarto-callout-caution-color}{HTML}{FC5300}
+\definecolor{quarto-callout-color-frame}{HTML}{acacac}
+\definecolor{quarto-callout-note-color-frame}{HTML}{4582ec}
+\definecolor{quarto-callout-important-color-frame}{HTML}{d9534f}
+\definecolor{quarto-callout-warning-color-frame}{HTML}{f0ad4e}
+\definecolor{quarto-callout-tip-color-frame}{HTML}{02b875}
+\definecolor{quarto-callout-caution-color-frame}{HTML}{fd7e14}
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{Table of contents}
+\else
+  \newcommand\contentsname{Table of contents}
+\fi
+\ifdefined\listfigurename
+  \renewcommand*\listfigurename{List of Figures}
+\else
+  \newcommand\listfigurename{List of Figures}
+\fi
+\ifdefined\listtablename
+  \renewcommand*\listtablename{List of Tables}
+\else
+  \newcommand\listtablename{List of Tables}
+\fi
+\ifdefined\figurename
+  \renewcommand*\figurename{Figure}
+\else
+  \newcommand\figurename{Figure}
+\fi
+\ifdefined\tablename
+  \renewcommand*\tablename{Table}
+\else
+  \newcommand\tablename{Table}
+\fi
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{Listing}
+\newcommand*\listoflistings{\listof{codelisting}{List of Listings}}
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+
+% From https://tex.stackexchange.com/a/645996/211326
+%%% apa7 doesn't want to add appendix section titles in the toc
+%%% let's make it do it
+\makeatletter
+\xpatchcmd{\appendix}
+  {\par}
+  {\addcontentsline{toc}{section}{\@currentlabelname}\par}
+  {}{}
+\makeatother
+
+%% Disable longtable counter
+%% https://tex.stackexchange.com/a/248395/211326
+
+\usepackage{etoolbox}
+
+\makeatletter
+\patchcmd{\LT@caption}
+  {\bgroup}
+  {\bgroup\global\LTpatch@captiontrue}
+  {}{}
+\patchcmd{\longtable}
+  {\par}
+  {\par\global\LTpatch@captionfalse}
+  {}{}
+\apptocmd{\endlongtable}
+  {\ifLTpatch@caption\else\addtocounter{table}{-1}\fi}
+  {}{}
+\newif\ifLTpatch@caption
+\makeatother
+
+\begin{document}
+
+\maketitle
+
+
+
+\setcounter{secnumdepth}{3}
+
+\setlength\LTleft{0pt}
+
+
+
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{snugshade}\begin{singlespace}}{\end{singlespace}\end{snugshade}}\fi
+
+\setlength{\cslhangindent}{0.5in}
+
+\pandocbounded{\includegraphics[keepaspectratio]{download.png}}
+
+\section{Why Do We Import Data? Why with
+R?}\label{why-do-we-import-data-why-with-r}
+
+Wickham and Grolemund (\citeproc{ref-wickham2016r}{2016}) explain that
+in the modern and dynamic report creation procedure, importing data is
+important to have quick and reliable access to the recent available
+data. R program help us to import these data easily and prepare the
+routine reports quickly. Also data import is the key for starting Data
+science, which is then followed by tidying data, transforming it,
+visualizing, and modeling it.
+
+\begin{itemize}
+\item
+  \textbf{Accessing the ``Raw'' Reality:} Decisions are based on data
+  stored in diverse environments---from simple text files and
+  spreadsheets to massive relational databases and specialized
+  scientific instruments as mentioned by R Core Team
+  (\citeproc{ref-rcore2015r}{2015}).
+\item
+  \textbf{The Reproducibility Imperative:} Bivand et al.
+  (\citeproc{ref-bivand2008applied}{2008}) mentions that a core
+  advantage of using R over ``point-and-click'' software is
+  reproducibility.
+\item
+  \textbf{Auditable:} In fields like public health or climate change,
+  where decisions have high stakes, open-source scripts allow every step
+  of the data import and analysis to be audited and checked by others,
+  as {``Chapter 2 - Data Import and Export in r and Python''}
+  (\citeproc{ref-elsevier2019import}{2019}) explains it.
+\item
+  \textbf{Efficiency and Automation:} Manual data entry or GUI-based
+  exports are prone to human error and are not scalable. R enables the
+  creation of scripts that can be replayed and modified for new datasets
+  with minimal effort, providing a high return on the initial ``steep
+  learning curve'' investment Huber (\citeproc{ref-huber2025how}{2025}).
+\item
+  \textbf{Handling Complexity:} R allows decision-makers to overcome the
+  limitations of traditional software like Excel, particularly when
+  dealing with non-rectangular data, complex encodings, or datasets that
+  exceed standard spreadsheet row limits R Core Team
+  (\citeproc{ref-rcore2015r}{2015}).
+\end{itemize}
+
+\section{Different Data Types}\label{different-data-types}
+
+Before choosing a package, a data scientist must understand the
+structure of the source material. Data generally falls into several
+categories:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \textbf{Rectangular/Tabular Data:} This is the most common type, where
+  data is organized into rows (observations) and columns (variables).
+  Examples include Comma Separated Values (.csv) and Tab Delimited (.txt
+  or .tsv) files R Core Team (\citeproc{ref-rcore2015r}{2015}).
+\item
+  \textbf{Proprietary Spreadsheets:} such as Microsoft Excel (.xls,
+  .xlsx), are widely used in companies. But they are more complicated
+  than plain text files because they can contain multiple sheets,
+  formulas, formatting, and macros, not just raw data, according to
+  Luraschi (\citeproc{ref-luraschi2023importing}{2023}).
+\item
+  \textbf{Statistical Software Files:} Data often originates from legacy
+  systems like SAS (.sas7bdat), SPSS (.sav), or Stata (.dta). These
+  files often contain important metadata, such as value labels, which
+  must be preserved during import Chapman University
+  (\citeproc{ref-chapman2026importing}{2026}).
+\item
+  \textbf{Relational Databases:} For very large-scale data that does not
+  fit into a computer's RAM, data is stored in RDBMS like MySQL,
+  PostgreSQL, or SQLite. Accessing these requires specialized connection
+  protocols R Core Team (\citeproc{ref-rcore2015r}{2015}).
+\item
+  \textbf{Spatial Data:} Includes coordinates, bounding boxes, and
+  reference systems. These are categorized into vector models (points,
+  lines, polygons) and raster models (regular grids like satellite
+  imagery) Bivand et al. (\citeproc{ref-bivand2008applied}{2008}).
+\item
+  \textbf{Scientific/Specialized Data:} Data from instruments like
+  sensors often comes in proprietary formats that require specialized
+  parsers to extract both measurements and critical metadata Gruson et
+  al. (\citeproc{ref-gruson2019lightr}{2019}).
+\end{enumerate}
+
+\section{Different Packages For Each Data
+Type}\label{different-packages-for-each-data-type}
+
+R's ecosystem offers a specialized collection of tools for data
+acquisition, ranging from built-in Base R functions to the modern,
+high-performance Tidyverse suite.
+
+Table~\ref{tbl-packages} summarizes the primary packages used for
+various data formats in professional data science workflows. {Wickham et
+al.} (\citeproc{ref-wickham2019welcome}{2019}), Chapman University
+(\citeproc{ref-chapman2026importing}{2026}), Luraschi
+(\citeproc{ref-luraschi2023importing}{2023}), R Core Team
+(\citeproc{ref-rcore2015r}{2015}),Bivand et al.
+(\citeproc{ref-bivand2008applied}{2008}), Visne et al.
+(\citeproc{ref-visne2012speedr}{2012}), Gruson et al.
+(\citeproc{ref-gruson2019lightr}{2019}).
+
+\begin{table}
+
+{\caption{{Overview of data import packages}{\label{tbl-packages}}}}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Data Category
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+File Extensions
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Key Package
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Primary Functions
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Standard Tabular & \texttt{.csv}, \texttt{.tsv}, \texttt{.txt} & readr &
+\texttt{read\_csv}, \texttt{read\_tsv} \\
+Proprietary Excel & \texttt{.xls}, \texttt{.xlsx} & readxl &
+\texttt{read\_excel}, \texttt{excel\_sheets} \\
+Statistical Files & \texttt{.sav}, \texttt{.sas7bdat}, \texttt{.dta} &
+haven & \texttt{read\_sas}, \texttt{read\_sav}, \texttt{read\_dta} \\
+Relational DBs & \texttt{.db}, \texttt{.sqlite}, \texttt{.mdb} & DBI &
+\texttt{dbConnect}, \texttt{dbGetQuery} \\
+Spatial / GIS & \texttt{.shp}, \texttt{.tif}, \texttt{.kml} & sf &
+\texttt{st\_read} \\
+Base Text & \texttt{.txt}, \texttt{.dat}, \texttt{.fwf} & utils &
+\texttt{read.table}, \texttt{read.csv}, \texttt{read.fwf} \\
+Scientific Data & \texttt{.jdx}, \texttt{.abs}, \texttt{.cnv},
+\texttt{.nc} & lightr & \texttt{lr\_get\_spec} \\
+Cloud Sheets & URL & googlesheets4 & \texttt{read\_sheet} \\
+Hierarchical Data & \texttt{.json} & jsonlite & \texttt{fromJSON} \\
+\end{longtable}
+}
+
+\end{table}
+
+\section{Graphical and Programmatic Implementation by Data
+Type}\label{graphical-and-programmatic-implementation-by-data-type}
+
+This section details the practical application of the tools identified
+in the previous page. For each category, we contrast the Graphical User
+Interface (GUI) approach---often best for initial exploration---with the
+Programmatic R Code required for reproducible scripts.
+
+\subsection{Standard Tabular Data (.csv,
+.tsv)}\label{standard-tabular-data-.csv-.tsv}
+
+\begin{itemize}
+\item
+  \textbf{Graphical:} Use the RStudio ``Import Dataset'' wizard and
+  select ``From Text (readr)''. This allows for a live preview where you
+  can visually change delimiters, skip rows, and rename columns while
+  the GUI generates the code automatically Luraschi
+  (\citeproc{ref-luraschi2023importing}{2023}).
+\item
+  \textbf{Code Wickham and Grolemund
+  (\citeproc{ref-wickham2016r}{2016})} :
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(readr)}
+\NormalTok{df\_readr }\OtherTok{\textless{}{-}} \FunctionTok{read\_csv}\NormalTok{(}\StringTok{"data.csv"}\NormalTok{)}
+\NormalTok{df\_readr}
+\end{Highlighting}
+\end{Shaded}
+
+large CSV:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(data.table)}
+\NormalTok{df\_fread }\OtherTok{\textless{}{-}} \FunctionTok{fread}\NormalTok{(}\StringTok{"bigdata.csv"}\NormalTok{)}
+\NormalTok{df\_fread}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{Proprietary Excel Files (.xls,
+.xlsx)}\label{proprietary-excel-files-.xls-.xlsx}
+
+\begin{itemize}
+\item
+  \textbf{Graphical:} Select ``From Excel\textbf{''} in the RStudio
+  wizard. This is crucial for navigating multi-sheet workbooks, as you
+  can select specific sheets and define a cell range (e.g.,''A1:E20'')
+  graphically Luraschi (\citeproc{ref-luraschi2023importing}{2023}).
+\item
+  \textbf{Code} Chapman University
+  (\citeproc{ref-chapman2026importing}{2026}):
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(readxl)}
+\NormalTok{df\_excel }\OtherTok{\textless{}{-}} \FunctionTok{read\_excel}\NormalTok{(}\StringTok{"file.xlsx"}\NormalTok{)}
+\NormalTok{df\_excel}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{Statistical Software Files (.sav, .sas7bdat,
+.dta)}\label{statistical-software-files-.sav-.sas7bdat-.dta}
+
+\begin{itemize}
+\item
+  \textbf{Graphical:} Select ``From SPSS/SAS/Stata'' in RStudio. This
+  wizard is particularly helpful as it shows how proprietary labels and
+  missing value codes will be translated into R factors Luraschi
+  (\citeproc{ref-luraschi2023importing}{2023}).
+\item
+  \textbf{Code R Core Team (\citeproc{ref-rcore2015r}{2015}):}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(haven)}
+\CommentTok{\# Import SPSS file}
+\NormalTok{df\_spss }\OtherTok{\textless{}{-}} \FunctionTok{read\_sav}\NormalTok{(}\StringTok{"survey\_data.sav"}\NormalTok{)}
+\CommentTok{\# Import Stata file}
+\NormalTok{df\_stata }\OtherTok{\textless{}{-}} \FunctionTok{read\_dta}\NormalTok{(}\StringTok{"economic\_data.dta"}\NormalTok{)}
+\CommentTok{\# Preview imported data}
+\FunctionTok{head}\NormalTok{(df\_spss)}
+\FunctionTok{head}\NormalTok{(df\_stata)}
+\end{Highlighting}
+\end{Shaded}
+\end{itemize}
+
+\subsection{Relational Databases (.db, .sqlite,
+.mdb)}\label{relational-databases-.db-.sqlite-.mdb}
+
+\begin{itemize}
+\item
+  \textbf{Graphical:} Access through the RStudio ``Connections'' pane.
+  Once a DBI connection is established, you can browse table schemas and
+  preview data before importing Luraschi
+  (\citeproc{ref-luraschi2023importing}{2023}).
+\item
+  \textbf{Code R Core Team (\citeproc{ref-rcore2015r}{2015}):}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(DBI)}
+\FunctionTok{library}\NormalTok{(RSQLite)}
+\CommentTok{\# Connect to SQLite database}
+\NormalTok{con }\OtherTok{\textless{}{-}} \FunctionTok{dbConnect}\NormalTok{(RSQLite}\SpecialCharTok{::}\FunctionTok{SQLite}\NormalTok{(), }\StringTok{"company.db"}\NormalTok{)}
+\CommentTok{\# Read table}
+\NormalTok{df\_db }\OtherTok{\textless{}{-}} \FunctionTok{dbGetQuery}\NormalTok{(con, }\StringTok{"SELECT * FROM employees"}\NormalTok{)}
+\CommentTok{\# Show data}
+\NormalTok{df\_db}
+\CommentTok{\# Disconnect}
+\FunctionTok{dbDisconnect}\NormalTok{(con)}
+\end{Highlighting}
+\end{Shaded}
+\end{itemize}
+
+\subsection{Spatial / GIS Data (.shp, .tif,
+.kml)}\label{spatial-gis-data-.shp-.tif-.kml}
+
+\begin{itemize}
+\item
+  \textbf{Graphical:} Usually handled programmatically, though GIS
+  software like GRASS can be linked to R to browse spatial layers.
+\item
+  \textbf{Code Bivand et al. (\citeproc{ref-bivand2008applied}{2008}) :}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(sf)}
+\CommentTok{\# Read shapefile}
+\NormalTok{spatial\_data }\OtherTok{\textless{}{-}} \FunctionTok{st\_read}\NormalTok{(}\StringTok{"sample\_shapefile.shp"}\NormalTok{)}
+\CommentTok{\# Preview spatial object}
+\FunctionTok{print}\NormalTok{(spatial\_data)}
+\end{Highlighting}
+\end{Shaded}
+\end{itemize}
+
+\subsection{Base Text and Fixed-Width Files (.txt, .dat,
+.fwf)}\label{base-text-and-fixed-width-files-.txt-.dat-.fwf}
+
+\begin{itemize}
+\item
+  \textbf{Graphical:} Use the ``From Text (base)'' option in the RStudio
+  wizard for legacy text formats that require manual field-width
+  definitions Luraschi (\citeproc{ref-luraschi2023importing}{2023}).
+\item
+  \textbf{Code R Core Team (\citeproc{ref-rcore2015r}{2015}):}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Import fixed{-}width file}
+\NormalTok{df\_fwf }\OtherTok{\textless{}{-}} \FunctionTok{read.fwf}\NormalTok{(}
+  \StringTok{"legacy\_data.fwf"}\NormalTok{,}
+  \AttributeTok{widths =} \FunctionTok{c}\NormalTok{(}\DecValTok{3}\NormalTok{, }\DecValTok{6}\NormalTok{, }\DecValTok{5}\NormalTok{),}
+  \AttributeTok{col.names =} \FunctionTok{c}\NormalTok{(}\StringTok{"ID"}\NormalTok{, }\StringTok{"Name"}\NormalTok{, }\StringTok{"Score"}\NormalTok{)}
+\NormalTok{)}
+
+\NormalTok{df\_fwf}
+\end{Highlighting}
+\end{Shaded}
+\end{itemize}
+
+\subsection{Scientific Spectral Data (.jdx, .abs, .cnv,
+.nc)}\label{scientific-spectral-data-.jdx-.abs-.cnv-.nc}
+
+\begin{itemize}
+\item
+  \textbf{Graphical:} Utilize specialized package GUIs or high-level
+  functions that automate folder-wide imports Gruson et al.
+  (\citeproc{ref-gruson2019lightr}{2019}).
+\item
+  \textbf{Code Gruson et al. (\citeproc{ref-gruson2019lightr}{2019}) :}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(lightr)}
+
+\CommentTok{\# Import spectral data}
+\NormalTok{spec\_data }\OtherTok{\textless{}{-}} \FunctionTok{lr\_get\_spec}\NormalTok{(}\StringTok{"spectrum.jdx"}\NormalTok{)}
+
+\CommentTok{\# Show spectral data}
+\FunctionTok{head}\NormalTok{(spec\_data)}
+\end{Highlighting}
+\end{Shaded}
+\end{itemize}
+
+\subsection{Cloud Sheets (Google Sheets/
+URLs)}\label{cloud-sheets-google-sheets-urls}
+
+\begin{itemize}
+\item
+  \textbf{Code: Chapman University
+  (\citeproc{ref-chapman2026importing}{2026})}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(googlesheets4)}
+\CommentTok{\# Import Google Sheet}
+\FunctionTok{gs4\_deauth}\NormalTok{()}
+\NormalTok{sheet\_data }\OtherTok{\textless{}{-}} \FunctionTok{read\_sheet}\NormalTok{(}
+  \StringTok{"https://docs.google.com/spreadsheets/d/19Z6SowrQtCS\_NsIAZ9ZcaZeb532cSlOOTPCSqfKKsSw/edit?usp=sharing"}
+\NormalTok{)}
+
+\NormalTok{sheet\_data}
+\end{Highlighting}
+\end{Shaded}
+\end{itemize}
+
+\subsection{Hierarchical Data (.json)}\label{hierarchical-data-.json}
+
+\begin{itemize}
+\item
+  \textbf{Graphical:} While RStudio does not have a dedicated ``JSON
+  Wizard'' in the same way it does for Excel or CSV, users can often
+  preview JSON structures through the File Pane or by using specialized
+  viewing packages.
+\item
+  \textbf{Code R Core Team (\citeproc{ref-rcore2015r}{2015}) :}
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(jsonlite)}
+\NormalTok{df\_json }\OtherTok{\textless{}{-}} \FunctionTok{fromJSON}\NormalTok{(}\StringTok{"data.json"}\NormalTok{)}
+\NormalTok{df\_json}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{Importing Data From Multiple
+Files}\label{importing-data-from-multiple-files}
+
+Decision-makers often face the need to import hundreds of files
+simultaneously. R provides several automation strategies Wickham and
+Grolemund (\citeproc{ref-wickham2016r}{2016}), Gruson et al.
+(\citeproc{ref-gruson2019lightr}{2019}).
+
+\begin{itemize}
+\item
+  \textbf{Automated Recursive Import:} Specialized tools like lightr use
+  functions such as \texttt{lr\_get\_spec()} to search subfolders
+  automatically for specific extensions and process them using
+  parallelized loops to save time Gruson et al.
+  (\citeproc{ref-gruson2019lightr}{2019}).
+\item
+  \textbf{The Tidyverse Approach (Iteration):} The most flexible method
+  combines \texttt{list.files()} with the purrr package. By using
+  \texttt{map()} or \texttt{map\_df()}, an analyst can apply a read
+  function to every path in a list, automatically stacking them into a
+  single unified tibble {Wickham et al.}
+  (\citeproc{ref-wickham2019welcome}{2019}).
+\item
+  \textbf{Complex Multi-File Formats:} Some formats are naturally
+  batch-oriented. For example, a single ``Shapefile'' is a collection of
+  files (\texttt{.shp}, \texttt{.dbf}, etc.). The \texttt{readOGR()}
+  function in rgdal uses a Data Source Name (DSN)---often a folder
+  path---to treat these multiple files as a single spatial object Bivand
+  et al. (\citeproc{ref-bivand2008applied}{2008}), R Core Team
+  (\citeproc{ref-rcore2015r}{2015}).
+\item
+  \textbf{Custom Functions for Productivity:} speedR can graphically
+  define an import process and then generate a new R function containing
+  those specific constraints. This ``ready-to-use'' code can be applied
+  to any number of similar files to ensure a consistent pipeline Visne
+  et al. (\citeproc{ref-visne2012speedr}{2012}).
+\end{itemize}
+
+\section{The Comparison Between
+Packages}\label{the-comparison-between-packages}
+
+Selecting the appropriate import method is a strategic decision that
+impacts the speed, reliability, and reproducibility of the analytical
+pipeline. Table~\ref{tbl-packagescomp} provides a side-by-side
+comparison of the key packages discussed in this handnote to help
+choosing the right tool based on the specific data requirements.
+{Wickham et al.} (\citeproc{ref-wickham2019welcome}{2019}) , Luraschi
+(\citeproc{ref-luraschi2023importing}{2023}), R Core Team
+(\citeproc{ref-rcore2015r}{2015}), Chapman University
+(\citeproc{ref-chapman2026importing}{2026}), Luraschi
+(\citeproc{ref-luraschi2023importing}{2023}),
+
+\begin{table}
+
+{\caption{{The Comparison Between Packages}{\label{tbl-packagescomp}}}}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1667}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Data Category
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+File Formats
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Recommended Package
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Key Function
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Graphical Method (GUI)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Main Advantage / Limitation
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Tabular Data & \textbf{\texttt{.csv}}, \textbf{\texttt{.tsv}},
+\textbf{\texttt{.txt}} & readr & read\_csv() & Import Dataset
+-\textgreater{} From Text (readr) & Very fast import; creates tibbles /
+Limited by RAM. \\
+Excel Sheets & \texttt{.xls}, \texttt{.xlsx} & readxl & read\_excel() &
+Import Dataset -\textgreater{} From Excel & No Java required; supports
+multiple sheets / Limited scalability. \\
+Statistical Files & \texttt{.sav}, \texttt{.dta}, \texttt{.sas7bdat} &
+haven & \texttt{read\_sav()}, \texttt{read\_dta()} & Import Dataset
+-\textgreater{} From SPSS/Stata & Preserves labels and metadata /
+Limited newest-version support. \\
+Databases (SQL) & \texttt{.db}, \texttt{.sqlite}, MySQL & DBI &
+\texttt{dbConnect()}, \texttt{dbGetQuery()} & RStudio ``Connections''
+Pane & Handles large datasets / Requires SQL knowledge. \\
+Spatial / GIS & \texttt{.shp}, \texttt{.tif}, \texttt{.kml} & rgdal &
+\texttt{readOGR()}, \texttt{readGDAL()} & External links (e.g., GRASS) &
+Supports CRS metadata / Complex for beginners. \\
+Hierarchical (Web) & .json & jsonlite & fromJSON() & N/A (Script-based)
+& Standard for APIs and JSON / Nested data can be complex. \\
+Batch Import & Multiple Files & purrr or lightr & \texttt{map()},
+\texttt{lr\_get\_spec()} & N/A (Script-based) & Automates multi-file
+import / Requires functional programming. \\
+Cloud Services & Google Sheets & googlesheets4 & read\_sheet() & N/A &
+Direct cloud access / Requires OAuth authentication. \\
+\end{longtable}
+}
+
+\end{table}
+
+\textbf{Key Decision-Making Guidelines for the Presentation:}
+
+\begin{itemize}
+\item
+  \textbf{The Reproducibility Standard:} While graphical tools like the
+  RStudio Wizard are excellent for initial exploration, final
+  decision-making workflows should always use Programmatic Scripts to
+  ensure every step is auditable and repeatable Bivand et al.
+  (\citeproc{ref-bivand2008applied}{2008}), Huber
+  (\citeproc{ref-huber2025how}{2025}).
+\item
+  \textbf{Memory Management:} For datasets larger than 2GB, avoid
+  standard flat-file imports and prioritize Relational Databases (DBI)
+  or Partial Reading (rgdal / GDAL.open) to prevent system crashes R
+  Core Team (\citeproc{ref-rcore2015r}{2015}), Wickham and Grolemund
+  (\citeproc{ref-wickham2016r}{2016}).
+\item
+  \textbf{Structure Alignment:} Always select the package that best
+  respects your data's inherent structure. For example, use haven for
+  surveys to avoid losing categorical labels, or lightr for scientific
+  spectrometry to preserve instrument metadata Luraschi
+  (\citeproc{ref-luraschi2023importing}{2023}), Gruson et al.
+  (\citeproc{ref-gruson2019lightr}{2019}).
+\end{itemize}
+
+\section{Conclusion}\label{conclusion}
+
+Mastering data import is about matching the right package to the right
+data structure while respecting hardware limits. Choosing programmatic
+scripts ensures that the decision-making process is transparent,
+scalable, and reproducible Bivand et al.
+(\citeproc{ref-bivand2008applied}{2008}), Huber
+(\citeproc{ref-huber2025how}{2025}).
+
+\section{Class Assignment}\label{class-assignment}
+
+Download the files from here
+\href{https://drive.google.com/file/d/17co85tSnV84tRCVxreNODKs_2N6F92Xc/view?usp=sharing}{link}.
+
+\subsection{Help The HR Manager!}\label{help-the-hr-manager}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  You are helping a HR manager in the company. She has given you CSV
+  file about the personnel information (off-course after signing
+  relative Non-disclusure agreement!). This data file is changing every
+  month and it is a real pain for her to create the report every time!
+  She knows you have R knowledge! and ask you to prepare a dynamic file
+  by import the data into R, so she can easily prepare report very
+  quickly in the beginning of every month. go ahead and do first step
+  which is importing the \url{exe1.csv} file into R Studio.
+\end{enumerate}
+
+\subsection{Everyday Sales Report!}\label{everyday-sales-report}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  You are a manager in a company and the sale department gives you sales
+  reports in excel file every morning. consider that you have recieved
+  \url{exe2.xlsx} file today. Import it to R Studio.
+\end{enumerate}
+
+\subsection{Spare Parts Sheet}\label{spare-parts-sheet}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  Imagine that you and your colleagues in the company are working on a
+  google spreadsheet, together. now you want to import data from it into
+  R. Use this
+  \href{https://docs.google.com/spreadsheets/d/1BoD9bXwbxm1NJWhEnk6BVXUxuxWbWArQWVT3LIKk2PQ/edit?usp=sharing}{Link}
+  and import it in the R Studio. if you had problem with the link to
+  Google spreadsheet, upload it (it is available in the exercise zip
+  folder) in your own account, and then use your own link.
+\end{enumerate}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, colframe=quarto-callout-tip-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title={Affidavit}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+I hereby affirm that this submitted paper was authored unaided and
+solely by me. Additionally, no other sources than those in the reference
+list were used. Parts of this paper, including tables and figures, that
+have been taken either verbatim or analogously from other works have in
+each case been properly cited with regard to their origin and
+authorship. This paper either in parts or in its entirety, be it in the
+same or similar form, has not been submitted to any other examination
+board and has not been published.
+
+I acknowledge that the university may use plagiarism detection software
+to check my thesis. I agree to cooperate with any investigation of
+suspected plagiarism and to provide any additional information or
+evidence requested by the university.
+
+Checklist:
+
+\begin{itemize}
+\tightlist
+\item[$\boxtimes$]
+  The handout contains 3-5 pages of text.
+\item[$\boxtimes$]
+  The submission contains the Quarto file of the handout.
+\item[$\boxtimes$]
+  The submission contains the Quarto file of the presentation.
+\item[$\boxtimes$]
+  The submission contains the HTML file of the handout.
+\item[$\boxtimes$]
+  The submission contains the HTML file of the presentation.
+\item[$\boxtimes$]
+  The submission contains the PDF file of the handout.
+\item[$\boxtimes$]
+  The submission contains the PDF file of the presentation.
+\item[$\boxtimes$]
+  The title page of the presentation and the handout contain personal
+  details (name, email, matriculation number).
+\item[$\boxtimes$]
+  The handout contains a bibliography, created using BibTeX with an APA
+  citation style.
+\item[$\boxtimes$]
+  Either the handout or the presentation contains R code that proofs the
+  expertise in coding.
+\item[$\boxtimes$]
+  The filled out Affidavit.
+\item[$\boxtimes$]
+  The link to the presentation and the handout published on GitHub.
+\end{itemize}
+
+Ali Soleimani, 17.05.2026, Cologne
+
+\end{tcolorbox}
+
+\section{References}
+
+\protect\phantomsection\label{refs}
+\begin{CSLReferences}{1}{0}
+\bibitem[\citeproctext]{ref-bivand2008applied}
+Bivand, R. S., Pebesma, E. J., \& Gómez-Rubio, V. (2008). \emph{Applied
+spatial data analysis with r}. Springer Science \& Business Media.
+\url{https://doi.org/10.1007/978-0-387-78171-6}
+
+\bibitem[\citeproctext]{ref-chapman2026importing}
+Chapman University. (2026). \emph{R programming: Importing data files
+into r}. \url{https://libguides.chapman.edu/R/import}
+
+\bibitem[\citeproctext]{ref-elsevier2019import}
+Chapter 2 - data import and export in r and python. (2019). In \emph{R
+and python for oceanographers: A practical guide with applications} (pp.
+23--47). Elsevier.
+\url{https://doi.org/10.1016/B978-0-12-813491-7.00002-6}
+
+\bibitem[\citeproctext]{ref-gruson2019lightr}
+Gruson, H., White, T., \& Maia, R. (2019). Lightr: Import spectral data
+and metadata in r. \emph{Journal of Open Source Software}, \emph{4}(43),
+1857. \url{https://doi.org/10.21105/joss.01857}
+
+\bibitem[\citeproctext]{ref-huber2025how}
+Huber, S. (2025). \emph{How to use r for data science}.
+\url{https://hubchev.github.io/ds/}
+
+\bibitem[\citeproctext]{ref-luraschi2023importing}
+Luraschi, J. (2023). \emph{Importing data with the RStudio IDE}. Posit
+Support.
+\url{https://support.posit.co/hc/en-us/articles/218611977-Importing-Data-with-the-RStudio-IDE}
+
+\bibitem[\citeproctext]{ref-rcore2015r}
+R Core Team. (2015). \emph{R data import/export}. R Foundation for
+Statistical Computing.
+\url{https://cran.r-project.org/doc/manuals/r-release/R-data.pdf}
+
+\bibitem[\citeproctext]{ref-visne2012speedr}
+Visne, I., Yildiz, A., Dilaveroglu, E., Vierlinger, K., Nöhammer, C.,
+Leisch, F., \& Kriegner, A. (2012). speedR: An r package for interactive
+data import, filtering and ready-to-use code generation. \emph{Journal
+of Statistical Software}, \emph{51}(2), 1--12.
+\url{https://doi.org/10.18637/jss.v051.i02}
+
+\bibitem[\citeproctext]{ref-wickham2019welcome}
+{Wickham, H., Averick, M., Bryan, J., Chang, W., McGowan, L. D.,
+François, R., Grolemund, G., Hayes, A., Henry, L., Hester, J., et al.}
+(2019). Welcome to the tidyverse. \emph{Journal of Open Source
+Software}, \emph{4}(43), 1686. \url{https://doi.org/10.21105/joss.01686}
+
+\bibitem[\citeproctext]{ref-wickham2016r}
+Wickham, H., \& Grolemund, G. (2016). \emph{R for data science: Import,
+tidy, transform, visualize, and model data}. O'Reilly Media, Inc.
+
+\end{CSLReferences}
+
+
+
+
+
+
+\end{document}
