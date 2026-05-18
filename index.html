@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Ali Soleimani (Matriculation Nr.: 401166548)">
-<meta name="dcterms.date" content="2026-05-18">
+<meta name="dcterms.date" content="2026-05-19">
 
 <title>Importing Data in R: Exploring Various Packages and Their Advantages – Importing Data in R</title>
 <style>
@@ -4129,7 +4129,6 @@ vertical-align: -.125em;
   <ul class="collapse">
   <li><a href="#help-the-hr-manager" id="toc-help-the-hr-manager" class="nav-link" data-scroll-target="#help-the-hr-manager"><span class="header-section-number">7.1</span> Help The HR Manager!</a></li>
   <li><a href="#everyday-sales-report" id="toc-everyday-sales-report" class="nav-link" data-scroll-target="#everyday-sales-report"><span class="header-section-number">7.2</span> Everyday Sales Report!</a></li>
-  <li><a href="#spare-parts-sheet" id="toc-spare-parts-sheet" class="nav-link" data-scroll-target="#spare-parts-sheet"><span class="header-section-number">7.3</span> Spare Parts Sheet</a></li>
   </ul></li>
   </ul>
 <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="index.pdf"><i class="bi bi-file-pdf"></i>PDF (apaquarto)</a></li></ul></div></nav>
@@ -4164,7 +4163,7 @@ vertical-align: -.125em;
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">May 18, 2026</p>
+      <p class="date">May 19, 2026</p>
     </div>
   </div>
   
@@ -4194,25 +4193,26 @@ Figure 1: QRCode
 </div>
 <section id="why-do-we-import-data-why-with-r" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> Why Do We Import Data? Why with R?</h1>
-<p><span class="citation" data-cites="wickham2016r">Wickham &amp; Grolemund (<a href="#ref-wickham2016r" role="doc-biblioref">2016</a>)</span> explain that in the modern and dynamic report creation procedure, importing data is important to have quick and reliable access to the recent available data. R program help us to import these data easily and prepare the routine reports quickly. Also data import is the key for starting Data science, which is then followed by tidying data, transforming it, visualizing, and modeling it.</p>
+<p><span class="citation" data-cites="wickham2016r">Wickham &amp; Grolemund (<a href="#ref-wickham2016r" role="doc-biblioref">2016</a>)</span> explains that in the modern and dynamic report creation procedure, importing data is important to have quick and reliable access to the recent available data. R helps users import data easily and prepare routine reports efficiently. Also data import is the key for starting Data science, which is then followed by tidying data, transforming it, visualizing, and modeling it.</p>
 <ul>
-<li><p><strong>Accessing the “Raw” Reality:</strong> Decisions are based on data stored in diverse environments—from simple text files and spreadsheets to massive relational databases and specialized scientific instruments as mentioned by <span class="citation" data-cites="rcore2015r">R Core Team (<a href="#ref-rcore2015r" role="doc-biblioref">2015</a>)</span>.</p></li>
-<li><p><strong>The Reproducibility Imperative:</strong> <span class="citation" data-cites="bivand2008applied">Bivand et al. (<a href="#ref-bivand2008applied" role="doc-biblioref">2008</a>)</span> mentions that a core advantage of using R over “point-and-click” software is reproducibility.</p></li>
-<li><p><strong>Auditable:</strong> In fields like public health or climate change, where decisions have high stakes, open-source scripts allow every step of the data import and analysis to be audited and checked by others, as <span class="citation" data-cites="elsevier2019import"><span>“Chapter 2 - Data Import and Export in r and Python”</span> (<a href="#ref-elsevier2019import" role="doc-biblioref">2019</a>)</span> explains it.</p></li>
-<li><p><strong>Efficiency and Automation:</strong> Manual data entry or GUI-based exports are prone to human error and are not scalable. R enables the creation of scripts that can be replayed and modified for new datasets with minimal effort, providing a high return on the initial “steep learning curve” investment <span class="citation" data-cites="huber2025how">Huber (<a href="#ref-huber2025how" role="doc-biblioref">2025</a>)</span>.</p></li>
-<li><p><strong>Handling Complexity:</strong> R allows decision-makers to overcome the limitations of traditional software like Excel, particularly when dealing with non-rectangular data, complex encodings, or datasets that exceed standard spreadsheet row limits <span class="citation" data-cites="rcore2015r">R Core Team (<a href="#ref-rcore2015r" role="doc-biblioref">2015</a>)</span>.</p></li>
+<li><p><strong>Accessing the “Raw” Reality:</strong> <span class="citation" data-cites="rcore2015r">R Core Team (<a href="#ref-rcore2015r" role="doc-biblioref">2015</a>)</span> note that decisions are based on data stored in diverse environments—from simple text files and spreadsheets to massive relational databases and specialized scientific instruments.</p></li>
+<li><p><strong>The Reproducibility Imperative:</strong> <span class="citation" data-cites="bivand2008applied">Bivand et al. (<a href="#ref-bivand2008applied" role="doc-biblioref">2008</a>)</span> explains that a core advantage of using R over “point-and-click” software is reproducibility.</p></li>
+<li><p><strong>Auditable:</strong> In fields like public health or climate change, where decisions have high stakes, open-source scripts allow every step of the data import and analysis to be audited and checked by others, as explained by <span class="citation" data-cites="elsevier2019import"><span>“Chapter 2 - Data Import and Export in r and Python”</span> (<a href="#ref-elsevier2019import" role="doc-biblioref">2019</a>)</span>.</p></li>
+<li><p><strong>Efficiency and Automation:</strong> Manual data entry or GUI-based exports are prone to human error and are not scalable. <span class="citation" data-cites="huber2025how">Huber (<a href="#ref-huber2025how" role="doc-biblioref">2025</a>)</span> describes how R enables the creation of scripts that can be replayed and modified for new datasets with minimal effort, providing a high return on the initial “steep learning curve” investment.</p></li>
+<li><p><strong>Handling Complexity:</strong> R allows decision-makers to overcome the limitations of traditional software like Excel, particularly when dealing with non-rectangular data, complex encodings, or datasets that exceed standard spreadsheet row limits as discussed by <span class="citation" data-cites="rcore2015r">R Core Team (<a href="#ref-rcore2015r" role="doc-biblioref">2015</a>)</span>.</p></li>
+<li><p><strong>Open-Source Accessibility:</strong> R is free and open-source software, allowing organizations to avoid expensive licensing costs associated with proprietary analytical tools.</p></li>
 </ul>
 </section>
 <section id="different-data-types" class="level1" data-number="2">
 <h1 data-number="2"><span class="header-section-number">2</span> Different Data Types</h1>
 <p>Before choosing a package, a data scientist must understand the structure of the source material. Data generally falls into several categories:</p>
 <ol type="1">
-<li><p><strong>Rectangular/Tabular Data:</strong> This is the most common type, where data is organized into rows (observations) and columns (variables). Examples include Comma Separated Values (.csv) and Tab Delimited (.txt or .tsv) files <span class="citation" data-cites="rcore2015r">R Core Team (<a href="#ref-rcore2015r" role="doc-biblioref">2015</a>)</span>.</p></li>
-<li><p><strong>Proprietary Spreadsheets:</strong> such as Microsoft Excel (.xls, .xlsx), are widely used in companies. But they are more complicated than plain text files because they can contain multiple sheets, formulas, formatting, and macros, not just raw data, according to <span class="citation" data-cites="luraschi2023importing">Luraschi (<a href="#ref-luraschi2023importing" role="doc-biblioref">2023</a>)</span>.</p></li>
-<li><p><strong>Statistical Software Files:</strong> Data often originates from legacy systems like SAS (.sas7bdat), SPSS (.sav), or Stata (.dta). These files often contain important metadata, such as value labels, which must be preserved during import <span class="citation" data-cites="chapman2026importing">Chapman University (<a href="#ref-chapman2026importing" role="doc-biblioref">2026</a>)</span>.</p></li>
+<li><p><strong>Rectangular/Tabular Data:</strong> This is the most common type, where data is organized into rows (observations) and columns (variables). Examples include Comma Separated Values (.csv) and Tab Delimited (.txt or .tsv) files.</p></li>
+<li><p><strong>Proprietary Spreadsheets:</strong> Proprietary spreadsheet such as Microsoft Excel (.xls, .xlsx) are widely used in companies. But they are more complicated than plain text files because they can contain multiple sheets, formulas, formatting, and macros, not just raw data.</p></li>
+<li><p><strong>Statistical Software Files:</strong> Data often originates from legacy systems like SAS (.sas7bdat), SPSS (.sav), or Stata (.dta). These files often contain important metadata, such as value labels, which must be preserved during import.</p></li>
 <li><p><strong>Relational Databases:</strong> For very large-scale data that does not fit into a computer’s RAM, data is stored in RDBMS like MySQL, PostgreSQL, or SQLite. Accessing these requires specialized connection protocols <span class="citation" data-cites="rcore2015r">R Core Team (<a href="#ref-rcore2015r" role="doc-biblioref">2015</a>)</span>.</p></li>
 <li><p><strong>Spatial Data:</strong> Includes coordinates, bounding boxes, and reference systems. These are categorized into vector models (points, lines, polygons) and raster models (regular grids like satellite imagery) <span class="citation" data-cites="bivand2008applied">Bivand et al. (<a href="#ref-bivand2008applied" role="doc-biblioref">2008</a>)</span>.</p></li>
-<li><p><strong>Scientific/Specialized Data:</strong> Data from instruments like sensors often comes in proprietary formats that require specialized parsers to extract both measurements and critical metadata <span class="citation" data-cites="gruson2019lightr">Gruson et al. (<a href="#ref-gruson2019lightr" role="doc-biblioref">2019</a>)</span>.</p></li>
+<li><p><strong>Scientific/Sensors Data:</strong> Data from instruments like sensors often comes in proprietary formats that require specialized parsers to extract both measurements and critical metadata <span class="citation" data-cites="gruson2019lightr">Gruson et al. (<a href="#ref-gruson2019lightr" role="doc-biblioref">2019</a>)</span>.</p></li>
 </ol>
 </section>
 <section id="different-packages-for-each-data-type" class="level1" data-number="3">
@@ -4296,7 +4296,7 @@ Table 1: Overview of data import packages
 <section id="standard-tabular-data-.csv-.tsv" class="level2" data-number="4.1">
 <h2 data-number="4.1" class="anchored" data-anchor-id="standard-tabular-data-.csv-.tsv"><span class="header-section-number">4.1</span> Standard Tabular Data (.csv, .tsv)</h2>
 <ul>
-<li><strong>Graphical:</strong> In R studio click on the File and then Import dataset and then you can see two options for importing text file, as shown in the <a href="#fig-1" class="quarto-xref">Figure 2</a>.</li>
+<li><strong>Graphical:</strong> In Rstudio, click on File → Import dataset, then you can see two options for importing text file, as shown in the <a href="#fig-1" class="quarto-xref">Figure 2</a>.</li>
 </ul>
 <div id="fig-1" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-cap="Opening Import section in R studio">
 <figure class="quarto-float quarto-float-fig figure">
@@ -4308,7 +4308,7 @@ Figure 2: Opening Import section in R studio
 </figcaption>
 </figure>
 </div>
-<p>Then you have option for base or readr packages. base package (see <a href="#fig-2" class="quarto-xref">Figure 3</a>) is the basic package which is slower. however, readr which is a part of tidyverse (see <a href="#fig-3" class="quarto-xref">Figure 4</a>) pacakge and requires installation prior to use, allows for a live preview where you can visually change delimiters, skip rows, and rename columns while the GUI generates the code automatically.</p>
+<p>Then You can then choose between the Base R and <code>readr</code> import options. The base import option (see <a href="#fig-2" class="quarto-xref">Figure 3</a>) uses Base R functions, which are generally slower for large datasets. However, the <code>readr</code> package, which is part of the <code>tidyverse</code> ecosystem (see <a href="#fig-3" class="quarto-xref">Figure 4</a>), provides a user-friendly interface with a live preview option.</p>
 <div id="fig-2" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -4346,7 +4346,7 @@ Figure 4: Imporing From text readr window
 </section>
 <section id="proprietary-excel-files-.xls-.xlsx" class="level2" data-number="4.2">
 <h2 data-number="4.2" class="anchored" data-anchor-id="proprietary-excel-files-.xls-.xlsx"><span class="header-section-number">4.2</span> Proprietary Excel Files (.xls, .xlsx)</h2>
-<p>For Excel files, you have to install a package. Tideyverse is recommended for it. it is easy to use.</p>
+<p>For Excel files, you have to install a package. The <code>readxl</code> package from the <code>tidyverse</code> ecosystem is commonly recommended for importing Excel files.</p>
 <ul>
 <li><strong>Graphical:</strong> Select “From Excel” in the RStudio wizard. Then you will see a window like <a href="#fig-4" class="quarto-xref">Figure 5</a> and you can select from which sheet you want to import data, and also define a cell range (e.g., “A1:E20”) graphically.</li>
 </ul>
@@ -4361,7 +4361,7 @@ Figure 5: Importing from Excel
 </figure>
 </div>
 <ul>
-<li><strong>Code</strong> <span class="citation" data-cites="chapman2026importing">Chapman University (<a href="#ref-chapman2026importing" role="doc-biblioref">2026</a>)</span>:</li>
+<li><strong>Code</strong> according to <span class="citation" data-cites="chapman2026importing">Chapman University (<a href="#ref-chapman2026importing" role="doc-biblioref">2026</a>)</span>:</li>
 </ul>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
@@ -4372,7 +4372,7 @@ Figure 5: Importing from Excel
 <section id="statistical-software-files-.sav-.sas7bdat-.dta" class="level2" data-number="4.3">
 <h2 data-number="4.3" class="anchored" data-anchor-id="statistical-software-files-.sav-.sas7bdat-.dta"><span class="header-section-number">4.3</span> Statistical Software Files (.sav, .sas7bdat, .dta)</h2>
 <ul>
-<li><strong>Graphical:</strong> Select “From SPSS/SAS/Stata” in RStudio.</li>
+<li><strong>Graphical:</strong> Click on File → Import Dataset → From SPSS/SAS/Stata in RStudio. After selecting the file, you will see a window like <a href="#fig-5" class="quarto-xref">Figure 6</a>.</li>
 </ul>
 <div id="fig-5" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -4385,7 +4385,7 @@ Figure 6: Importing from .sav or .dta files
 </figure>
 </div>
 <ul>
-<li><p><strong>Code <span class="citation" data-cites="rcore2015r">R Core Team (<a href="#ref-rcore2015r" role="doc-biblioref">2015</a>)</span>:</strong></p>
+<li><p><strong>Code</strong> according to <span class="citation" data-cites="rcore2015r">R Core Team (<a href="#ref-rcore2015r" role="doc-biblioref">2015</a>)</span>:</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(haven)</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Import SPSS file</span></span>
@@ -4401,8 +4401,8 @@ Figure 6: Importing from .sav or .dta files
 <section id="relational-databases-.db-.sqlite-.mdb" class="level2" data-number="4.4">
 <h2 data-number="4.4" class="anchored" data-anchor-id="relational-databases-.db-.sqlite-.mdb"><span class="header-section-number">4.4</span> Relational Databases (.db, .sqlite, .mdb)</h2>
 <ul>
-<li><p><strong>Graphical:</strong> Access through the RStudio “Connections” pane. Once a DBI connection is established, you can browse table schemas and preview data before importing <span class="citation" data-cites="luraschi2023importing">Luraschi (<a href="#ref-luraschi2023importing" role="doc-biblioref">2023</a>)</span>.</p></li>
-<li><p><strong>Code <span class="citation" data-cites="rcore2015r">R Core Team (<a href="#ref-rcore2015r" role="doc-biblioref">2015</a>)</span>:</strong></p>
+<li><p><strong>Graphical:</strong> Access through the RStudio “Connections” pane. Once a DBI connection is established, you can browse table schemas and preview data before importing.</p></li>
+<li><p><strong>Code</strong> according to <span class="citation" data-cites="rcore2015r">R Core Team (<a href="#ref-rcore2015r" role="doc-biblioref">2015</a>)</span>:</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(DBI)</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(RSQLite)</span>
@@ -4420,7 +4420,7 @@ Figure 6: Importing from .sav or .dta files
 <section id="spatial-gis-data-.shp-.tif-.kml" class="level2" data-number="4.5">
 <h2 data-number="4.5" class="anchored" data-anchor-id="spatial-gis-data-.shp-.tif-.kml"><span class="header-section-number">4.5</span> Spatial / GIS Data (.shp, .tif, .kml)</h2>
 <ul>
-<li><p><strong>Code <span class="citation" data-cites="bivand2008applied">Bivand et al. (<a href="#ref-bivand2008applied" role="doc-biblioref">2008</a>)</span> :</strong></p>
+<li><p><strong>Code</strong> The following example is adapted from <span class="citation" data-cites="bivand2008applied">Bivand et al. (<a href="#ref-bivand2008applied" role="doc-biblioref">2008</a>)</span> :</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sf)</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Read shapefile</span></span>
@@ -4434,7 +4434,7 @@ Figure 6: Importing from .sav or .dta files
 <h2 data-number="4.6" class="anchored" data-anchor-id="base-text-and-fixed-width-files-.txt-.dat-.fwf"><span class="header-section-number">4.6</span> Base Text and Fixed-Width Files (.txt, .dat, .fwf)</h2>
 <ul>
 <li><p><strong>Graphical:</strong> Use the “From Text (base)” option in the RStudio wizard.</p></li>
-<li><p><strong>Code <span class="citation" data-cites="rcore2015r">R Core Team (<a href="#ref-rcore2015r" role="doc-biblioref">2015</a>)</span>:</strong></p>
+<li><p><strong>Code</strong> according to <span class="citation" data-cites="rcore2015r">R Core Team (<a href="#ref-rcore2015r" role="doc-biblioref">2015</a>)</span>:</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Import fixed-width file</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>df_fwf <span class="ot">&lt;-</span> <span class="fu">read.fwf</span>(</span>
@@ -4450,8 +4450,8 @@ Figure 6: Importing from .sav or .dta files
 <section id="scientific-spectral-data-.jdx-.abs-.cnv-.nc" class="level2" data-number="4.7">
 <h2 data-number="4.7" class="anchored" data-anchor-id="scientific-spectral-data-.jdx-.abs-.cnv-.nc"><span class="header-section-number">4.7</span> Scientific Spectral Data (.jdx, .abs, .cnv, .nc)</h2>
 <ul>
-<li><p><strong>Graphical:</strong> Utilize specialized package GUIs or high-level functions that automate folder-wide imports <span class="citation" data-cites="gruson2019lightr">Gruson et al. (<a href="#ref-gruson2019lightr" role="doc-biblioref">2019</a>)</span>.</p></li>
-<li><p><strong>Code <span class="citation" data-cites="gruson2019lightr">Gruson et al. (<a href="#ref-gruson2019lightr" role="doc-biblioref">2019</a>)</span> :</strong></p>
+<li><p><strong>Graphical:</strong> Utilize specialized package GUIs or high-level functions that automate folder-wide imports, as mentioned by <span class="citation" data-cites="gruson2019lightr">Gruson et al. (<a href="#ref-gruson2019lightr" role="doc-biblioref">2019</a>)</span>.</p></li>
+<li><p><strong>Code:</strong></p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lightr)</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -4466,7 +4466,7 @@ Figure 6: Importing from .sav or .dta files
 <section id="cloud-sheets-google-sheets-urls" class="level2" data-number="4.8">
 <h2 data-number="4.8" class="anchored" data-anchor-id="cloud-sheets-google-sheets-urls"><span class="header-section-number">4.8</span> Cloud Sheets (Google Sheets/ URLs)</h2>
 <ul>
-<li><p><strong>Code: <span class="citation" data-cites="chapman2026importing">Chapman University (<a href="#ref-chapman2026importing" role="doc-biblioref">2026</a>)</span></strong></p>
+<li><p><strong>Code:</strong> The following example is adapted from <span class="citation" data-cites="chapman2026importing">Chapman University (<a href="#ref-chapman2026importing" role="doc-biblioref">2026</a>)</span></p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(googlesheets4)</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Import Google Sheet</span></span>
@@ -4483,7 +4483,7 @@ Figure 6: Importing from .sav or .dta files
 <h2 data-number="4.9" class="anchored" data-anchor-id="hierarchical-data-.json"><span class="header-section-number">4.9</span> Hierarchical Data (.json)</h2>
 <ul>
 <li><p><strong>Graphical:</strong> While RStudio does not have a dedicated “JSON Wizard” in the same way it does for Excel or CSV, users can often preview JSON structures through the File Pane or by using specialized viewing packages.</p></li>
-<li><p><strong>Code <span class="citation" data-cites="rcore2015r">R Core Team (<a href="#ref-rcore2015r" role="doc-biblioref">2015</a>)</span> :</strong></p></li>
+<li><p><strong>Code:</strong> see <span class="citation" data-cites="rcore2015r">R Core Team (<a href="#ref-rcore2015r" role="doc-biblioref">2015</a>)</span></p></li>
 </ul>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(jsonlite)</span>
@@ -4495,16 +4495,16 @@ Figure 6: Importing from .sav or .dta files
 <h2 data-number="4.10" class="anchored" data-anchor-id="importing-data-from-multiple-files"><span class="header-section-number">4.10</span> Importing Data From Multiple Files</h2>
 <p>Decision-makers often face the need to import hundreds of files simultaneously. R provides several automation strategies <span class="citation" data-cites="wickham2016r">Wickham &amp; Grolemund (<a href="#ref-wickham2016r" role="doc-biblioref">2016</a>)</span>, <span class="citation" data-cites="gruson2019lightr">Gruson et al. (<a href="#ref-gruson2019lightr" role="doc-biblioref">2019</a>)</span>.</p>
 <ul>
-<li><p><strong>Automated Recursive Import:</strong> Specialized tools like lightr use functions such as <code>lr_get_spec()</code> to search subfolders automatically for specific extensions and process them using parallelized loops to save time <span class="citation" data-cites="gruson2019lightr">Gruson et al. (<a href="#ref-gruson2019lightr" role="doc-biblioref">2019</a>)</span>.</p></li>
+<li><p><strong>Automated Recursive Import:</strong> Specialized tools like lightr use functions such as <code>lr_get_spec()</code> to search subfolders automatically for specific extensions and process them using parallelized loops to reduce processing time <span class="citation" data-cites="gruson2019lightr">Gruson et al. (<a href="#ref-gruson2019lightr" role="doc-biblioref">2019</a>)</span>.</p></li>
 <li><p><strong>The Tidyverse Approach (Iteration):</strong> The most flexible method combines <code>list.files()</code> with the purrr package. By using <code>map()</code> or <code>map_df()</code>, an analyst can apply a read function to every path in a list, automatically stacking them into a single unified tibble <span class="citation" data-cites="wickham2019welcome"><span class="nocase">Wickham et al.</span> (<a href="#ref-wickham2019welcome" role="doc-biblioref">2019</a>)</span>.</p></li>
-<li><p><strong>Complex Multi-File Formats:</strong> Some formats are naturally batch-oriented. For example, a single “Shapefile” is a collection of files (<code>.shp</code>, <code>.dbf</code>, etc.). The <code>readOGR()</code> function in rgdal uses a Data Source Name (DSN)—often a folder path—to treat these multiple files as a single spatial object <span class="citation" data-cites="bivand2008applied">Bivand et al. (<a href="#ref-bivand2008applied" role="doc-biblioref">2008</a>)</span>, <span class="citation" data-cites="rcore2015r">R Core Team (<a href="#ref-rcore2015r" role="doc-biblioref">2015</a>)</span>.</p></li>
+<li><p><strong>Complex Multi-File Formats:</strong> Some formats are naturally batch-oriented. For example, a shapefile is composed of several related files (<code>.shp</code>, <code>.dbf</code>, <code>.shx</code>, etc.). The <code>st_read()</code> function from the <code>sf</code> package can automatically import these files as a single spatial object. <span class="citation" data-cites="bivand2008applied">Bivand et al. (<a href="#ref-bivand2008applied" role="doc-biblioref">2008</a>)</span>, <span class="citation" data-cites="rcore2015r">R Core Team (<a href="#ref-rcore2015r" role="doc-biblioref">2015</a>)</span>.</p></li>
 <li><p><strong>Custom Functions for Productivity:</strong> speedR can graphically define an import process and then generate a new R function containing those specific constraints. This “ready-to-use” code can be applied to any number of similar files to ensure a consistent pipeline <span class="citation" data-cites="visne2012speedr">Visne et al. (<a href="#ref-visne2012speedr" role="doc-biblioref">2012</a>)</span>.</p></li>
 </ul>
 </section>
 </section>
 <section id="the-comparison-between-packages" class="level1" data-number="5">
 <h1 data-number="5"><span class="header-section-number">5</span> The Comparison Between Packages</h1>
-<p>Selecting the appropriate import method is a strategic decision that impacts the speed, reliability, and reproducibility of the analytical pipeline. <a href="#tbl-comparison" class="quarto-xref">Table 2</a> provides a side-by-side comparison of the key packages discussed in this handnote to help choosing the right tool based on the specific data requirements.</p>
+<p>Selecting the appropriate import method is a strategic decision that impacts the speed, reliability, and reproducibility of the analytical pipeline. <a href="#tbl-comparison" class="quarto-xref">Table 2</a> provides a side-by-side comparison of the key packages discussed in this handnote to help users choose the right tool based on the specific data requirements.</p>
 <div id="tbl-comparison" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-comparison-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -4566,8 +4566,8 @@ Table 2: The Comparison Between Packages
 <tr class="odd">
 <td>Spatial / GIS</td>
 <td><code>.shp</code>, <code>.tif</code>, <code>.kml</code></td>
-<td>rgdal</td>
-<td><code>readOGR()</code>, <code>readGDAL()</code></td>
+<td>sf</td>
+<td><code>st_read()</code></td>
 <td>External links (e.g., GRASS)</td>
 <td>Supports CRS metadata / Complex for beginners.</td>
 </tr>
@@ -4602,34 +4602,30 @@ Table 2: The Comparison Between Packages
 </div>
 <p><strong>Key Decision-Making Guidelines for the Presentation:</strong></p>
 <ul>
-<li><p><strong>The Reproducibility Standard:</strong> While graphical tools like the RStudio Wizard are excellent for initial exploration, final decision-making workflows should always use Programmatic Scripts to ensure every step is auditable and repeatable <span class="citation" data-cites="bivand2008applied">Bivand et al. (<a href="#ref-bivand2008applied" role="doc-biblioref">2008</a>)</span>, <span class="citation" data-cites="huber2025how">Huber (<a href="#ref-huber2025how" role="doc-biblioref">2025</a>)</span>.</p></li>
-<li><p><strong>Memory Management:</strong> For datasets larger than 2GB, avoid standard flat-file imports and prioritize Relational Databases (DBI) or Partial Reading (rgdal / GDAL.open) to prevent system crashes <span class="citation" data-cites="rcore2015r">R Core Team (<a href="#ref-rcore2015r" role="doc-biblioref">2015</a>)</span>, <span class="citation" data-cites="wickham2016r">Wickham &amp; Grolemund (<a href="#ref-wickham2016r" role="doc-biblioref">2016</a>)</span>.</p></li>
+<li><p><strong>The Reproducibility Standard:</strong> While graphical tools like the RStudio Wizard are excellent for initial exploration, final decision-making workflows should always use programmatic scripts to ensure every step is auditable and repeatable <span class="citation" data-cites="bivand2008applied">Bivand et al. (<a href="#ref-bivand2008applied" role="doc-biblioref">2008</a>)</span>, <span class="citation" data-cites="huber2025how">Huber (<a href="#ref-huber2025how" role="doc-biblioref">2025</a>)</span>.</p></li>
+<li><p><strong>Memory Management:</strong> For datasets larger than 2GB, avoid standard flat-file imports and prioritize database connections or optimized import methods to prevent system crashes <span class="citation" data-cites="rcore2015r">R Core Team (<a href="#ref-rcore2015r" role="doc-biblioref">2015</a>)</span>, <span class="citation" data-cites="wickham2016r">Wickham &amp; Grolemund (<a href="#ref-wickham2016r" role="doc-biblioref">2016</a>)</span>.</p></li>
 <li><p><strong>Structure Alignment:</strong> Always select the package that best respects your data’s inherent structure. For example, use haven for surveys to avoid losing categorical labels, or lightr for scientific spectrometry to preserve instrument metadata <span class="citation" data-cites="luraschi2023importing">Luraschi (<a href="#ref-luraschi2023importing" role="doc-biblioref">2023</a>)</span>, <span class="citation" data-cites="gruson2019lightr">Gruson et al. (<a href="#ref-gruson2019lightr" role="doc-biblioref">2019</a>)</span>.</p></li>
 </ul>
 </section>
 <section id="conclusion" class="level1" data-number="6">
 <h1 data-number="6"><span class="header-section-number">6</span> Conclusion</h1>
-<p>Mastering data import is about matching the right package to the right data structure while respecting hardware limits. Choosing programmatic scripts ensures that the decision-making process is transparent, scalable, and reproducible <span class="citation" data-cites="bivand2008applied">Bivand et al. (<a href="#ref-bivand2008applied" role="doc-biblioref">2008</a>)</span>, <span class="citation" data-cites="huber2025how">Huber (<a href="#ref-huber2025how" role="doc-biblioref">2025</a>)</span>.</p>
+<p>Mastering data import is about matching the right package to the right data structure while considering hardware limits. Choosing programmatic scripts ensures that the decision-making process is transparent, scalable, and reproducible <span class="citation" data-cites="bivand2008applied">Bivand et al. (<a href="#ref-bivand2008applied" role="doc-biblioref">2008</a>)</span>, <span class="citation" data-cites="huber2025how">Huber (<a href="#ref-huber2025how" role="doc-biblioref">2025</a>)</span>.</p>
 </section>
 <section id="class-assignment" class="level1" data-number="7">
 <h1 data-number="7"><span class="header-section-number">7</span> Class Assignment</h1>
-<p>Download the files from here <a href="https://drive.google.com/file/d/17co85tSnV84tRCVxreNODKs_2N6F92Xc/view?usp=sharing" class="uri">link</a>.</p>
+<p>Download all 3 files from here <a href="https://drive.google.com/file/d/17co85tSnV84tRCVxreNODKs_2N6F92Xc/view?usp=sharing" class="uri">link</a> or you can access them individually, inside each exercise description.</p>
 <section id="help-the-hr-manager" class="level2" data-number="7.1">
 <h2 data-number="7.1" class="anchored" data-anchor-id="help-the-hr-manager"><span class="header-section-number">7.1</span> Help The HR Manager!</h2>
 <ol type="1">
-<li>You are helping a HR manager in the company. She has given you CSV file about the personnel information (off-course after signing relative Non-disclusure agreement!). This data file is changing every month and it is a real pain for her to create the report every time! She knows you have R knowledge! and ask you to prepare a dynamic file by import the data into R, so she can easily prepare report very quickly in the beginning of every month. go ahead and do first step which is importing the <a href="exe1.csv">exe1.csv</a> file into R Studio.</li>
+<li>Your HR manager is importing personnel database every month and it is a real pain for her to create the report every time from it! She asks you to prepare a dynamic report by importing the data into R, so she can easily prepare reports more efficiently. Go ahead and do first step which is importing the <a href="exe1.csv">exe1.csv</a> file into R Studio.</li>
 </ol>
 </section>
 <section id="everyday-sales-report" class="level2" data-number="7.2">
 <h2 data-number="7.2" class="anchored" data-anchor-id="everyday-sales-report"><span class="header-section-number">7.2</span> Everyday Sales Report!</h2>
 <ol start="2" type="1">
-<li>You are a manager in a company and the sale department gives you sales reports in excel file every morning. consider that you have recieved <a href="exe2.xlsx">exe2.xlsx</a> file today. Import it to R Studio.</li>
-</ol>
-</section>
-<section id="spare-parts-sheet" class="level2" data-number="7.3">
-<h2 data-number="7.3" class="anchored" data-anchor-id="spare-parts-sheet"><span class="header-section-number">7.3</span> Spare Parts Sheet</h2>
-<ol start="3" type="1">
-<li>Imagine that you and your colleagues in the company are working on a google spreadsheet, together. now you want to import data from it into R. Use this <a href="https://docs.google.com/spreadsheets/d/1BoD9bXwbxm1NJWhEnk6BVXUxuxWbWArQWVT3LIKk2PQ/edit?usp=sharing">Link</a> and import it in the R Studio. if you had problem with the link to Google spreadsheet, upload it (it is available in the exercise zip folder) in your own account, and then use your own link.</li>
+<li><p>You are a manager in a company and the sales department gives you sales reports in excel file every morning. consider that you have received <a href="#0">exe2.xlsx</a> file today. Import it to Rstudio.</p></li>
+<li><p>Imagine that you and your colleagues in the company are working on a Google spreadsheet (<a href="https://docs.google.com/spreadsheets/d/1BoD9bXwbxm1NJWhEnk6BVXUxuxWbWArQWVT3LIKk2PQ/edit?usp=sharing">Link</a>), together. And now you want to import the data into R. Import it in the R Studio.</p>
+<p>Note: If you had problem with the link to Google spreadsheet, upload this file <a href="#0">exe3.xlsx</a> yourself and then use your own link. Note that you should use the Google sheet link, not Google Drive link.</p></li>
 </ol>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="Affidavit">
 <div class="callout-header d-flex align-content-center">
