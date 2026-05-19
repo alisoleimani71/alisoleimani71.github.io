@@ -310,6 +310,8 @@ Download all 3 files from here [link](https://drive.google.com/file/d/17co85tSnV
 
 2.  You are a manager in a company and the sales department gives you sales reports in excel file every morning. consider that you have received [exe2.xlsx](#0) file today. Import it to Rstudio.
 
+## Spare part Warehouse
+
 3.  Imagine that you and your colleagues in the company are working on a Google spreadsheet ([Link](https://docs.google.com/spreadsheets/d/1BoD9bXwbxm1NJWhEnk6BVXUxuxWbWArQWVT3LIKk2PQ/edit?usp=sharing)), together. And now you want to import the data into R. Import it in the R Studio.
 
     Note: If you had problem with the link to Google spreadsheet, upload this file [exe3.xlsx](#0) yourself and then use your own link. Note that you should use the Google sheet link, not Google Drive link.
