@@ -10,9 +10,9 @@ website:
         text: "Home"
       - href: index.pdf
         text: "Handout PDF"
-      - href: presentation.html    
+      - href: Presentation.html    
         text: "Presentation"
-      - href: presentation.pdf
+      - href: Presentation.pdf
         text: "Presentation PDF"
       - href: Exercises.zip
         text: "Exercises"
