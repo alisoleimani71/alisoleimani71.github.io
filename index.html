@@ -1,192 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <title>Ali Soleimani | Procurement & Project Management</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+<title>Ali Soleimani | Procurement & Project Management</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
-    <link href="css/styles.css" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+
+/* ===== BASE ===== */
+body {
+    font-family: Arial, sans-serif;
+    transition: 0.3s;
+    background: #f5f7fa;
+    color: #222;
+}
+
+.dark-mode {
+    background: #121212;
+    color: #eee;
+}
+
+/* ===== HERO ===== */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero img {
+    width: 140px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 4px solid #007bff;
+}
+
+/* ===== CARDS ===== */
+.cardx {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.dark-mode .cardx {
+    background: #1e1e1e;
+    color: #fff;
+}
+
+/* ===== BADGE ===== */
+.badgex {
+    display: inline-block;
+    background: #007bff;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 6px;
+    margin: 4px;
+    font-size: 12px;
+}
+
+/* ===== BUTTON ===== */
+.btnx {
+    padding: 10px 18px;
+    background: #000;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+/* ===== NAV ===== */
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+    background: white;
+    position: sticky;
+    top: 0;
+}
+
+.dark-mode .topbar {
+    background: #1e1e1e;
+}
+
+</style>
 </head>
 
-<body id="page-top">
+<body>
 
-<!-- NAV -->
-<nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
-    <div class="container px-4 px-lg-5">
-        <a class="navbar-brand" href="#page-top">Ali Soleimani</a>
-
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ms-auto my-2 my-lg-0">
-                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
-                <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-                <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </div>
-</nav>
+<!-- TOP BAR -->
+<div class="topbar">
+    <div><b>Ali Soleimani</b></div>
+    <button onclick="toggleDark()">🌙 Dark Mode</button>
+</div>
 
 <!-- HERO -->
-<header class="masthead">
-    <div class="container h-100">
-        <div class="row h-100 align-items-center justify-content-center text-center">
+<div class="hero">
 
-            <div class="col-lg-8">
-                <h1 class="text-white font-weight-bold">
-                    Ali Soleimani
-                </h1>
+    <img src="images/profile.jpg">
 
-                <hr class="divider" />
+    <h1>Ali Soleimani</h1>
 
-                <p class="text-white-75 mb-3">
-                    Senior Procurement & Project Management Professional
-                </p>
+    <h4>Senior Procurement & Project Management Professional</h4>
 
-                <p class="text-white-75 mb-5">
-                    Chemical Engineer | MBA<br>
-                    Oil & Gas | Offshore Wind | Industrial Projects
-                </p>
+    <p>Chemical Engineer | MBA</p>
+    <p>Oil & Gas | Offshore Wind | Industrial Projects</p>
 
-                <a class="btn btn-primary btn-xl" href="cv.pdf">Download CV</a>
-            </div>
+    <br>
 
-        </div>
-    </div>
-</header>
+    <a class="btnx" href="cv.pdf">Download CV</a>
+
+</div>
+
+<div class="container">
 
 <!-- ABOUT -->
-<section class="page-section bg-primary" id="about">
-    <div class="container px-4 px-lg-5 text-center">
+<h2>About</h2>
+<div class="cardx">
+Procurement and Project Management professional with experience in Oil & Gas,
+Petrochemical, Mining and Offshore Wind projects. Skilled in contract management,
+supplier negotiation and international project coordination.
+</div>
 
-        <h2 class="text-white mt-0">About Me</h2>
-        <hr class="divider divider-light" />
-
-        <p class="text-white-75 mb-4">
-            Procurement and Project Management professional with experience in Oil & Gas,
-            Petrochemical, Mining, Offshore Wind and large-scale industrial projects.
-            Skilled in contract management, supplier negotiation, procurement strategy
-            and international project coordination.
-        </p>
-
-    </div>
-</section>
+<!-- HIGHLIGHTS -->
+<h2>Highlights</h2>
+<div class="cardx">
+✔ 10+ years experience<br>
+✔ Multi-million € procurement packages<br>
+✔ International supplier management<br>
+✔ Industrial mega projects
+</div>
 
 <!-- EXPERIENCE -->
-<section class="page-section" id="experience">
-    <div class="container px-4 px-lg-5">
+<h2>Experience</h2>
 
-        <h2 class="text-center mt-0">Experience</h2>
-        <hr class="divider" />
+<div class="cardx">
+<b>Procurement Engineer</b><br>
+2020 – 2023<br><br>
+✔ RFQ & Tendering<br>
+✔ Supplier evaluation<br>
+✔ Contract negotiation
+</div>
 
-        <div class="row gx-4 gx-lg-5">
-
-            <div class="col-lg-6 text-center">
-                <div class="mt-5">
-                    <i class="bi-briefcase fs-1 text-primary"></i>
-                    <h3 class="h4 mb-2">Procurement Engineer</h3>
-                    <p class="text-muted mb-0">2020 – 2023 | Industrial Projects</p>
-                    <p>RFQ, supplier evaluation, contract negotiation, cost optimization</p>
-                </div>
-            </div>
-
-            <div class="col-lg-6 text-center">
-                <div class="mt-5">
-                    <i class="bi-gear fs-1 text-primary"></i>
-                    <h3 class="h4 mb-2">Project Coordinator</h3>
-                    <p class="text-muted mb-0">2017 – 2020</p>
-                    <p>Project planning, logistics coordination, stakeholder management</p>
-                </div>
-            </div>
-
-        </div>
-
-    </div>
-</section>
+<div class="cardx">
+<b>Project Coordinator</b><br>
+2017 – 2020<br><br>
+✔ Planning<br>
+✔ Logistics<br>
+✔ Stakeholder management
+</div>
 
 <!-- PROJECTS -->
-<section class="page-section" id="projects">
-    <div class="container px-4 px-lg-5">
+<h2>Projects</h2>
 
-        <h2 class="text-center mt-0">Major Projects</h2>
-        <hr class="divider" />
+<div class="cardx">
+<b>Offshore Gas Project</b><br>
+€100M+ Procurement Scope<br>
+<span class="badgex">Contracts</span>
+<span class="badgex">Logistics</span>
+<span class="badgex">Vendor Management</span>
+</div>
 
-        <div class="row gx-4 gx-lg-5">
-
-            <div class="col-lg-4 text-center">
-                <h3>Offshore Gas Project</h3>
-                <p>€100M+ Procurement Scope</p>
-                <p>Vendor selection, contracts, logistics</p>
-            </div>
-
-            <div class="col-lg-4 text-center">
-                <h3>Petrochemical Plant</h3>
-                <p>Procurement & coordination</p>
-                <p>Supply chain optimization</p>
-            </div>
-
-            <div class="col-lg-4 text-center">
-                <h3>Industrial Expansion</h3>
-                <p>Project coordination</p>
-                <p>Execution & stakeholder management</p>
-            </div>
-
-        </div>
-
-    </div>
-</section>
+<div class="cardx">
+<b>Industrial Expansion</b><br>
+Execution & Coordination<br>
+<span class="badgex">Planning</span>
+<span class="badgex">Execution</span>
+</div>
 
 <!-- SKILLS -->
-<section class="page-section bg-light" id="skills">
-    <div class="container px-4 px-lg-5 text-center">
-
-        <h2>Skills</h2>
-        <hr class="divider" />
-
-        <p>
-            <span class="badge bg-primary">Procurement</span>
-            <span class="badge bg-primary">Contract Management</span>
-            <span class="badge bg-primary">Negotiation</span>
-            <span class="badge bg-primary">SAP</span>
-            <span class="badge bg-primary">Project Coordination</span>
-            <span class="badge bg-primary">Supply Chain</span>
-        </p>
-
-    </div>
-</section>
+<h2>Skills</h2>
+<div class="cardx">
+<span class="badgex">Procurement</span>
+<span class="badgex">Contract Management</span>
+<span class="badgex">Negotiation</span>
+<span class="badgex">SAP</span>
+<span class="badgex">Project Coordination</span>
+</div>
 
 <!-- CONTACT -->
-<section class="page-section" id="contact">
-    <div class="container px-4 px-lg-5 text-center">
+<h2>Contact</h2>
+<div class="cardx">
+Email: yourmail@gmail.com<br>
+LinkedIn: linkedin.com/in/alisoleimani71
+</div>
 
-        <h2>Contact</h2>
-        <hr class="divider" />
+</div>
 
-        <p>Email: yourmail@gmail.com</p>
-        <p>LinkedIn: linkedin.com/in/alisoleimani71</p>
-
-        <a class="btn btn-dark btn-xl" href="cv.pdf">Download CV</a>
-
-    </div>
-</section>
-
-<!-- FOOTER -->
-<footer class="bg-light py-5">
-    <div class="container text-center">
-        <small>© Ali Soleimani | Procurement & Project Management</small>
-    </div>
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="js/scripts.js"></script>
+<script>
+function toggleDark() {
+    document.body.classList.toggle("dark-mode");
+}
+</script>
 
 </body>
 </html>
