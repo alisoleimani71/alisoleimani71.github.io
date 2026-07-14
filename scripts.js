@@ -1,261 +1,437 @@
-/* ==========================================
-   ALI SOLEIMANI PORTFOLIO
-   scripts.js
-========================================== */
-
-// Smooth active navigation
-const sections = document.querySelectorAll("section");
-const navLinks = document.querySelectorAll(".nav-links a");
-
-window.addEventListener("scroll", () => {
-
-    let current = "";
-
-    sections.forEach(section => {
-
-        const sectionTop = section.offsetTop - 120;
-
-        if (window.scrollY >= sectionTop) {
-            current = section.getAttribute("id");
-        }
-
-    });
-
-    navLinks.forEach(link => {
-
-        link.classList.remove("active");
-
-        if (link.getAttribute("href") === "#" + current) {
-            link.classList.add("active");
-        }
-
-    });
-
-});
+// ===============================
+// Ali Soleimani Portfolio Website
+// Interactive Effects
+// ===============================
 
 
 
-// Navbar background
-
-const header = document.querySelector("header");
-
-window.addEventListener("scroll",()=>{
-
-    if(window.scrollY>50){
-
-        header.style.background="rgba(15,23,42,.92)";
-
-        header.style.boxShadow="0 10px 30px rgba(0,0,0,.25)";
-
-    }
-
-    else{
-
-        header.style.background="rgba(15,23,42,.70)";
-
-        header.style.boxShadow="none";
-
-    }
-
-});
+document.addEventListener(
+    "DOMContentLoaded",
+    () => {
 
 
 
-// Reveal Animation
+    /*
+    ============================
+    SCROLL REVEAL ANIMATION
+    ============================
+    */
 
-const revealElements=document.querySelectorAll("section,.stat-card");
 
-const reveal=()=>{
+    const revealElements = document.querySelectorAll(
+        ".section, .stat-card, .timeline-item, .skills-grid div, .impact-grid div"
+    );
 
-    revealElements.forEach(el=>{
 
-        const windowHeight=window.innerHeight;
+    revealElements.forEach(
+        element => {
 
-        const top=el.getBoundingClientRect().top;
-
-        if(top<windowHeight-100){
-
-            el.classList.add("show");
+            element.classList.add("reveal");
 
         }
-
-    });
-
-};
-
-window.addEventListener("scroll",reveal);
-
-reveal();
+    );
 
 
 
-// Counter Animation
+    const observer = new IntersectionObserver(
+        entries => {
 
-const counters=document.querySelectorAll(".stat-card h3");
 
-let started=false;
+            entries.forEach(
+                entry => {
 
-function runCounter(){
 
-    if(started) return;
+                    if(entry.isIntersecting){
 
-    const stats=document.querySelector(".stats");
+                        entry.target.classList.add(
+                            "active"
+                        );
 
-    const trigger=stats.getBoundingClientRect().top;
+                    }
 
-    if(trigger<window.innerHeight-120){
-
-        started=true;
-
-        counters.forEach(counter=>{
-
-            const text=counter.innerText;
-
-            let target=0;
-            let prefix="";
-            let suffix="";
-
-            if(text.includes("€")){
-
-                prefix="€";
-                suffix="M+";
-                target=10;
-
-            }
-
-            else if(text.includes("30")){
-
-                suffix="+";
-                target=30;
-
-            }
-
-            else if(text.includes("10")){
-
-                suffix="+";
-                target=10;
-
-            }
-
-            else{
-
-                target=8;
-
-            }
-
-            let current=0;
-
-            const timer=setInterval(()=>{
-
-                current++;
-
-                counter.innerText=prefix+current+suffix;
-
-                if(current>=target){
-
-                    clearInterval(timer);
 
                 }
+            );
 
-            },60);
 
-        });
+        },
+        {
+            threshold:0.15
+        }
+
+    );
+
+
+
+    revealElements.forEach(
+        element => {
+
+            observer.observe(element);
+
+        }
+    );
+
+
+
+
+
+
+
+    /*
+    ============================
+    NAVBAR EFFECT
+    ============================
+    */
+
+
+    const navbar =
+        document.querySelector(".navbar");
+
+
+    window.addEventListener(
+        "scroll",
+        () => {
+
+
+            if(window.scrollY > 60){
+
+                navbar.style.background =
+                "rgba(8,16,24,0.92)";
+
+
+                navbar.style.backdropFilter =
+                "blur(10px)";
+
+
+            }
+
+            else {
+
+
+                navbar.style.background =
+                "transparent";
+
+
+            }
+
+
+
+        }
+    );
+
+
+
+
+
+
+
+
+    /*
+    ============================
+    COUNTER ANIMATION
+    ============================
+    */
+
+
+    const counters =
+    document.querySelectorAll(
+        ".stat-card h2"
+    );
+
+
+    let started = false;
+
+
+
+    function startCounters(){
+
+
+        if(started)
+            return;
+
+
+        const statsSection =
+        document.querySelector(".stats");
+
+
+        const position =
+        statsSection.getBoundingClientRect();
+
+
+        if(position.top <
+        window.innerHeight - 100){
+
+
+            started = true;
+
+
+
+            counters.forEach(
+                counter => {
+
+
+                    let text =
+                    counter.innerText;
+
+
+                    let number =
+                    parseInt(
+                        text.replace(/\D/g,'')
+                    );
+
+
+                    let suffix =
+                    text.replace(/[0-9]/g,'');
+
+
+
+                    let current = 0;
+
+
+
+                    let interval =
+                    setInterval(
+                        () => {
+
+
+                            current +=
+                            Math.ceil(
+                                number / 40
+                            );
+
+
+
+                            if(current >= number){
+
+                                current = number;
+
+                                clearInterval(
+                                    interval
+                                );
+
+                            }
+
+
+
+                            counter.innerText =
+                            current + suffix;
+
+
+
+                        },
+                        40
+                    );
+
+
+
+                }
+            );
+
+
+        }
+
 
     }
 
-}
-
-window.addEventListener("scroll",runCounter);
-
-runCounter();
 
 
+    window.addEventListener(
+        "scroll",
+        startCounters
+    );
 
 
-// Button Hover Effect
 
-document.querySelectorAll(".btn-primary,.btn-secondary").forEach(btn=>{
 
-    btn.addEventListener("mousemove",(e)=>{
 
-        const rect=btn.getBoundingClientRect();
 
-        const x=e.clientX-rect.left;
 
-        const y=e.clientY-rect.top;
 
-        btn.style.backgroundPosition=`${x}px ${y}px`;
 
-    });
+    /*
+    ============================
+    ACTIVE LINK HIGHLIGHT
+    ============================
+    */
+
+
+    const sections =
+    document.querySelectorAll(
+        "section[id]"
+    );
+
+
+    const links =
+    document.querySelectorAll(
+        ".navbar a"
+    );
+
+
+
+    window.addEventListener(
+        "scroll",
+        () => {
+
+
+            let current="";
+
+
+            sections.forEach(
+                section => {
+
+
+                    const sectionTop =
+                    section.offsetTop - 150;
+
+
+
+                    if(
+                        window.scrollY >= sectionTop
+                    ){
+
+                        current =
+                        section.getAttribute(
+                            "id"
+                        );
+
+                    }
+
+
+
+                }
+            );
+
+
+
+            links.forEach(
+                link => {
+
+
+                    link.style.color =
+                    "#dce5ef";
+
+
+                    if(
+                        link.getAttribute("href")
+                        === "#" + current
+                    ){
+
+                        link.style.color =
+                        "#56ccf2";
+
+                    }
+
+
+                }
+            );
+
+
+
+        }
+    );
+
+
+
+
+
+
+
+
+    /*
+    ============================
+    IMAGE PARALLAX EFFECT
+    ============================
+    */
+
+
+    const image =
+    document.querySelector(
+        ".image-frame"
+    );
+
+
+
+    window.addEventListener(
+        "mousemove",
+        (event)=>{
+
+
+            if(!image)
+                return;
+
+
+
+            let x =
+            (window.innerWidth / 2 -
+            event.clientX) / 60;
+
+
+
+            let y =
+            (window.innerHeight / 2 -
+            event.clientY) / 60;
+
+
+
+            image.style.transform =
+            `
+            translate(${x}px,${y}px)
+            `;
+
+
+
+        }
+    );
+
+
+
+
+
+
+
+    /*
+    ============================
+    SMOOTH BUTTON FEEDBACK
+    ============================
+    */
+
+
+    const buttons =
+    document.querySelectorAll(
+        ".btn"
+    );
+
+
+    buttons.forEach(
+        button=>{
+
+
+            button.addEventListener(
+                "mouseenter",
+                ()=>{
+
+                    button.style.boxShadow =
+                    "0 15px 35px rgba(47,128,237,.35)";
+
+                }
+            );
+
+
+
+            button.addEventListener(
+                "mouseleave",
+                ()=>{
+
+                    button.style.boxShadow =
+                    "none";
+
+                }
+            );
+
+
+        }
+    );
+
+
 
 });
-
-
-
-// Fade Hero
-
-window.addEventListener("scroll",()=>{
-
-    const hero=document.querySelector(".hero");
-
-    hero.style.opacity=1-window.scrollY/900;
-
-});
-
-
-
-// Typing Cursor Effect
-
-const logo=document.querySelector(".logo");
-
-logo.addEventListener("mouseenter",()=>{
-
-    logo.style.letterSpacing="2px";
-
-});
-
-logo.addEventListener("mouseleave",()=>{
-
-    logo.style.letterSpacing=".5px";
-
-});
-
-
-
-// Scroll To Top
-
-const topBtn=document.createElement("button");
-
-topBtn.innerHTML="↑";
-
-topBtn.className="topButton";
-
-document.body.appendChild(topBtn);
-
-window.addEventListener("scroll",()=>{
-
-    if(window.scrollY>500){
-
-        topBtn.classList.add("visible");
-
-    }
-
-    else{
-
-        topBtn.classList.remove("visible");
-
-    }
-
-});
-
-topBtn.onclick=()=>{
-
-    window.scrollTo({
-
-        top:0,
-
-        behavior:"smooth"
-
-    });
-
-};
