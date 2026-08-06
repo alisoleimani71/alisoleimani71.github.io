@@ -1214,3 +1214,50 @@ transition:1.5s;
 background:#f1c40f;
 
 }
+.contact-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+gap:25px;
+
+margin-top:40px;
+
+}
+
+.contact-grid div{
+
+background:white;
+
+padding:25px;
+
+border-radius:12px;
+
+text-align:center;
+
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+
+}
+
+.contact-grid i{
+
+font-size:28px;
+
+color:#009639;
+
+margin-bottom:15px;
+
+display:block;
+
+}
+
+.contact-grid a{
+
+text-decoration:none;
+
+color:#003A70;
+
+font-weight:600;
+
+}
