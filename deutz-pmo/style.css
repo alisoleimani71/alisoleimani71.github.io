@@ -1218,46 +1218,68 @@ background:#f1c40f;
 
 display:grid;
 
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 
-gap:25px;
+gap:30px;
 
-margin-top:40px;
+margin-top:50px;
 
 }
 
-.contact-grid div{
+.contact-card{
 
-background:white;
+background:#ffffff;
 
-padding:25px;
+border-radius:18px;
 
-border-radius:12px;
+padding:35px 25px;
 
 text-align:center;
 
-box-shadow:0 5px 15px rgba(0,0,0,.08);
+transition:.3s;
+
+box-shadow:0 8px 25px rgba(0,0,0,.12);
 
 }
 
-.contact-grid i{
+.contact-card:hover{
 
-font-size:28px;
+transform:translateY(-8px);
+
+}
+
+.contact-card i{
+
+font-size:34px;
 
 color:#009639;
 
-margin-bottom:15px;
-
-display:block;
+margin-bottom:18px;
 
 }
 
-.contact-grid a{
+.contact-card h3{
+
+margin-bottom:12px;
+
+color:#003A70;
+
+}
+
+.contact-card a{
 
 text-decoration:none;
 
 color:#003A70;
 
 font-weight:600;
+
+}
+
+.contact-card p{
+
+margin:0;
+
+color:#444;
 
 }
