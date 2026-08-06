@@ -1,0 +1,25 @@
+project:
+  type: website
+
+website:
+  title: "Ali Soleimani"
+  site-url: "https://alisoleimani71.github.io"
+
+  navbar:
+    left:
+      - text: "Home"
+        href: index.qmd
+      - text: "Resume"
+        href: resume/resume.qmd
+      - text: "Projects"
+        href: projects/index.qmd
+      - text: "Research"
+        href: research/index.qmd
+      - text: "Companies"
+        href: companies/index.qmd
+
+format:
+  html:
+    theme: lux
+    css: assets/css/style.css
+    toc: true
