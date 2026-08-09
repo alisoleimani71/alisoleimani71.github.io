@@ -53,3 +53,24 @@ The Candidate Dashboard has intentionally been removed.
 - A2 levels use a solid yellow badge with dark text.
 - Language names are larger, bold and pure white.
 - Increased borders, spacing and badge size for immediate readability.
+
+## v11 — Scan-first DEUTZ application design
+- Removed the Cologne/HQ hero pill and long introductory hero paragraph.
+- Replaced the generic hero slogan with a concise PMO-focused first impression.
+- Added large keyword cards aligned with the DEUTZ vacancy: Global SCM Projects, KPI & Data Analysis, Project Planning, Management Reporting, MS Excel & PowerPoint, and Project Standards.
+- Merged Profile and Why Ali Soleimani into section 01.
+- Why DEUTZ is section 02; Job Match is section 03.
+- Professional Experience is section 04 and is intentionally concise without bullet points.
+- Removed the Timeline section and navigation item.
+- Contact is section 09; all sections now follow sequential numbering.
+
+## v12 changes
+- Removed the standalone Why Ali Soleimani section; it remains only as section 01 merged with the profile.
+- Rebuilt Professional Experience as a compact vertical career timeline.
+- Reduced Projects to year + image + project name only.
+- Removed bullet points from Voluntary Experience.
+
+## v13 changes
+- Removed the two requested voluntary-experience descriptions.
+- Changed the top ALI SOLEIMANI brand link to open the main personal website:
+  https://alisoleimani71.github.io/
