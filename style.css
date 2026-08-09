@@ -514,3 +514,101 @@ h2{font-family:"Space Grotesk";font-size:clamp(2.2rem,4vw,4rem);line-height:1;le
   .company-heading{align-items:flex-start}
   .company-heading img{width:30px;height:30px}
 }
+
+/* v13 — portrait crop refinement */
+.hero-photo-v9 img,
+.hero-photo-frame img {
+  object-position: center 30%;
+}
+
+
+/* v15 — DEUTZ PMO & Supply Chain positioning */
+.metric-grid-v8{grid-template-columns:repeat(4,1fr)}
+@media(max-width:950px){.metric-grid-v8{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.metric-grid-v8{grid-template-columns:1fr 1fr}}
+
+
+/* v16 — Unified skill/language visual system */
+.skill-tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
+.skill-tags span{
+  display:inline-flex;
+  align-items:center;
+  min-height:38px;
+  padding:8px 13px;
+  border:1px solid rgba(255,255,255,.16);
+  border-radius:8px;
+  background:rgba(255,255,255,.035);
+  color:#e7ebed;
+  font-size:.82rem;
+  line-height:1.2;
+}
+.languages-v16{
+  margin-top:42px;
+  padding-top:28px;
+  border-top:1px solid rgba(255,255,255,.12);
+}
+.language-heading{
+  display:flex;
+  justify-content:space-between;
+  align-items:baseline;
+  gap:20px;
+  margin-bottom:16px;
+}
+.language-heading h3{margin:0}
+.language-heading > span{
+  color:#89939a;
+  font-size:.72rem;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+}
+.language-tags-v16{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+}
+.language-tag{
+  display:inline-flex;
+  align-items:center;
+  gap:12px;
+  min-height:44px;
+  padding:7px 9px 7px 14px;
+  border:1px solid rgba(255,255,255,.16);
+  border-radius:9px;
+  background:rgba(255,255,255,.035);
+}
+.language-tag strong{
+  color:#f2f4f5;
+  font-size:.86rem;
+  font-weight:600;
+}
+.language-tag span{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-width:40px;
+  height:27px;
+  padding:0 8px;
+  border-radius:6px;
+  font-size:.68rem;
+  font-weight:700;
+  letter-spacing:.03em;
+  background:rgba(185,230,75,.12);
+  color:var(--accent);
+  border:1px solid rgba(185,230,75,.28);
+}
+.language-tag .level-native{
+  min-width:56px;
+}
+@media(max-width:600px){
+  .language-heading{align-items:flex-start;flex-direction:column;gap:6px}
+  .language-tags-v16{gap:9px}
+  .language-tag{width:100%;justify-content:space-between}
+}
+
+.language-tag .level-a1{
+  min-width:40px;
+}

@@ -84,3 +84,23 @@ The design uses the LFTN page as the visual reference: dark sections, lime accen
 - IUST logo is used for both academic degrees and the IUST Research Assistant role.
 - PSL logo is used for PSL professional roles; EIED logo is used for the internship.
 - Languages updated to: Persian Native, English C1, German A2, Turkish B1, Tati Native.
+
+## v13 changes
+- Removed Selected Achievements section and navigation tab.
+- Refined hero portrait crop to show more of the hair/top of the head.
+
+## v15 changes — DEUTZ PMO & Supply Chain positioning
+- Repositioned the public site away from procurement as the primary professional identity.
+- Reframed hero, profile, competencies, professional experience, projects and skills around Project Coordination, PMO support, Supply Chain Management, KPI reporting, data analysis, project documentation, scheduling and cross-functional coordination.
+- Kept factual job titles and dates from the DEUTZ-tailored CV.
+- Removed the procurement-portfolio metric from the top metrics and replaced the headline metrics with PMO/SCM-relevant evidence.
+- Added PowerPoint explicitly and emphasized Excel, Microsoft Project, Gantt charts, KPI reporting and project documentation.
+- Project descriptions were rewritten to emphasize coordination, planning, tracking, reporting and delivery rather than purchasing.
+
+## v16 changes
+- Unified the visual language of skills and languages.
+- Kept skills as bordered tags, but redesigned languages as matching bordered items with a distinct proficiency badge for Native, C1, A2 and B1.
+- Removed the previous table-style language presentation.
+
+## v17 changes
+- Added Arabic — A1 to the Languages section.
