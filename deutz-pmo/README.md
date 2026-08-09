@@ -1,0 +1,28 @@
+# DEUTZ Application Portfolio
+
+Application-specific page for the DEUTZ AG Werkstudent (m/w/d) Global PMO & Strategy Supply Chain Management position.
+
+The page follows the main personal-site structure while using DEUTZ-inspired red/yellow branding.
+
+Sections:
+Profile · Why DEUTZ · Job Match · Competencies · Experience · Projects · Education · Skills · Voluntary · Timeline · Contact
+
+The Candidate Dashboard has intentionally been removed.
+
+## v3 changes
+- Replaced the portrait with the newly supplied image.
+- Removed the diagonal/skewed red hero shape.
+- Changed the navigation label from Competencies to Why Ali Soleimani.
+- Rebuilt Job Match as a structured comparison table.
+- Rebuilt Why Ali Soleimani as visual bordered cards.
+- Continued using the same local project and university/company assets as the main site.
+
+## v4 changes
+- Job Match Strong statuses are now green.
+- English C1 is shown as a strong match in green; German A2 is shown separately as developing in yellow.
+- Professional experience and skills were rechecked against the CV submitted for the DEUTZ application and aligned to its wording.
+- Turkish is A2 on this DEUTZ-specific page, matching the submitted CV (rather than the A2/B1 value used elsewhere on the personal site).
+
+## v5 changes
+- All Job Match rows marked Strong now use the green Strong status.
+- German A2 remains the developing/yellow status.
