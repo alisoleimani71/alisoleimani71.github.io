@@ -35,3 +35,8 @@ The Candidate Dashboard has intentionally been removed.
 
 ## v7 changes
 - Turkish proficiency set to A2 on the DEUTZ application page.
+
+## v8 changes
+- Fixed the profile photo URL.
+- The DEUTZ page now loads the current profile photo from the actual main-site asset:
+  https://alisoleimani71.github.io/assets/ali-profile.png
