@@ -26,3 +26,12 @@ The Candidate Dashboard has intentionally been removed.
 ## v5 changes
 - All Job Match rows marked Strong now use the green Strong status.
 - German A2 remains the developing/yellow status.
+
+## v6 — Shared asset architecture
+- Removed duplicated project images, university/company logos and portrait from this application package.
+- Shared media is loaded directly from the main portfolio at https://alisoleimani71.github.io/assets/
+- Only the DEUTZ-specific logo remains local to this application.
+- Shared images use lazy loading to keep the application page efficient.
+
+## v7 changes
+- Turkish proficiency set to A2 on the DEUTZ application page.
