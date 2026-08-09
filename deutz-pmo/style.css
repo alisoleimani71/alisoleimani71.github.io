@@ -134,3 +134,58 @@
   color:#6d6200;
   border-color:rgba(180,150,0,.35);
 }
+
+/* v9 — clearer language proficiency */
+.languages-v16 .language-heading h3{
+  color:#ffffff;
+}
+.languages-v16 .language-heading > span{
+  color:#aeb7bd;
+  font-weight:700;
+}
+.languages-v16 .language-tag{
+  min-height:52px;
+  padding:8px 12px 8px 16px;
+  background:#182027;
+  border:1px solid #465159;
+  border-radius:9px;
+  gap:14px;
+}
+.languages-v16 .language-tag strong{
+  color:#ffffff;
+  font-size:.9rem;
+  font-weight:700;
+  letter-spacing:.01em;
+}
+.languages-v16 .language-tag > span{
+  min-width:48px;
+  min-height:30px;
+  padding:4px 9px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:6px;
+  font-size:.72rem;
+  font-weight:800;
+  letter-spacing:.04em;
+}
+/* Strong language */
+.languages-v16 .language-tag.language-strong{
+  border-color:rgba(28,145,83,.55);
+  background:rgba(28,145,83,.10);
+}
+.languages-v16 .language-tag.language-strong > span{
+  color:#ffffff;
+  background:#16824a;
+  border-color:#16824a;
+}
+/* Developing languages */
+.languages-v16 .language-tag.language-developing{
+  border-color:rgba(245,229,0,.55);
+  background:rgba(245,229,0,.08);
+}
+.languages-v16 .language-tag.language-developing > span{
+  color:#171717;
+  background:#f5e500;
+  border-color:#f5e500;
+}

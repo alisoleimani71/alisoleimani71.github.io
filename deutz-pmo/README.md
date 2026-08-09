@@ -40,3 +40,9 @@ The Candidate Dashboard has intentionally been removed.
 - Fixed the profile photo URL.
 - The DEUTZ page now loads the current profile photo from the actual main-site asset:
   https://alisoleimani71.github.io/assets/ali-profile.png
+
+## v9 changes
+- Improved language readability and contrast.
+- Language names are now bright white and larger.
+- Proficiency levels use high-contrast badges: green for strong and yellow for developing.
+- German A2 and Turkish A2 are now much easier to distinguish from the surrounding text.
