@@ -54,3 +54,33 @@ The design uses the LFTN page as the visual reference: dark sections, lime accen
 ## v7 changes
 - Restored the original timeline layout: years on the left, timeline line in the center, and all event information on the right.
 - Removed the alternating left/right timeline layout.
+
+## v8 changes
+- Refined hero presentation, removed phone number, updated timeline, replaced Azerbaijani with Turkish, and added subtle metric count-up animation.
+
+## v9 changes
+- Removed the unwanted 10+ Years of Experience badge from the hero.
+- Rebuilt the hero to match the supplied reference layout more closely: portrait/name/role/location card on the left and large professional headline/content on the right.
+
+## v10 changes
+- Renamed the Additional Experience navigation/section terminology to Voluntary Experience.
+
+## v11 changes
+- Replaced project placeholders with the user's existing project photos from `assets/p/`.
+- Project image mapping:
+  - Iron Plant — DRI.jpg
+  - C2+ Recovery & Fractionation — C2.jpg
+  - Copper Plant Technical Support — TechnicalSup.jpg
+  - Petrochemical Loading Station — Petro.jpg
+  - Copper Smelter Expansion — copper.jpg
+  - Oil Desalting & Production Unit — Oilunit.jpg
+  - Loading/Unloading Arms — loadingarm.jpg
+  - National Solar Industry — PV.jpg
+- HTML references are relative (`assets/p/...`), so the existing folder in the GitHub repository can be kept exactly where it is.
+
+## v12 changes
+- Added real university/company logo references from `assets/logo/`.
+- Hochschule Fresenius education updated to M.A. International Management — Project Management, current GPA 1.2.
+- IUST logo is used for both academic degrees and the IUST Research Assistant role.
+- PSL logo is used for PSL professional roles; EIED logo is used for the internship.
+- Languages updated to: Persian Native, English C1, German A2, Turkish B1, Tati Native.
