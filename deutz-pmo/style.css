@@ -189,3 +189,51 @@
   background:#f5e500;
   border-color:#f5e500;
 }
+
+/* v10 — maximum readability for language proficiency */
+.languages-v16 .language-tags-v16{
+  gap:14px;
+}
+.languages-v16 .language-tag{
+  min-height:58px;
+  padding:9px 12px 9px 18px;
+  border-width:2px;
+  background:#121a20;
+  gap:18px;
+}
+.languages-v16 .language-tag strong{
+  color:#ffffff !important;
+  font-size:1rem;
+  font-weight:800;
+}
+.languages-v16 .language-tag > span{
+  min-width:52px;
+  height:34px;
+  padding:5px 11px;
+  border-radius:7px;
+  font-size:.78rem;
+  font-weight:900;
+  color:#ffffff !important;
+  text-shadow:none;
+}
+/* Native / C1 — clearly green */
+.languages-v16 .language-tag.language-strong{
+  border-color:#159957;
+  background:rgba(21,153,87,.08);
+}
+.languages-v16 .language-tag.language-strong > span{
+  background:#159957 !important;
+  border:2px solid #159957 !important;
+  color:#ffffff !important;
+}
+/* A2 — clearly yellow with dark text */
+.languages-v16 .language-tag.language-developing{
+  border-color:#d8c400;
+  background:rgba(245,229,0,.09);
+}
+.languages-v16 .language-tag.language-developing > span{
+  background:#f5e500 !important;
+  border:2px solid #d8c400 !important;
+  color:#111417 !important;
+  text-shadow:none;
+}

@@ -46,3 +46,10 @@ The Candidate Dashboard has intentionally been removed.
 - Language names are now bright white and larger.
 - Proficiency levels use high-contrast badges: green for strong and yellow for developing.
 - German A2 and Turkish A2 are now much easier to distinguish from the surrounding text.
+
+## v10 changes
+- Increased language card and proficiency badge contrast substantially.
+- Strong levels use a solid green badge with white text.
+- A2 levels use a solid yellow badge with dark text.
+- Language names are larger, bold and pure white.
+- Increased borders, spacing and badge size for immediate readability.
