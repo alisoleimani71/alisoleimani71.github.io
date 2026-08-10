@@ -612,3 +612,21 @@ h2{font-family:"Space Grotesk";font-size:clamp(2.2rem,4vw,4rem);line-height:1;le
 .language-tag .level-a1{
   min-width:40px;
 }
+.signature-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 55px auto 35px;
+    padding: 25px 30px;
+    background: #ffffff;
+    border-top: 1px solid #e5e7e9;
+    border-bottom: 1px solid #e5e7e9;
+}
+
+.signature-image {
+    display: block;
+    width: min(720px, 85%);
+    height: auto;
+    max-height: 180px;
+    object-fit: contain;
+}
