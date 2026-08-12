@@ -851,3 +851,4 @@ h2{font-family:"Space Grotesk";font-size:clamp(2.2rem,4vw,4rem);line-height:1;le
 @media(max-width:720px){
   .language-switcher{position:absolute;right:62px;top:50%;transform:translateY(-50%)}
 }
+ 
