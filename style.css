@@ -851,4 +851,46 @@ h2{font-family:"Space Grotesk";font-size:clamp(2.2rem,4vw,4rem);line-height:1;le
 @media(max-width:720px){
   .language-switcher{position:absolute;right:62px;top:50%;transform:translateY(-50%)}
 }
- 
+
+/* FINAL HEADER NAVIGATION SPACING */
+.site-header .nav-wrap{display:flex;align-items:center;width:100%;}
+.site-header .nav{margin-left:auto;}
+.site-header .header-actions{display:flex;align-items:center;gap:18px;margin-left:48px;flex-shrink:0;}
+.site-header .language-switcher{display:flex;align-items:center;gap:8px;white-space:nowrap;}
+.site-header .menu-btn{margin-left:0;}
+@media (max-width:950px){
+  .site-header .nav{margin-left:0;}
+  .site-header .header-actions{margin-left:0;}
+}
+@media (max-width:720px){
+  .site-header .language-switcher{position:absolute;right:62px;top:50%;transform:translateY(-50%);}
+}
+
+/* Final language switcher position */
+@media (min-width: 951px){
+  .site-header .header-actions{
+    margin-right:32px;
+  }
+}
+
+/* Final brand positioning */
+.site-header .brand{
+  margin-left:28px;
+}
+
+@media (max-width:950px){
+  .site-header .brand{
+    margin-left:0;
+  }
+}
+
+/* Final brand left spacing */
+.site-header .brand{
+  margin-left:48px !important;
+}
+
+@media (max-width:950px){
+  .site-header .brand{
+    margin-left:0 !important;
+  }
+}
