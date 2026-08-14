@@ -1,23 +1,13 @@
-# REWE Application – Ali Soleimani
+# REWE Bewerbung – Ali Soleimani
 
-Tailored application materials for:
+Kurze, auf die Position **Category Buying Assistant – Haushaltswaren & Dekoration (m/w/d)** bei der REWE Group zugeschnittene Bewerbungsseite.
 
-**Category Buying Assistant – Haushaltswaren & Dekoration (m/w/d)**  
-REWE Group · Köln · Job-ID 948548
+## Verwendung im Haupt-Repository
 
-## Files
+Die Seite ist so angelegt, dass sie als `/REWE/` im bestehenden `alisoleimani.de`-Repository verwendet werden kann.
 
-- `index.html` – one-page application website
-- `style.css` – responsive styling
-- `Ali_Soleimani_Cover_Letter_REWE.docx` – German cover letter
+- `index.html` → als `REWE/index.html`
+- `style.css` → als `REWE/style.css`
+- Die Seite verwendet das vorhandene Portrait unter `../assets/ali-soleimani-portrait.jpeg`.
 
-## Publish with GitHub Pages
-
-1. Create a repository, e.g. `rewe-application`.
-2. Upload `index.html` and `style.css`.
-3. Open **Settings → Pages**.
-4. Select **Deploy from a branch**.
-5. Select `main` and `/root`.
-6. Save.
-
-The site is static and needs no build process.
+Die Inhalte orientieren sich an der bestehenden Hauptwebsite und wurden für die REWE-Stelle bewusst kürzer und auf Einkauf/Category Buying fokussiert. Die Telefonnummer wird nicht angezeigt.
