@@ -1,0 +1,43 @@
+*{box-sizing:border-box}
+:root{
+  --bg:#f6f7f4;--paper:#ffffff;--ink:#172019;--muted:#68716b;
+  --line:#d9ded9;--accent:#1d6b4f;--accent2:#e8f0eb;
+}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,Segoe UI,Arial,sans-serif;line-height:1.65}
+a{color:inherit;text-decoration:none}
+.nav{max-width:1180px;margin:auto;padding:24px 28px;display:flex;justify-content:space-between;align-items:center}
+.brand{font-weight:800;letter-spacing:.12em}
+.nav-links{display:flex;gap:24px;font-size:14px;color:var(--muted)}
+.nav-links a:hover,.contact-links a:hover{color:var(--accent)}
+.hero{background:var(--paper);border-bottom:1px solid var(--line)}
+.hero-inner{max-width:1180px;margin:auto;padding:82px 28px 100px;display:grid;grid-template-columns:1.25fr .75fr;gap:80px;align-items:center}
+.eyebrow{font-size:12px;font-weight:800;letter-spacing:.14em;color:var(--accent)}
+h1{font-size:clamp(48px,7vw,86px);line-height:.95;margin:18px 0 20px;letter-spacing:-.055em}
+h1 span{color:var(--accent)}
+.lead{font-size:21px;font-weight:650;margin:0 0 20px}
+.intro{max-width:650px;color:var(--muted);font-size:17px}
+.actions{display:flex;gap:12px;margin-top:28px}
+.btn{padding:12px 18px;border:1px solid var(--ink);font-weight:700;font-size:14px}
+.btn.primary{background:var(--ink);color:white}.btn.secondary{background:white}
+.hero-card{background:var(--accent2);padding:34px;border:1px solid #d3e2d9}
+.card-label{font-size:11px;font-weight:800;letter-spacing:.14em;color:var(--accent)}
+.hero-card h2{font-size:30px;line-height:1.1;margin:12px 0 8px}
+.hero-card p{color:var(--muted);margin-top:0}
+.mini-grid{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid #c9d8cf;margin-top:28px;padding-top:20px;gap:20px}
+.mini-grid strong,.mini-grid small{display:block}.mini-grid small{color:var(--muted);font-size:11px;margin-top:2px}
+.section{max-width:1180px;margin:auto;padding:90px 28px}
+.alt{max-width:none;background:#eef2ee;padding-left:calc((100% - 1124px)/2);padding-right:calc((100% - 1124px)/2)}
+.section-title{display:flex;gap:18px;align-items:baseline;margin-bottom:42px}
+.section-title span{color:var(--accent);font-weight:800;font-size:13px}.section-title h2{font-size:38px;margin:0;letter-spacing:-.03em}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:70px}.large{font-size:27px;line-height:1.35;margin-top:0}
+.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.skill{background:white;padding:25px}.skill b,.skill span{display:block}.skill span{color:var(--muted);font-size:14px;margin-top:5px}
+.timeline article{display:grid;grid-template-columns:180px 1fr;gap:30px;padding:28px 0;border-top:1px solid var(--line)}
+.date{font-size:13px;color:var(--accent);font-weight:800}.timeline h3,.education h3{margin:0 0 4px;font-size:22px}.company{font-weight:700;margin:0 0 8px}.timeline p{color:var(--muted)}
+.education{display:grid;grid-template-columns:1fr 1fr;gap:30px}.education>div{background:white;padding:30px;border:1px solid var(--line)}.education span{font-size:12px;color:var(--accent);font-weight:800}
+.contact{background:var(--ink);color:white;padding:75px max(28px,calc((100% - 1124px)/2));display:flex;justify-content:space-between;gap:60px;align-items:end}
+.contact h2{font-size:42px;line-height:1.05;max-width:600px;margin:14px 0}.contact p{color:#c4cbc6}.contact-links{display:grid;gap:9px;text-align:right}.contact-links a{color:#e4e9e5}
+footer{max-width:1180px;margin:auto;padding:22px 28px;display:flex;justify-content:space-between;color:var(--muted);font-size:12px}
+@media(max-width:800px){.nav-links{display:none}.hero-inner,.two-col,.education{grid-template-columns:1fr}.hero-inner{padding-top:55px;gap:45px}.skills{grid-template-columns:1fr 1fr}.timeline article{grid-template-columns:1fr;gap:5px}.contact{display:block}.contact-links{text-align:left;margin-top:28px}footer{display:block}footer span{display:block;margin:4px 0}}
+@media(max-width:520px){.skills{grid-template-columns:1fr}h1{font-size:52px}.section{padding:65px 22px}.alt{padding-left:22px;padding-right:22px}}
