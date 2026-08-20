@@ -1,0 +1,1 @@
+Upload index.html and style.css to /bandis-knopp/ so the site is available at https://alisoleimani.de/bandis-knopp/. No salary information and no application link are included.
