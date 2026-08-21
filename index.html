@@ -1,716 +1,129 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="Ali Soleimani — International Business, Procurement &amp; Supply Chain, and Project Coordination professional with 10+ years of industrial and EPC experience." name="description"/>
-<title>Ali Soleimani | International Business · Procurement · Project Coordination</title>
-<link href="style.css" rel="stylesheet"/>
-<!-- Google tag (gtag.js) -->
-<script src="/analytics.js"></script>
-<style>
-.hero-current-status{display:flex;flex-direction:column;gap:.25rem;margin:1.25rem 0 0;padding:.9rem 1rem;border-left:2px solid currentColor;font-size:.9rem;opacity:.9}
-
-
-
-
-.certification-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-top:2rem}
-.certification-item{padding:1.1rem 1.2rem;border:1px solid rgba(127,127,127,.22);border-radius:12px;display:flex;flex-direction:column;gap:.3rem}
-.certification-item span{opacity:.7;font-size:.9rem}
-@media(max-width:900px){.certification-grid{grid-template-columns:1fr}}
-@media(max-width:560px){}
-</style>
-<style>
-/* Requested layout refinements */
-.expertise-2x2{
-  display:grid !important;
-  grid-template-columns:repeat(2,minmax(0,1fr)) !important;
-  gap:1.25rem !important;
-}
-.professional-timeline{
-  position:relative;
-  display:flex !important;
-  flex-direction:column !important;
-  gap:0 !important;
-  margin-top:2rem;
-}
-.professional-timeline::before{
-  content:"";
-  position:absolute;
-  left:calc(22% + 0.75rem);
-  top:0.6rem;
-  bottom:0.6rem;
-  width:1px;
-  background:currentColor;
-  opacity:.18;
-}
-.professional-timeline-item{
-  position:relative;
-  display:grid !important;
-  grid-template-columns:22% 1fr !important;
-  column-gap:2.25rem !important;
-  padding:0 0 2rem !important;
-}
-.professional-timeline-item::before{
-  content:"";
-  position:absolute;
-  left:calc(22% + 0.75rem - 4px);
-  top:0.55rem;
-  width:8px;
-  height:8px;
-  border-radius:50%;
-  background:currentColor;
-  opacity:.7;
-}
-.professional-timeline-item .timeline-date{
-  text-align:right;
-  padding-right:1rem;
-}
-@media(max-width:800px){
-  .expertise-2x2{grid-template-columns:1fr !important;}
-  .professional-timeline::before{left:0.3rem;}
-  .professional-timeline-item{
-    grid-template-columns:1fr !important;
-    padding-left:1.25rem !important;
-  }
-  .professional-timeline-item::before{left:-0.05rem;}
-  .professional-timeline-item .timeline-date{text-align:left;padding-right:0;margin-bottom:.5rem;}
-}
-</style><style>
-/* Professional experience — same visual language as the Career Journey timeline */
-.professional-life-timeline{
-  margin-top:2.2rem;
-}
-.professional-life-event{
-  align-items:start;
-}
-.professional-life-event .life-content{
-  max-width:900px;
-}
-.professional-life-event .life-content h3{
-  margin-bottom:.35rem;
-}
-.professional-location{
-  margin:.15rem 0 .75rem;
-  opacity:.68;
-  font-size:.9rem;
-}
-.professional-life-event .company-heading{
-  margin:.55rem 0 .8rem;
-}
-.professional-life-event .company-heading h4{
-  margin:0;
-}
-.professional-life-event ul{
-  margin:.7rem 0 0;
-}
-.professional-life-event li{
-  margin-bottom:.35rem;
-}
-</style><style>
-.professional-life-timeline{margin-top:2.25rem}
-.professional-life-event{align-items:flex-start}
-.professional-life-event .life-content{max-width:920px}
-.professional-life-event .life-content h3{margin:.15rem 0 .25rem}
-.professional-company{margin:0 0 .15rem;font-weight:600}
-.professional-location{margin:0 0 .7rem;opacity:.68;font-size:.9rem}
-.professional-life-event .role-note{margin:.4rem 0 .75rem;opacity:.75;font-style:italic}
-.professional-life-event ul{margin:.7rem 0 0;padding-left:1.1rem}
-.professional-life-event li{margin-bottom:.4rem}
-</style></head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Ali Soleimani — International Management student in Cologne with 10+ years of procurement and industrial project experience.">
+<title>Ali Soleimani | Procurement · Project Coordination · International Management</title>
+<link rel="stylesheet" href="style.css">
+</head>
 <body>
-<header class="site-header">
-<div class="container nav-wrap">
+<header class="site-header"><div class="container nav">
 <a class="brand" href="#top">ALI SOLEIMANI</a>
-<nav class="nav">
-<a href="#profile">Profile</a>
-<a href="#expertise">Expertise</a>
-<a href="#experience">Experience</a>
-<a href="#projects">Projects</a>
-<a href="#education">Education</a>
-<a href="#skills">Skills</a>
-<a href="#certifications">Certifications</a>
-<a href="#contact">Contact</a>
-</nav>
-<div class="header-actions">
-<div aria-label="Language selection" class="language-switcher">
-<a class="lang active" href="index.html" hreflang="en" lang="en">EN</a>
-<span>/</span>
-<a class="lang" href="index-de.html" hreflang="de" lang="de">DE</a>
-</div>
-<button aria-label="Open menu" class="menu-btn">☰</button>
-</div>
-</div>
-</header>
+<nav><a href="#what-i-bring">What I Bring</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#certifications">Certifications</a><a href="#publication">Publication</a><a href="#contact">Contact</a></nav>
+<div class="header-actions"><a class="nav-link active" href="index.html">EN</a><span>/</span><a class="nav-link" href="index-de.html">DE</a></div>
+</div></header>
+
 <main id="top">
-<!-- HERO -->
-<section class="hero hero-v10">
-<div class="hero-glow"></div>
-<div class="hero-accent"></div>
-<div class="container hero-grid-v10">
-<div class="hero-profile-card">
-<div class="hero-photo-v10">
-<img alt="Ali Soleimani professional portrait" src="assets/ali-soleimani-portrait.jpeg"/>
+<section class="hero">
+<div class="container hero-grid">
+<div class="hero-copy">
+<div class="hero-profile-line">
+<span class="green-kicker">COLOGNE · GERMANY</span>
 </div>
-<div class="hero-profile-text">
-<h2>Ali Soleimani</h2>
-<p>International Business · Procurement &amp; Supply Chain · Project Coordination</p>
-<span>Cologne, Germany</span>
+<h1>Procurement &amp; Project Coordination</h1>
+<p class="hero-intro">International Management student in Cologne with 10+ years of experience across procurement, EPC and industrial projects.</p>
+
+<div class="hero-cards">
+<article class="info-card">
+<div class="card-icon university-logo"><img src="assets/logo/HSF.webp" alt="Hochschule Fresenius"></div>
+<div><small>Currently studying</small><strong>M.A. International Management</strong><span>Hochschule Fresenius · Cologne</span></div>
+</article>
+<article class="info-card">
+<div class="card-icon study-icon"><svg viewBox="0 0 64 64" aria-hidden="true">
+<path d="M10 25 32 15l22 10-22 10L10 25Z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+<path d="M18 30v12c7 6 21 6 28 0V30M54 25v13" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+<path d="M27 48h10" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+</svg></div>
+<div><small>Current GPA</small><strong>1.2</strong><span>Current grade average</span></div>
+</article>
+<article class="info-card">
+<div class="card-icon cathedral-icon"><svg viewBox="0 0 64 64" aria-hidden="true">
+<path d="M11 52h42M15 48V26l8-7v8l9-18 9 18v-8l8 7v22M23 48V34h18v14M29 48V37h6v11M20 26l3-5 3 5M38 26l3-5 3 5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></div>
+<div><small>Location &amp; work status</small><strong>Cologne · Germany</strong><span>Eligible for student / part-time work</span></div>
+</article>
+<article class="info-card">
+<div class="card-icon experience-icon"><svg viewBox="0 0 64 64" aria-hidden="true">
+<rect x="10" y="20" width="44" height="31" rx="4" fill="none" stroke="currentColor" stroke-width="2.5"/>
+<path d="M23 20v-5h18v5M10 31h44M28 31v5h8v-5" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+</svg></div>
+<div><small>Professional experience</small><strong>10+ years</strong><span>Procurement, projects &amp; industrial operations</span></div>
+</article>
 </div>
+
+<div class="industry-row"><span>Industries</span><div><b>Oil &amp; Gas</b><b>Petrochemical</b><b>Metals &amp; Mining</b><b>Industrial Automation</b><b>Energy</b><b>EPC</b></div></div>
+<div class="hero-actions"><a class="btn btn-primary" href="#experience">View experience</a><a class="btn btn-ghost" href="https://www.linkedin.com/in/alisoleimani-de/" target="_blank" rel="noopener">LinkedIn ↗</a></div>
 </div>
-<div class="hero-copy-v10">
-<div class="eyebrow">PROFESSIONAL PROFILE • 2026</div>
-<h1>Connecting international business,<br/>procurement &amp; projects<br/>into <span>structured results.</span></h1>
-<div class="hero-line"></div>
-<p class="lead">
-          International Business, Procurement &amp; Project Coordination professional with 10+ years of experience
-          across industrial, EPC, process automation, petrochemical, metals and energy-related projects.
-        </p>
-<div class="hero-current-status">
-<strong>CURRENTLY BASED IN COLOGNE</strong>
-<span>M.A. International Management · Hochschule Fresenius</span>
-<span><b>Working Student</b> · Part-time</span>
-<span>Apr 2026 – Present · Cologne, Germany · On-site</span>
-</div>
-<div class="hero-contact-row">
-<a href="mailto:alisoleimani71@gmail.com">✉ <span>alisoleimani71@gmail.com</span></a>
-<span>⌖ <span>Cologne, Germany</span></span>
-</div>
-<div class="hero-actions">
-<a class="btn btn-primary" href="#profile">Explore my profile</a>
-<a class="btn btn-ghost" href="https://www.linkedin.com/in/alisoleimani-de/" rel="noopener" target="_blank">LinkedIn ↗</a>
-</div>
+<div class="hero-side">
+<img class="portrait" src="assets/ali-soleimani-portrait.jpeg" alt="Ali Soleimani">
+<div class="availability"><span class="status-dot"></span><div><strong>Open to student opportunities in NRW</strong><small>Procurement · Supply Chain · PMO · Project Coordination</small></div></div>
 </div>
 </div>
 </section>
-<!-- METRICS -->
-<section class="metrics">
-<div class="container metric-grid metric-grid-v10">
-<div>
-<strong class="counter" data-suffix="+" data-target="10">0</strong>
-<span>Years of professional experience</span>
-</div>
-<div>
-<strong class="counter money-counter" data-prefix="€" data-suffix="M+" data-target="10">0</strong>
-<span>Procurement portfolio managed</span>
-</div>
-<div>
-<strong class="counter" data-suffix="+" data-target="30">0</strong>
-<span>International suppliers</span>
-</div>
-<div>
-<strong class="counter" data-suffix="" data-target="8">0</strong>
-<span>National-scale EPC &amp; industrial projects</span>
-</div>
-<div>
-<strong class="counter" data-prefix="~" data-suffix="%" data-target="10">0</strong>
-<span>Procurement cost reduction</span>
-</div>
-<div>
-<strong class="counter" data-prefix="~" data-suffix="%" data-target="50">0</strong>
-<span>Improvement in procurement efficiency &amp; reporting</span>
-</div>
-</div>
-</section>
-<!-- CAREER HIGHLIGHTS -->
-<!-- PROFILE -->
-<section class="section" id="profile">
-<div class="container two-col">
-<div>
-<div class="section-kicker">01 • PROFILE</div>
-<h2>International business, procurement and project coordination — connected by industrial experience.</h2>
-</div>
-<div class="section-copy">
-<p>
-          I am an International Business, Procurement &amp; Supply Chain, and Project Coordination professional
-          with 10+ years of experience across industrial, EPC, process automation, petrochemical, metals
-          and energy-related projects. I have managed procurement portfolios exceeding €10M across
-          8 national-scale projects and negotiated with 30+ international suppliers across Europe and Asia.
-        </p>
-<p>
-          My experience covers international sourcing, tendering and RFQs, supplier and OEM coordination,
-          commercial and contract negotiations, technical and commercial bid evaluation, INCOTERMS,
-          shipping and inspection documentation, bank guarantees, customs clearance, client coordination,
-          engineering interfaces, manufacturing coordination, site execution, pre-commissioning and commissioning.
-        </p>
-<p>
-          I combine an M.Sc. in Chemical Engineering with an ongoing M.A. in International Management,
-          with a chosen specialty in Project Management at Hochschule Fresenius in Cologne. This combination
-          allows me to connect technical requirements, procurement decisions, commercial considerations and project execution.
-        </p>
-</div>
-</div>
-</section>
-<!-- EXPERTISE -->
-<section class="dark-section" id="expertise">
-<div class="container">
-<div class="section-kicker">02 • EXPERTISE</div>
-<h2>Four connected areas of professional expertise.</h2>
-<div class="competency-grid competency-grid-v10 expertise-2x2">
-<div class="competency competency-main">
-<span class="competency-number">01</span>
-<h3>International Business &amp; Commercial</h3>
-<p>International business coordination, export/import coordination, commercial negotiations, client and OEM communication, proposals, contracts and INCOTERMS.</p>
-</div>
-<div class="competency competency-main">
-<span class="competency-number">02</span>
-<h3>Procurement &amp; Supply Chain</h3>
-<p>Strategic sourcing, procurement planning, RFQs and tenders, supplier qualification, international purchasing, bid evaluation, supplier performance and logistics.</p>
-</div>
-<div class="competency competency-main">
-<span class="competency-number">03</span>
-<h3>Project &amp; Technical Coordination</h3>
-<p>EPC project delivery, engineering and manufacturing coordination, scheduling, inspections, control panels, process automation, site execution and commissioning.</p>
-</div>
-<div class="competency competency-main">
-<span class="competency-number">04</span>
-<h3>Digital &amp; Office Tools</h3>
-<p>Advanced Excel, MS Project, PowerPoint, Visio, Outlook, Aspen HYSYS and MATLAB / Simulink for reporting, planning, analysis and technical work.</p>
-</div>
-</div>
-</div>
-</section>
-<!-- WHAT I BRING -->
-<section class="section bring-section">
-<div class="container two-col">
-<div>
-<div class="section-kicker">03 • WHAT I BRING</div>
-<h2>Connecting commercial decisions with technical understanding and project execution.</h2>
-</div>
-<div class="section-copy">
-<p><strong>Commercial Perspective</strong><br/>Connecting supplier negotiations, contracts, international purchasing and client requirements.</p>
-<p><strong>Technical Understanding</strong><br/>Combining Chemical Engineering with experience in automation, control systems, manufacturing and industrial projects.</p>
-<p><strong>Project Coordination</strong><br/>Connecting engineering, procurement, manufacturing, logistics and site teams around project objectives.</p>
-<p><strong>International Experience</strong><br/>Working with suppliers, OEMs and stakeholders across Europe and Asia.</p>
-</div>
-</div>
-</section>
-<!-- EXPERIENCE -->
-<section class="section" id="experience">
-<div class="container">
-<div class="section-kicker">04 • PROFESSIONAL EXPERIENCE</div>
-<h2>10+ years across procurement, international suppliers and industrial project execution.</h2>
-<div class="life-timeline professional-life-timeline"><article class="life-event professional-life-event"><div class="life-year">Apr 2026 — Present</div><div class="life-dot"></div><div class="life-content"><div class="life-label">CURRENT ROLE</div><h3>Working Student</h3><p class="professional-company">Studentwerk · Part-time</p><p class="professional-location">Cologne, Germany · On-site</p></div></article><article class="life-event professional-life-event"><div class="life-year">Mar 2026 — Present</div><div class="life-dot"></div><div class="life-content"><div class="life-label">COMMERCIAL • PROCUREMENT</div><h3>Commercial Consultant (Remote)</h3><p class="professional-company">Petro Sanat Lidoma Engineering Services (PSL)</p><p class="professional-location">Cologne, Germany</p><ul><li>Advise executive management on procurement strategy, supplier selection, commercial negotiations and sourcing decisions for EPC, industrial manufacturing and automation projects.</li><li>Lead supplier identification, qualification, evaluation and commercial negotiations with international manufacturers and engineering service providers.</li><li>Develop sourcing strategies from RFQ preparation and technical/commercial evaluation through purchase order issuance and delivery follow-up.</li><li>Prepare commercial proposals, tender documentation and procurement recommendations supporting business development.</li><li>Support contract negotiations covering commercial terms, delivery schedules, payment conditions and INCOTERMS.</li><li>Support procurement for industrial control panels, electrical equipment and process automation systems.</li></ul></div></article><article class="life-event professional-life-event"><div class="life-year">Dec 2017 — Feb 2026</div><div class="life-dot"></div><div class="life-content"><div class="life-label">PROCUREMENT • LEADERSHIP</div><h3>Procurement Manager &amp; Executive Coordinator</h3><p class="professional-company">Petro Sanat Lidoma Engineering Services (PSL)</p><p class="professional-location">Tehran, Iran</p><p class="role-note">Held both roles concurrently, combining procurement leadership with executive-level operational coordination across the company’s EPC project portfolio.</p><ul><li>Directed procurement and sourcing across 8 national-scale EPC and industrial projects, managing portfolios exceeding €10M.</li><li>Managed end-to-end international procurement from tendering and negotiation through inspection, shipping and delivery.</li><li>Negotiated with 30+ international suppliers across Europe and Asia on commercial and contractual terms.</li><li>Coordinated engineering, manufacturing, logistics, clients and site teams to support project execution.</li><li>Managed supplier performance, control-panel manufacturing and equipment supply, including inspection and site implementation.</li><li>Reduced procurement costs by approximately 10% through strategic sourcing and supplier negotiations.</li><li>Optimized procurement processes and digital documentation, improving efficiency and reporting transparency by ~50%.</li></ul></div></article><article class="life-event professional-life-event"><div class="life-year">Jun 2016 — Nov 2017</div><div class="life-dot"></div><div class="life-content"><div class="life-label">PROCUREMENT</div><h3>Procurement Specialist</h3><p class="professional-company">Petro Sanat Lidoma Engineering Services (PSL)</p><p class="professional-location">Tehran, Iran</p><ul><li>Managed end-to-end procurement for concurrent EPC projects, from RFQs and tendering through negotiation and delivery.</li><li>Conducted technical and commercial evaluations for capital equipment and engineering services.</li><li>Negotiated pricing, delivery, payment terms and INCOTERMS with international suppliers across Europe and Asia.</li><li>Coordinated OEM, client, engineering, logistics and site interfaces, including FAT, inspection and shipment.</li><li>Supported the design, manufacturing and supply of control panels, electrical systems and process automation equipment.</li></ul></div></article><article class="life-event professional-life-event"><div class="life-year">Jan 2016 — May 2016</div><div class="life-dot"></div><div class="life-content"><div class="life-label">RESEARCH</div><h3>Research Assistant</h3><p class="professional-company">Iran University of Science and Technology (IUST)</p><p class="professional-location">Tehran, Iran</p><ul><li>Conducted research on viscosity reduction of heavy crude oil, published in the Iranian Journal of Chemistry and Chemical Engineering.</li><li>Performed simulation and economic evaluation of adsorption refrigeration systems and delivered MS Excel training for undergraduate engineering students.</li></ul></div></article><article class="life-event professional-life-event"><div class="life-year">Jun 2015 — Aug 2015</div><div class="life-dot"></div><div class="life-content"><div class="life-label">ENGINEERING</div><h3>Process Engineering Intern</h3><p class="professional-company">Energy Industries Engineering &amp; Design (EIED – part of OIEC Group)</p><p class="professional-location">Tehran, Iran</p><ul><li>Conducted technical and economic analyses of Oil &amp; Gas process plants during the FEED phase and assisted with process simulations and data validation.</li></ul></div></article></div></div>
-</section>
-<!-- PROJECTS -->
-<section class="section projects-section" id="projects">
-<div class="container">
-<div class="section-kicker">05 • SELECTED PROJECTS</div>
-<div class="section-heading-row">
-<div>
-<h2>Industrial projects where procurement meets execution.</h2>
-<p class="section-intro">
-            Selected projects demonstrating international sourcing, supplier coordination, logistics,
-            engineering interfaces and project delivery across metals, Oil &amp; Gas, petrochemical and energy environments.
-          </p>
-</div>
-</div>
-<div class="project-grid project-grid-wide">
-<article class="project-card">
-<div class="project-image"><img alt="Iron Plant — 800,000 t/a" loading="lazy" src="assets/p/DRI.jpg"/></div>
-<div class="project-body">
-<span>JUN 2021 — MAR 2023 • METALS</span>
-<h3>Iron Plant — 800,000 t/a</h3>
-<p>National-scale DRI project using PERED technology.</p>
-<ul>
-<li>Coordinated procurement and project activities across suppliers and internal functions.</li>
-<li>Managed delivery milestones, documentation, logistics and customs-related workflows.</li>
-<li>Supported time-critical project execution and cross-functional issue resolution.</li>
-</ul>
-</div>
-</article>
-<article class="project-card">
-<div class="project-image"><img alt="C2+ Recovery &amp; Fractionation" loading="lazy" src="assets/p/C2.jpg"/></div>
-<div class="project-body">
-<span>JAN 2020 — MAR 2022 • OIL &amp; GAS</span>
-<h3>C2+ Recovery &amp; Fractionation</h3>
-<p>Dual-site project with sites more than 60 km apart after the original foreign EPC contractor exited the country.</p>
-<ul>
-<li>Coordinated engineering completion and commissioning handoff.</li>
-<li>Tracked parallel activities across two geographically separated sites.</li>
-<li>Managed cross-functional actions, suppliers, logistics and project documentation.</li>
-</ul>
-</div>
-</article>
-<article class="project-card">
-<div class="project-image"><img alt="Copper Smelter Expansion — +50% Capacity" loading="lazy" src="assets/p/copper.jpg"/></div>
-<div class="project-body">
-<span>JUN 2019 — JUN 2020 • COPPER</span>
-<h3>Copper Smelter Expansion — +50% Capacity</h3>
-<p>Expansion project requiring continuity of engineering and commissioning after the original international JV partner exited.</p>
-<ul>
-<li>Supported continuity of project execution following partner withdrawal.</li>
-<li>Coordinated engineering and commissioning activities through delivery.</li>
-</ul>
-</div>
-</article>
-<article class="project-card">
-<div class="project-image"><img alt="Oil Desalting &amp; Production Unit" loading="lazy" src="assets/p/Oilunit.jpg"/></div>
-<div class="project-body">
-<span>MAR 2019 — MAY 2020 • OIL</span>
-<h3>Oil Desalting &amp; Production Unit</h3>
-<p>Upgrade and extension of an existing industrial control system in an operating industrial environment.</p>
-<ul>
-<li>Coordinated supplier deliverables, inspections and shipping documentation.</li>
-<li>Coordinated import and customs activities supporting project delivery.</li>
-</ul>
-</div>
-</article>
-<article class="project-card">
-<div class="project-image"><img alt="Loading / Unloading Arms Supply" loading="lazy" src="assets/p/loadingarm.jpg"/></div>
-<div class="project-body">
-<span>MAR 2018 — OCT 2018 • PETROCHEMICAL</span>
-<h3>Loading / Unloading Arms Supply</h3>
-<p>Supply of specialized loading and unloading equipment from an international manufacturer.</p>
-<ul>
-<li>Tracked design approvals, manufacturing progress and FAT activities.</li>
-<li>Coordinated documentation and import steps through delivery.</li>
-</ul>
-</div>
-</article>
-<article class="project-card">
-<div class="project-image"><img alt="Loading Station Addition" loading="lazy" src="assets/p/Petro.jpg"/></div>
-<div class="project-body">
-<span>APR 2021 — JUN 2021 • PETROCHEMICAL</span>
-<h3>Loading Station Addition</h3>
-<p>Control-system addition for a new loading station within an active petrochemical facility.</p>
-<ul>
-<li>Coordinated technical and operational inputs in a live plant environment.</li>
-<li>Tracked supplier, inspection, logistics and delivery activities.</li>
-</ul>
-</div>
-</article>
-<article class="project-card">
-<div class="project-image"><img alt="Copper Plant — Technical Support &amp; Training" loading="lazy" src="assets/p/TechnicalSup.jpg"/></div>
-<div class="project-body">
-<span>FEB 2021 — FEB 2022 • MINING / METALS</span>
-<h3>Copper Plant — Technical Support &amp; Training</h3>
-<p>Control-systems technical support, structured training and knowledge transfer for client personnel.</p>
-<ul>
-<li>Planned and delivered structured training.</li>
-<li>Coordinated on-site and remote technical support activities.</li>
-</ul>
-</div>
-</article>
-<article class="project-card">
-<div class="project-image"><img alt="National Solar Industry — Feasibility Study" loading="lazy" src="assets/p/PV.jpg"/></div>
-<div class="project-body">
-<span>MAY 2017 — FEB 2018 • SOLAR ENERGY</span>
-<h3>National Solar Industry — Feasibility Study</h3>
-<p>Strategic feasibility study for a major state-owned power generation conglomerate, focused on the photovoltaic supply chain.</p>
-<ul>
-<li>Analyzed supply-chain structure and market-entry requirements.</li>
-<li>Translated findings into a structured strategic roadmap.</li>
-</ul>
-</div>
-</article>
-</div>
-</div>
-</section>
-<!-- EDUCATION -->
-<section class="section" id="education">
-<div class="container">
-<div class="section-kicker">06 • EDUCATION</div>
-<h2>Technical foundation. International management. Strong current performance.</h2>
-<div class="education-list">
-<div class="edu-item-logo edu-current">
-<div class="university-logo">
-<img alt="Hochschule Fresenius logo" src="assets/logo/HSF.webp"/>
-</div>
-<div>
-<strong>M.A. International Management — Project Management</strong>
-<span>Hochschule Fresenius • Cologne, Germany • 2026–2028</span>
-<small>Current GPA: <b>1.2</b> · Project Management · Supply Chain Management · Data Analysis for Decision-Making</small>
-</div>
-</div>
-<div class="edu-item-logo">
-<div class="university-logo">
-<img alt="Iran University of Science and Technology logo" src="assets/logo/IUST.png"/>
-</div>
-<div>
-<strong>M.Sc. Chemical Engineering — Control, Simulation &amp; Modeling</strong>
-<span>Iran University of Science and Technology • Tehran, Iran • 2015–2018</span>
-<small>Published one research paper in the Iranian Journal of Chemistry and Chemical Engineering.</small></div>
-</div>
-<div class="edu-item-logo">
-<div class="university-logo">
-<img alt="Iran University of Science and Technology logo" src="assets/logo/IUST.png"/>
-</div>
-<div>
-<strong>B.Sc. Chemical Engineering</strong>
-<span>Iran University of Science and Technology • Tehran, Iran • 2011–2015</span>
-<small>Ranked among the Top 3 graduates</small><small>Published one research paper in the Iranian Journal of Chemistry and Chemical Engineering.</small>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- SKILLS -->
-<section class="section dark-section" id="skills">
-<div class="container">
-<div class="section-kicker">07 • SKILLS &amp; LANGUAGES</div>
-<div class="skills-heading">
-<div aria-hidden="true" class="skills-icon">✦</div>
-<div>
-<h2>Skills aligned with international business, procurement and project delivery.</h2>
-</div>
-</div>
-<div class="skills-columns skills-columns-v10">
-<div>
-<h3>International Business &amp; Commercial</h3>
-<div class="tag-list skill-tags">
-<span>International Business Coordination</span>
-<span>Export / Import Coordination</span>
-<span>International Partner &amp; OEM Coordination</span>
-<span>Commercial Correspondence</span>
-<span>Contract Negotiation</span>
-<span>Commercial Proposals</span>
-<span>Client &amp; Stakeholder Management</span>
-<span>INCOTERMS</span>
-<span>Shipping &amp; Logistics Coordination</span>
-</div>
-</div>
-<div>
-<h3>Procurement &amp; Supply Chain</h3>
-<div class="tag-list skill-tags">
-<span>Strategic Sourcing</span>
-<span>Procurement Planning &amp; Operations</span>
-<span>Tender &amp; RFQ Management</span>
-<span>Supplier Qualification</span>
-<span>Supplier Performance Management</span>
-<span>International Purchasing</span>
-<span>Commercial Bid Evaluation</span>
-<span>Cost Optimization</span>
-<span>Procurement Analytics</span>
-<span>Customs Clearance</span>
-<span>Inspection &amp; FAT</span>
-<span>Bank Guarantees &amp; Contractual Securities</span>
-</div>
-</div>
-<div>
-<h3>Project &amp; Technical Coordination</h3>
-<div class="tag-list skill-tags">
-<span>EPC Project Delivery</span>
-<span>Engineering Coordination</span>
-<span>Scheduling &amp; Planning</span>
-<span>Manufacturing Coordination</span>
-<span>Control Panel Manufacturing</span>
-<span>Industrial Automation &amp; Control Systems</span>
-<span>Process Automation</span>
-<span>Site Execution</span>
-<span>Pre-Commissioning &amp; Commissioning</span>
-<span>Project Documentation</span>
-<span>Risk Management</span>
-<span>Cross-functional Collaboration</span>
-</div>
-</div>
-<div>
-<h3>Digital &amp; Office Tools</h3>
-<div class="tag-list skill-tags">
-<span>Advanced Excel</span>
-<span>MS Project</span>
-<span>PowerPoint</span>
-<span>Visio</span>
-<span>Outlook</span>
-<span>Aspen HYSYS</span>
-<span>MATLAB / Simulink</span>
-</div>
-</div>
-</div>
-<div class="languages-v16">
-<div class="language-heading">
-<h3>Languages</h3>
-<span>Proficiency</span>
-</div>
-<div class="language-tags-v16">
-<div class="language-tag"><strong>Persian</strong><span class="level-native">Native</span></div>
-<div class="language-tag"><strong>English</strong><span class="level-c1">C1</span></div>
-<div class="language-tag"><strong>German</strong><span class="level-a2">A2</span></div>
-<div class="language-tag"><strong>Arabic</strong><span class="level-a1">A1</span></div>
-<div class="language-tag"><strong>Turkish</strong><span class="level-a2">A2</span></div>
-<div class="language-tag"><strong>Tati</strong><span class="level-native">Native</span></div>
-</div>
-</div>
-</div>
-</section>
-<!-- CERTIFICATIONS -->
-<section class="section" id="certifications">
-<div class="container">
-<div class="section-kicker">08 • CERTIFICATIONS &amp; TRAINING</div>
-<h2>Professional development across procurement, contracts, leadership and technology.</h2>
-<div class="certification-grid">
-<div class="certification-item"><strong>Procurement &amp; Import of Goods</strong><span>Tehran Chamber of Commerce · 2019</span></div>
-<div class="certification-item"><strong>EPC Contracts, Taxation &amp; Social Security</strong><span>Iran MPORG · 2024</span></div>
-<div class="certification-item"><strong>Stepping into Leadership Workshop</strong><span>2026</span></div>
-<div class="certification-item"><strong>VMware Certified Professional – Data Center Virtualization (VCP-DCV 8)</strong><span>2025</span></div>
-<div class="certification-item"><strong>Microsoft Certified Systems Administrator (MCSA)</strong><span>2025</span></div>
-<div class="certification-item"><strong>AI Study Buddy – Research in Academic Writing</strong><span>2026</span></div>
-</div>
-</div>
-</section>
-<!-- PUBLICATION -->
-<section class="section publication-section">
-<div class="container two-col">
-<div>
-<div class="section-kicker">09 • PUBLICATION</div>
-<h2>Research experience supporting an analytical and evidence-based approach.</h2>
-</div>
-<div class="section-copy">
-<p><strong>An investigation on the viscosity reduction of Iranian heavy crude oil through dilution method</strong></p>
-<p>Iranian Journal of Chemistry and Chemical Engineering · 2021 · 40(3), 934–944</p>
-<a class="btn btn-ghost" href="https://doi.org/10.30492/IJCCE.2020.38039" rel="noopener" target="_blank">View publication ↗</a>
-</div>
-</div>
-</section>
-<!-- VOLUNTARY -->
-<section class="section" id="additional">
-<div class="container two-col">
-<div>
-<div class="section-kicker">10 • VOLUNTARY EXPERIENCE</div>
-<h2>Supporting people and communities beyond the workplace.</h2>
-</div>
-<div class="section-copy">
-<p>
-<strong>International Student Mentor — Hochschule Fresenius</strong><br/>
-          Supporting international students with university procedures, administration and integration.
-        </p>
-<p>
-<strong>Course Representative — Hochschule Fresenius</strong><br/>
-          Acting as a liaison between students, faculty and administration.
-        </p>
-<p>
-<strong>Volunteer Experience</strong><br/>
-          Long-term community engagement since 2008.
-        </p>
-</div>
-</div>
-</section>
-<!-- TIMELINE -->
-<section class="section timeline-section" id="timeline">
-<div class="container">
-<div class="section-kicker">11 • CAREER JOURNEY</div>
-<div class="timeline-intro">
-<div>
-<h2>From engineering<br/><span>to international management.</span></h2>
-</div>
-<div class="section-copy">
-<p>
-            A concise view of the academic and professional milestones that shaped my transition from
-            chemical engineering into procurement, project coordination and international management.
-          </p>
-</div>
-</div>
-<div aria-label="Timeline visual guide" class="timeline-ribbon">
-<span><b>1993</b> Beginning</span>
-<span><b>2011</b> University</span>
-<span><b>2016</b> Industry</span>
-<span><b>2018</b> M.Sc.</span>
-<span><b>2026</b> Germany</span>
-<span><b>NOW</b> Cologne</span>
-</div>
-<div class="life-timeline">
-<article class="life-event">
-<div class="life-year">2011</div><div class="life-dot"></div>
-<div class="life-content"><div class="life-label">EDUCATION</div><h3>Entered university</h3><p>Started a B.Sc. in Chemical Engineering at Iran University of Science and Technology.</p></div>
-</article>
-<article class="life-event">
-<div class="life-year">2015</div><div class="life-dot"></div>
-<div class="life-content"><div class="life-label">GRADUATE STUDIES</div><h3>Started an M.Sc. in Chemical Engineering</h3><p>Specialized in Control, Simulation and Modeling at IUST.</p></div>
-</article>
-<article class="life-event">
-<div class="life-year">2015–2016</div><div class="life-dot"></div>
-<div class="life-content"><div class="life-label">CAREER</div><h3>Research to industry</h3><p>Completed a process engineering internship and worked as a Research Assistant before entering industrial procurement.</p></div>
-</article>
-<article class="life-event">
-<div class="life-year">2016</div><div class="life-dot"></div>
-<div class="life-content"><div class="life-label">PROCUREMENT</div><h3>Entered industrial procurement</h3><p>Started as a Procurement Specialist, working with engineering, suppliers and project teams on sourcing, delivery tracking and documentation.</p></div>
-</article>
-<article class="life-event">
-<div class="life-year">2018</div><div class="life-dot"></div>
-<div class="life-content"><div class="life-label">MILESTONE</div><h3>Completed M.Sc. &amp; expanded project coordination</h3><p>Defended the M.Sc. thesis in March 2018 and expanded into broader project and executive coordination responsibilities.</p></div>
-</article>
-<article class="life-event">
-<div class="life-year">2018–2026</div><div class="life-dot"></div>
-<div class="life-content"><div class="life-label">LEADERSHIP • INDUSTRIAL PROJECTS</div><h3>Coordinated major industrial projects</h3><p>Worked across 8 national-scale EPC and industrial manufacturing projects, coordinating engineering, procurement, logistics, manufacturing and external partners.</p></div>
-</article>
-<article class="life-event">
-<div class="life-year">2026</div><div class="life-dot"></div>
-<div class="life-content"><div class="life-label">GERMANY • NEW CHAPTER</div><h3>Relocated to Germany &amp; started International Management</h3><p>Moved to Germany, began an M.A. in International Management at Hochschule Fresenius and continued professional development in Cologne.</p></div>
-</article>
-<article class="life-event current">
-<div class="life-year">NOW</div><div class="life-dot"></div>
-<div class="life-content"><div class="life-label">COLOGNE • 2026</div><h3>Building the next chapter</h3><p>Combining 10+ years of industrial experience with international management studies, mentoring and active professional development in Germany.</p></div>
-</article>
-</div>
-</div>
-</section>
-<!-- CONTACT -->
-<section class="contact-section" id="contact">
-<div class="container contact-grid">
-<div>
-<div class="section-kicker">12 • LET'S CONNECT</div>
-<h2>Open to the next opportunity.</h2>
-<p>
-          Based in Cologne, Germany. Interested in opportunities across international business,
-          procurement, supply chain, project coordination, PMO and related commercial functions.
-        </p>
-</div>
-<div class="contact-links">
-<a href="mailto:alisoleimani71@gmail.com">alisoleimani71@gmail.com</a>
-<a href="https://www.linkedin.com/in/alisoleimani-de/" rel="noopener" target="_blank">LinkedIn ↗</a>
-<a href="https://alisoleimani.de/" rel="noopener" target="_blank">Portfolio ↗</a>
-</div>
-</div>
-</section>
+
+<section class="metrics"><div class="container metric-grid">
+<div><strong>10+</strong><span>Years of professional experience</span></div>
+<div><strong>€10M+</strong><span>Procurement portfolio managed</span></div>
+<div><strong>30+</strong><span>International suppliers</span></div>
+<div><strong>8</strong><span>National-scale EPC &amp; industrial projects</span></div>
+<div><strong>~10%</strong><span>Procurement cost reduction</span></div>
+<div><strong>~50%</strong><span>Procurement efficiency &amp; reporting improvement</span></div>
+</div></section>
+
+<section class="section" id="what-i-bring"><div class="container">
+<div class="section-head"><div><div class="section-kicker">WHAT I BRING</div><h2>Commercial thinking backed by technical and project experience.</h2></div></div>
+<div class="bring-grid">
+<article><span>01</span><h3>Procurement</h3><p>Strategic sourcing, RFQs, supplier qualification, negotiation, purchasing and delivery coordination.</p></article>
+<article><span>02</span><h3>Project coordination</h3><p>Engineering, manufacturing, logistics, suppliers and site teams aligned around project delivery.</p></article>
+<article><span>03</span><h3>Commercial perspective</h3><p>Contracts, commercial evaluation, INCOTERMS, supplier communication and client-facing coordination.</p></article>
+<article><span>04</span><h3>International environment</h3><p>Experience coordinating international suppliers, OEMs and stakeholders across Europe and Asia.</p></article>
+</div></div></section>
+
+<section class="section alt" id="experience"><div class="container">
+<div class="section-head"><div><div class="section-kicker">PROFESSIONAL EXPERIENCE &amp; EDUCATION</div><h2>Experience and education in one chronological timeline.</h2></div></div>
+<div class="timeline">
+<div class="timeline-line"></div>
+<div class="timeline-item"><div class="timeline-date">Apr 2026 — Present</div><div class="timeline-node"></div><div class="timeline-content"><div class="timeline-label">CURRENT ROLE</div><h3>Working Student</h3><p>Studentwerk · Cologne, Germany · Part-time</p></div></div>
+<div class="timeline-item"><div class="timeline-date">Mar 2026 — Present</div><div class="timeline-node"></div><div class="timeline-content"><div class="timeline-label">EDUCATION</div><h3>M.A. International Management</h3><p>Hochschule Fresenius · Cologne, Germany · Project Management focus</p></div></div>
+<div class="timeline-item"><div class="timeline-date">Dec 2017 — Feb 2026</div><div class="timeline-node"></div><div class="timeline-content"><div class="timeline-label">PROCUREMENT · LEADERSHIP</div><h3>Procurement Manager &amp; Executive Coordinator</h3><p>Petro Sanat Lidoma Engineering Services (PSL) · Tehran, Iran</p></div></div>
+<div class="timeline-item"><div class="timeline-date">Jun 2016 — Nov 2017</div><div class="timeline-node"></div><div class="timeline-content"><div class="timeline-label">PROCUREMENT</div><h3>Procurement Specialist</h3><p>Petro Sanat Lidoma Engineering Services (PSL) · Tehran, Iran</p></div></div>
+<div class="timeline-item"><div class="timeline-date">Jan 2016 — May 2016</div><div class="timeline-node"></div><div class="timeline-content"><div class="timeline-label">RESEARCH</div><h3>Research Assistant</h3><p>Iran University of Science and Technology · Tehran, Iran</p></div></div>
+<div class="timeline-item"><div class="timeline-date">Jun 2015 — Aug 2015</div><div class="timeline-node"></div><div class="timeline-content"><div class="timeline-label">ENGINEERING</div><h3>Process Engineering Intern</h3><p>Energy Industries Engineering &amp; Design (EIED – OIEC Group) · Tehran, Iran</p></div></div>
+<div class="timeline-item"><div class="timeline-date">2015 — 2018</div><div class="timeline-node"></div><div class="timeline-content"><div class="timeline-label">EDUCATION</div><h3>M.Sc. Chemical Engineering</h3><p>Iran University of Science and Technology · Control, Simulation &amp; Modeling</p></div></div>
+<div class="timeline-item"><div class="timeline-date">2011 — 2015</div><div class="timeline-node"></div><div class="timeline-content"><div class="timeline-label">EDUCATION</div><h3>B.Sc. Chemical Engineering</h3><p>Iran University of Science and Technology</p></div></div>
+</div></div></section>
+
+<section class="section" id="skills"><div class="container">
+<div class="section-head"><div><div class="section-kicker">SKILLS &amp; LANGUAGES</div><h2>Core capabilities &amp; tools.</h2></div></div>
+<div class="skill-groups">
+<div><h3>Procurement &amp; Supply Chain</h3><p>Strategic Sourcing · Procurement Planning · Tender &amp; RFQ Management · Supplier Qualification · International Purchasing · Bid Evaluation · Cost Optimization · Procurement Analytics · Customs Clearance · Inspection &amp; FAT</p></div>
+<div><h3>Project &amp; Commercial Coordination</h3><p>EPC Project Delivery · Engineering Coordination · Scheduling &amp; Planning · Manufacturing Coordination · Project Documentation · Contract Negotiation · Commercial Proposals · INCOTERMS · Stakeholder Management</p></div>
+<div><h3>Technical &amp; Digital Tools</h3><p>Advanced Excel · MS Project · PowerPoint · Visio · Outlook · Aspen HYSYS · MATLAB / Simulink · Industrial Automation &amp; Control Systems</p></div>
+</div>
+<div class="languages"><h3>Languages</h3><div><span>Persian <b>Native</b></span><span>English <b>C1</b></span><span>German <b>A2</b></span><span>Arabic <b>A1</b></span><span>Turkish <b>A2</b></span></div></div>
+</div></section>
+
+<section class="section alt" id="certifications"><div class="container">
+<div class="section-head"><div><div class="section-kicker">CERTIFICATIONS</div><h2>Selected professional training &amp; certifications.</h2></div></div>
+
+<div class="cert-grid">
+<article class="cert"><div class="issuer-logo issuer-tcc"><span>TCC</span></div><div><h3>Procurement &amp; Import of Goods</h3><p>Tehran Chamber of Commerce · 2019</p></div></article>
+<article class="cert"><div class="issuer-logo issuer-mporg"><span>MPORG</span></div><div><h3>EPC Contracts, Taxation &amp; Social Security</h3><p>Plan and Budget Organization of Iran · 2024</p></div></article>
+<article class="cert"><div class="issuer-logo issuer-fresenius"><img src="assets/logo/HSF.webp" alt="Hochschule Fresenius"></div><div><h3>Stepping into Leadership Workshop</h3><p>Hochschule Fresenius · 2026</p></div></article>
+<article class="cert"><div class="issuer-logo issuer-vmware"><span>VMware</span></div><div><h3>VMware Certified Professional – Data Center Virtualization (VCP-DCV 8)</h3><p>VMware · 2025</p></div></article>
+<article class="cert"><div class="issuer-logo issuer-microsoft"><span>Microsoft</span></div><div><h3>Microsoft Certified Systems Administrator (MCSA)</h3><p>Microsoft · 2025</p></div></article>
+<article class="cert"><div class="issuer-logo issuer-fresenius"><img src="assets/logo/HSF.webp" alt="Hochschule Fresenius"></div><div><h3>AI Study Buddy – Research in Academic Writing</h3><p>Hochschule Fresenius · 2026</p></div></article>
+</div></div></section>
+
+<section class="section publication-mini" id="publication"><div class="container publication-row">
+<div><div class="section-kicker">PUBLICATION</div><h2>An investigation on the viscosity reduction of Iranian heavy crude oil through dilution method</h2></div>
+<div><p>Iranian Journal of Chemistry and Chemical Engineering · 2021 · 40(3), 934–944</p><a href="https://doi.org/10.30492/IJCCE.2020.38039" target="_blank" rel="noopener">View publication ↗</a></div>
+</div></section>
+
+<section class="contact" id="contact"><div class="container contact-inner">
+<div><div class="section-kicker">CONTACT</div><h2>Open to student opportunities in NRW.</h2></div>
+<div><a href="mailto:alisoleimani71@gmail.com">alisoleimani71@gmail.com</a><a href="https://www.linkedin.com/in/alisoleimani-de/" target="_blank" rel="noopener">linkedin.com/in/alisoleimani-de/ ↗</a></div>
+</div></section>
 </main>
-<footer class="footer">
-<div class="signature-block">
-<img alt="Ali Soleimani Signature" class="signature-image" src="assets/logo/ali-signature.png"/>
-</div>
-<div class="container">© 2026 Ali Soleimani</div>
-</footer>
-<script>
-document.querySelector('.menu-btn').addEventListener('click', () => {
-  document.querySelector('.nav').classList.toggle('open');
-});
-document.querySelectorAll('.nav a').forEach(a => a.addEventListener('click', () => {
-  document.querySelector('.nav').classList.remove('open');
-}));
-</script>
-<script>
-(function () {
-  const counters = document.querySelectorAll('.counter');
-  const metrics = document.querySelector('.metrics');
-  if (!counters.length || !metrics) return;
-
-  const animateCounter = (el) => {
-    const target = Number(el.dataset.target || 0);
-    const prefix = el.dataset.prefix || '';
-    const suffix = el.dataset.suffix || '';
-    const decimals = Number(el.dataset.decimals || 0);
-    const duration = 1200;
-    const start = performance.now();
-
-    const tick = (now) => {
-      const progress = Math.min((now - start) / duration, 1);
-      const eased = 1 - Math.pow(1 - progress, 3);
-      const value = (target * eased).toFixed(decimals);
-      el.textContent = prefix + value + suffix;
-      if (progress < 1) requestAnimationFrame(tick);
-    };
-    requestAnimationFrame(tick);
-  };
-
-  const observer = new IntersectionObserver((entries, obs) => {
-    if (entries.some(entry => entry.isIntersecting)) {
-      counters.forEach(animateCounter);
-      obs.disconnect();
-    }
-  }, { threshold: 0.25 });
-
-  observer.observe(metrics);
-})();
-</script>
-</body>
-</html>
+<footer><div class="signature-wrap"><img src="assets/logo/ali-signature.png" alt="Ali Soleimani signature"></div><div class="container">© 2026 Ali Soleimani · Cologne, Germany</div></footer>
+</body></html>
