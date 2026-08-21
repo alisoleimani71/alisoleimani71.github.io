@@ -5,6 +5,49 @@
 <meta name="description" content="Ali Soleimani — International Management student in Cologne with 10+ years of procurement and industrial project experience.">
 <title>Ali Soleimani | Procurement · Project Coordination · International Management</title>
 <link rel="stylesheet" href="style.css">
+
+<script>
+(function () {
+  const saved = localStorage.getItem('site-language');
+  const path = window.location.pathname.toLowerCase();
+  const isGermanPage = path.endsWith('/index-de.html') || path.endsWith('index-de.html');
+
+  // Respect a visitor's explicit language choice.
+  if (saved === 'en' && isGermanPage) {
+    window.location.replace('index.html');
+    return;
+  }
+  if (saved === 'de' && !isGermanPage) {
+    window.location.replace('index-de.html');
+    return;
+  }
+
+  // On first visit, prefer German for visitors whose browser is German
+  // or whose device timezone is Europe/Berlin (the normal Germany signal).
+  const browserIsGerman = /^de(-|_)/i.test(navigator.language || '');
+  let berlinTimezone = false;
+  try {
+    berlinTimezone = Intl.DateTimeFormat().resolvedOptions().timeZone === 'Europe/Berlin';
+  } catch (e) {}
+
+  if (!saved && !isGermanPage && (browserIsGerman || berlinTimezone)) {
+    window.location.replace('index-de.html');
+  }
+
+  // Language switch links explicitly set the user's preference.
+  document.addEventListener('click', function (event) {
+    const link = event.target.closest('a');
+    if (!link) return;
+    const href = (link.getAttribute('href') || '').toLowerCase();
+    if (href === 'index-de.html' || href.endsWith('/index-de.html')) {
+      localStorage.setItem('site-language', 'de');
+    } else if (href === 'index.html' || href.endsWith('/index.html')) {
+      localStorage.setItem('site-language', 'en');
+    }
+  });
+})();
+</script>
+
 </head>
 <body>
 <header class="site-header"><div class="container nav">
@@ -132,6 +175,7 @@
 </div><div class="signature-panel">
 
 <img src="assets/logo/ali-signature.png" alt="Ali Soleimani signature">
+<div class="signature-name">Ali Soleimani</div>
 </div></div></div></section>
 </main>
 <footer><div class="container">© 2026 Ali Soleimani · Cologne, Germany</div></footer>
