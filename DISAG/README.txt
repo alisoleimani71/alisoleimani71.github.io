@@ -1,0 +1,1 @@
+Content-tailored copy of the finalized SegenSolar application website for the DIS AG Einkäufer (m/w/d) position in Cologne. CSS/design/assets were not changed.
