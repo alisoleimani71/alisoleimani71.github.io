@@ -1,129 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Ali Soleimani — International Management student in Cologne with 10+ years of procurement and industrial project experience.">
-<title>Ali Soleimani | Procurement · Project Coordination · International Management</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Ali Soleimani — application profile for Honorardozent at Hochschule Fresenius, with practice-oriented expertise in Project Management, Supply Chain, Logistics, International Management and Business Analytics.">
+<title>Ali Soleimani | Honorary Lecturer · Business & Media</title>
 <link rel="stylesheet" href="style.css">
-
-<script>
-(function () {
-  const saved = localStorage.getItem('site-language');
-  const path = window.location.pathname.toLowerCase();
-  const isGermanPage = path.endsWith('/index-de.html') || path.endsWith('index-de.html');
-
-  // Respect a visitor's explicit language choice.
-  if (saved === 'en' && isGermanPage) {
-    window.location.replace('index.html');
-    return;
-  }
-  if (saved === 'de' && !isGermanPage) {
-    window.location.replace('index-de.html');
-    return;
-  }
-
-  // On first visit, prefer German for visitors whose browser is German
-  // or whose device timezone is Europe/Berlin (the normal Germany signal).
-  const browserIsGerman = /^de(-|_)/i.test(navigator.language || '');
-  let berlinTimezone = false;
-  try {
-    berlinTimezone = Intl.DateTimeFormat().resolvedOptions().timeZone === 'Europe/Berlin';
-  } catch (e) {}
-
-  if (!saved && !isGermanPage && (browserIsGerman || berlinTimezone)) {
-    window.location.replace('index-de.html');
-  }
-
-  // Language switch links explicitly set the user's preference.
-  document.addEventListener('click', function (event) {
-    const link = event.target.closest('a');
-    if (!link) return;
-    const href = (link.getAttribute('href') || '').toLowerCase();
-    if (href === 'index-de.html' || href.endsWith('/index-de.html')) {
-      localStorage.setItem('site-language', 'de');
-    } else if (href === 'index.html' || href.endsWith('/index.html')) {
-      localStorage.setItem('site-language', 'en');
-    }
-  });
-})();
-</script>
-
 </head>
 <body>
 <header class="site-header"><div class="container nav">
 <a class="brand" href="#top">ALI SOLEIMANI</a>
-<nav><a href="#what-i-bring">What I Bring</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#certifications">Certifications</a><a href="#publication">Publication</a><a href="#contact">Contact</a></nav>
-<div class="header-actions"><a class="nav-link active" href="index.html">EN</a><span>/</span><a class="nav-link" href="index-de.html">DE</a></div>
+<nav>
+<a href="#experience">Experience</a><a href="#match">Requirements</a><a href="#contact">Contact</a>
+</nav>
+<div class="header-actions"><a class="nav-link active" href="index.html">EN</a><span>/</span><a class="nav-link " href="index-de.html">DE</a></div>
 </div></header>
 
 <main id="top">
 <section class="hero">
 <div class="container hero-grid">
 <div class="hero-copy">
-<h1>Procurement &amp; Project Coordination</h1>
-<p class="hero-intro">International Management student in Cologne with 10+ years of experience across procurement, EPC and industrial projects.</p><div class="application-target"><span>APPLICATION FOCUS</span><strong>Honorardozent · Fachbereich Wirtschaft &amp; Medien</strong><small>Köln · International Management · Project Management · Supply Chain · Business Analytics</small></div>
+<div class="green-kicker">APPLICATION • HONORARY LECTURER</div>
+<h1>Practice meets higher education.</h1>
+<p class="hero-intro">M.A. student at Hochschule Fresenius in Cologne with 10+ years of practical experience in project management, procurement, supply chain and international industrial business — with a focus on practice-oriented teaching.</p>
+<div class="application-target"><span>APPLICATION FOCUS</span><strong>Honorardozent (m/w/d) · Wirtschaft & Medien</strong><small>Cologne · Project Management · Supply Chain · Logistics · International Management</small></div>
 
 <div class="hero-cards">
-<article class="info-card">
-<div class="card-icon university-logo"><img src="assets/logo/HSF.webp" alt="Hochschule Fresenius"></div>
-<div><small>Currently studying</small><strong>M.A. International Management</strong><span>Hochschule Fresenius · Cologne</span></div>
-</article>
-<article class="info-card">
-<div class="card-icon study-icon"><svg viewBox="0 0 64 64" aria-hidden="true">
-<path d="M10 25 32 15l22 10-22 10L10 25Z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
-<path d="M18 30v12c7 6 21 6 28 0V30M54 25v13" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-<path d="M27 48h10" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-</svg></div>
-<div><small>Current GPA</small><strong>1.2</strong><span>Current grade average</span></div>
-</article>
-<article class="info-card">
-<div class="card-icon cathedral-icon"><svg viewBox="0 0 64 64" aria-hidden="true">
-<path d="M11 52h42M15 48V26l8-7v8l9-18 9 18v-8l8 7v22M23 48V34h18v14M29 48V37h6v11M20 26l3-5 3 5M38 26l3-5 3 5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-</svg></div>
-<div><small>Location &amp; work status</small><strong>Cologne · Germany</strong><span>Eligible for student / part-time work</span></div>
-</article>
-<article class="info-card">
-<div class="card-icon experience-icon"><svg viewBox="0 0 64 64" aria-hidden="true">
-<rect x="10" y="20" width="44" height="31" rx="4" fill="none" stroke="currentColor" stroke-width="2.5"/>
-<path d="M23 20v-5h18v5M10 31h44M28 31v5h8v-5" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-</svg></div>
-<div><small>Professional experience</small><strong>10+ years</strong><span>Procurement, projects &amp; industrial operations</span></div>
-</article>
+<article class="info-card"><div class="card-icon university-logo"><img src="../assets/logo/HSF.webp" alt="Hochschule Fresenius"></div><div><small>Currently studying</small><strong>M.A. International Management</strong><span>Hochschule Fresenius · Köln</span></div></article>
+<article class="info-card"><div class="card-icon study-icon"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M10 25 32 15l22 10-22 10L10 25Z" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M18 30v12c7 6 21 6 28 0V30M54 25v13" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><path d="M27 48h10" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg></div><div><small>Current GPA</small><strong>1.2</strong><span>Current grade average</span></div></article>
+<article class="info-card"><div class="card-icon cathedral-icon"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M11 52h42M15 48V26l8-7v8l9-18 9 18v-8l8 7v22M23 48V34h18v14M29 48V37h6v11" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><small>Location</small><strong>Köln · Deutschland</strong><span>Based in Cologne · Hochschule Fresenius</span></div></article>
+<article class="info-card"><div class="card-icon experience-icon"><svg viewBox="0 0 64 64" aria-hidden="true"><rect x="10" y="20" width="44" height="31" rx="4" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M23 20v-5h18v5M10 31h44M28 31v5h8v-5" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg></div><div><small>Professional experience</small><strong>10+ years</strong><span>Project management, procurement & industry</span></div></article>
 </div>
 
-<div class="industry-row"><span>Industries</span><div><b>Oil &amp; Gas</b><b>Petrochemical</b><b>Metals &amp; Mining</b><b>Industrial Automation</b><b>Energy</b><b>EPC</b></div></div>
+<div class="industry-row"><span>AREAS</span><div><b>International Management</b><b>Project Management</b><b>Supply Chain</b><b>Procurement</b><b>Business Analytics</b><b>Research</b></div></div>
 <div class="hero-actions"><a class="btn btn-primary" href="#experience">View experience</a><a class="btn btn-ghost" href="https://www.linkedin.com/in/alisoleimani-de/" target="_blank" rel="noopener">LinkedIn ↗</a></div>
 </div>
-<div class="hero-side">
-<img class="portrait" src="assets/ali-soleimani-portrait.jpeg" alt="Ali Soleimani">
-<div class="availability"><span class="status-dot"></span><div><strong>Open to student opportunities in NRW</strong><small>Procurement · Supply Chain · PMO · Project Coordination</small></div></div>
-</div>
+<div class="hero-side"><img class="portrait" src="../assets/ali-soleimani-portrait.jpeg" alt="Ali Soleimani"><div class="availability"><span class="status-dot"></span><div><strong>Open to teaching assignments in Cologne</strong><small>Practice-oriented teaching · Business · Management · Supply Chain</small></div></div></div>
 </div>
 </section>
 
 <section class="metrics"><div class="container metric-grid">
-<div><strong>10+</strong><span>Years of professional experience</span></div>
-<div><strong>€10M+</strong><span>Procurement portfolio managed</span></div>
-<div><strong>30+</strong><span>International suppliers</span></div>
-<div><strong>8</strong><span>National-scale EPC &amp; industrial projects</span></div>
-<div><strong>~10%</strong><span>Procurement cost reduction</span></div>
-<div><strong>~50%</strong><span>Procurement efficiency &amp; reporting improvement</span></div>
+<div><strong>10+</strong><span>Years of professional experience</span></div><div><strong>€10M+</strong><span>Procurement portfolio managed</span></div><div><strong>30+</strong><span>International suppliers</span></div><div><strong>1.2</strong><span>Current M.A. GPA</span></div><div><strong>C1</strong><span>English · TOEFL 101</span></div><div><strong>A2</strong><span>German · improving</span></div>
 </div></section>
 
-<section class="section" id="what-i-bring"><div class="container">
-<div class="section-head"><div><div class="section-kicker">WHAT I BRING</div><h2>Commercial thinking backed by technical and project experience.</h2></div></div>
-<div class="bring-grid">
-<article><span>01</span><h3>Procurement</h3><p>Strategic sourcing, RFQs, supplier qualification, negotiation, purchasing and delivery coordination.</p></article>
-<article><span>02</span><h3>Project coordination</h3><p>Engineering, manufacturing, logistics, suppliers and site teams aligned around project delivery.</p></article>
-<article><span>03</span><h3>Commercial perspective</h3><p>Contracts, commercial evaluation, INCOTERMS, supplier communication and client-facing coordination.</p></article>
-<article><span>04</span><h3>International environment</h3><p>Experience coordinating international suppliers, OEMs and stakeholders across Europe and Asia.</p></article>
-</div></div></section>
+<section class="section" id="experience"><div class="container">
+<div class="section-head"><div><div class="section-kicker">EXPERIENCE & EDUCATION</div><h2>The professional practice behind the teaching profile.</h2></div></div>
+<div class="timeline"><div class="timeline-line"></div>
+<div class="timeline-item"><div class="timeline-date">Mar 2026 — present</div><div class="timeline-node"></div><div class="timeline-content"><div class="timeline-label">CURRENT PROFESSIONAL PRACTICE</div><h3>Commercial Consultant</h3><p>Petro Sanat Lidoma Engineering Services (PSL) · Cologne, Germany</p></div></div>
+<div class="timeline-item education-item"><div class="timeline-date">Mar 2026 — present</div><div class="timeline-node"></div><div class="timeline-content"><div class="timeline-label">CURRENT STUDIES</div><h3>M.A. International Management</h3><p>Hochschule Fresenius · Cologne · Project Management, Supply Chain, Data Analysis &amp; Strategic Management</p></div></div>
+<div class="timeline-item"><div class="timeline-date">Dec 2017 — Feb 2026</div><div class="timeline-node"></div><div class="timeline-content"><div class="timeline-label">PROCUREMENT · LEADERSHIP</div><h3>Procurement Manager &amp; Executive Coordinator</h3><p>Petro Sanat Lidoma Engineering Services (PSL) · Tehran, Iran</p></div></div>
+<div class="timeline-item"><div class="timeline-date">Jun 2016 — Nov 2017</div><div class="timeline-node"></div><div class="timeline-content"><div class="timeline-label">PROCUREMENT</div><h3>Procurement Specialist</h3><p>Petro Sanat Lidoma Engineering Services (PSL) · Tehran, Iran</p></div></div>
+<div class="timeline-item"><div class="timeline-date">Jan 2016 — May 2016</div><div class="timeline-node"></div><div class="timeline-content"><div class="timeline-label">RESEARCH</div><h3>Research Assistant</h3><p>Iran University of Science and Technology (IUST) · Tehran, Iran</p></div></div>
+<div class="timeline-item education-item"><div class="timeline-date">2015 — 2018</div><div class="timeline-node"></div><div class="timeline-content"><div class="timeline-label">EDUCATION</div><h3>M.Sc. Chemical Engineering</h3><p>Iran University of Science and Technology (IUST) · Control, Simulation &amp; Modeling</p></div></div>
+<div class="timeline-item education-item"><div class="timeline-date">2011 — 2015</div><div class="timeline-node"></div><div class="timeline-content"><div class="timeline-label">EDUCATION</div><h3>B.Sc. Chemical Engineering</h3><p>Iran University of Science and Technology (IUST)</p></div></div>
+</div>
+</div></section>
 
-<section class="section alt" id="profile-match"><div class="container"><div class="section-head"><div><div class="section-kicker">PROFILE MATCH</div><h2>Industry practitioner → applied business education.</h2></div></div><div class="match-intro"><p>My strongest proposition for this role is the combination of current M.A. International Management studies at Hochschule Fresenius and 10+ years of practical experience in procurement, supply chain, project coordination and industrial business.</p></div><div class="match-grid"><article><span>01</span><h3>International &amp; Global Management</h3><p>Current M.A. International Management plus international industrial experience and supplier coordination across Europe and Asia.</p><b>STRONG</b></article><article><span>02</span><h3>Project Management</h3><p>10+ years coordinating EPC and industrial projects involving planning, procurement, reporting and stakeholders.</p><b>STRONG</b></article><article><span>03</span><h3>Supply Chain Management</h3><p>Direct professional experience in procurement and supply-chain activities across large industrial projects.</p><b>STRONG</b></article><article><span>04</span><h3>Logistics</h3><p>Procurement planning, supplier coordination, delivery follow-up and project-related logistics.</p><b>STRONG</b></article><article><span>05</span><h3>Strategic Procurement</h3><p>€10M+ procurement portfolios, 30+ international suppliers and strategic sourcing.</p><b>STRONG</b></article><article><span>06</span><h3>Business Analytics</h3><p>Advanced Excel, KPI reporting, commercial analysis and current Data Analysis for Decision-Making studies.</p><b>GOOD</b></article><article><span>07</span><h3>Research Methods</h3><p>Current research-methodology studies and previous engineering research experience.</p><b>GOOD</b></article><article><span>08</span><h3>Intercultural Management</h3><p>Long-term coordination with international suppliers and business partners across Europe and Asia.</p><b>GOOD</b></article><article><span>09</span><h3>Corporate Strategy</h3><p>Senior management experience, strategic sourcing, commercial evaluation and project-level decision-making.</p><b>GOOD / TRANSFERABLE</b></article><article><span>10</span><h3>Entrepreneurship</h3><p>Senior business responsibility and commercial decision-making within an engineering company.</p><b>TRANSFERABLE</b></article><article><span>11</span><h3>Innovation Management</h3><p>Exposure to industrial projects and renewable-energy-related business activities.</p><b>TRANSFERABLE</b></article><article><span>12</span><h3>Business Analytics &amp; Communication</h3><p>Management reporting, procurement analysis, supplier communication and cross-functional coordination.</p><b>GOOD</b></article><article><span>13</span><h3>Career Ecosystem</h3><p>International professional experience, commercial leadership and current management studies.</p><b>TRANSFERABLE</b></article><article><span>14</span><h3>E-Commerce</h3><p>No direct e-commerce platform experience is documented in the Master CV.</p><b>GAP</b></article><article><span>15</span><h3>Data Science</h3><p>Analytical background is relevant, but advanced Data Science/programming expertise is not documented.</p><b>GAP / TRANSFERABLE</b></article><article><span>16</span><h3>Agile Project Management</h3><p>Project coordination and process improvement are transferable; no Agile certification is claimed.</p><b>TRANSFERABLE</b></article><article><span>17</span><h3>Corporate Finance</h3><p>Commercial and cost-related procurement experience exists, but dedicated Corporate Finance expertise is not sufficiently documented.</p><b>LIMITED</b></article></div><div class="note"><b>Qualification transparency:</b> The vacancy asks for a completed higher-education qualification in the represented subject area, ideally a doctorate and teaching experience. My completed degrees are in Chemical Engineering, while my M.A. International Management at Hochschule Fresenius is currently in progress. I therefore position myself specifically for practice-oriented modules that closely match my professional experience.</div></div></section><section class="section alt" id="experience"><div class="container">
-<div class="section-head"><div><div class="section-kicker">PROFESSIONAL EXPERIENCE &amp; EDUCATION</div><h2>Experience and education in one chronological timeline.</h2></div></div>
-<div class="timeline">
-<div class="timeline-line"></div>
-</section>
+<section class="section alt" id="match"><div class="container">
+<div class="section-head"><div><div class="section-kicker">REQUIREMENTS</div><h2>The vacancy requirements compared transparently with my profile.</h2></div></div>
+<table class="requirement-table"><thead><tr><th>Requirement</th><th>My profile</th><th>Fit</th></tr></thead><tbody>
+
+<tr><td>Completed higher-education qualification in the represented subject</td><td>M.Sc. Chemical Engineering completed; M.A. International Management currently in progress. Strong subject alignment for selected practice-oriented modules, but not a completed degree in Business/Management.</td><td><span class="partial">PARTIAL</span></td></tr>
+<tr><td>Ideally a doctorate</td><td>No doctorate.</td><td><span class="gap">GAP</span></td></tr>
+<tr><td>Teaching experience</td><td>Research Assistant experience included Excel training for undergraduate engineering students; no substantial university teaching record documented.</td><td><span class="partial">LIMITED</span></td></tr>
+<tr><td>Project Management</td><td>10+ years of project coordination and EPC project delivery.</td><td><span class="fit">STRONG FIT</span></td></tr>
+<tr><td>Supply Chain Management</td><td>10+ years procurement, supplier management, purchasing and logistics coordination.</td><td><span class="fit">STRONG FIT</span></td></tr>
+<tr><td>Logistics</td><td>Delivery follow-up, shipping documentation, INCOTERMS, inspection and supplier coordination.</td><td><span class="fit">STRONG FIT</span></td></tr>
+<tr><td>International &amp; Global Management</td><td>Current M.A. International Management plus international supplier/stakeholder experience.</td><td><span class="fit">STRONG FIT</span></td></tr>
+<tr><td>Business Analytics / Communication</td><td>Advanced Excel, KPI reporting, procurement analysis and management communication.</td><td><span class="fit">GOOD FIT</span></td></tr>
+<tr><td>Research Methods / Empirical Studies</td><td>Current Research Methodology studies, research-assistant experience and publication.</td><td><span class="fit">GOOD FIT</span></td></tr>
+<tr><td>German as a Foreign Language</td><td>German A2; not an appropriate teaching subject at present.</td><td><span class="gap">NOT A FIT</span></td></tr>
+
+</tbody></table>
+<div class="teaching-note"><strong>Important:</strong> The application should clearly focus on the specific modules where the subject fit is strongest. Applying as a general lecturer across all topics in the vacancy would be too broad.</div>
+</div></section>
+
+<section class="section"><div class="container">
+<div class="section-head"><div><div class="section-kicker">TEACHING PROFILE</div><h2>What I can bring into the classroom.</h2></div></div>
+<div class="skill-groups skill-cards">
+<div><h3>Practice & case studies</h3><p>EPC, Einkauf, Lieferantenverhandlungen, Supply Chain, Projektkoordination, internationale Geschäftsbeziehungen und Prozessverbesserung.</p></div>
+<div><h3>Analytics & structure</h3><p>Advanced Excel, KPI-Reporting, kommerzielle Analysen, Research Methodology und strukturierte Dokumentation.</p></div>
+<div><h3>International perspective</h3><p>Englisch C1, internationale Lieferanten in Europa und Asien sowie laufendes Studium International Management in Köln.</p></div>
+</div>
+</div></section>
+
+<section class="contact contact-large" id="contact"><div class="container">
+<div class="contact-heading"><div class="section-kicker">CONTACT</div><h2>Ready to bring professional practice into the classroom.</h2><p>This page is tailored to the Hochschule Fresenius Honorardozent vacancy in Cologne. The application should emphasize Project Management, Supply Chain, Logistics, International Management and Business Analytics.</p></div>
+<div class="contact-cards">
+<a class="contact-card" href="mailto:alisoleimani71@gmail.com"><div class="contact-icon">✉</div><div><small>Email</small><strong>alisoleimani71@gmail.com</strong><span>Get in touch directly</span></div><b>↗</b></a>
+<a class="contact-card" href="https://www.linkedin.com/in/alisoleimani-de/" target="_blank" rel="noopener"><div class="contact-icon">in</div><div><small>LinkedIn</small><strong>linkedin.com/in/alisoleimani-de</strong><span>Professional profile</span></div><b>↗</b></a>
+<a class="contact-card" href="https://karriere.crf-education.com/job/honorardozenten-m-w-d-im-fachbereich-wirtschaft-medien/" target="_blank" rel="noopener"><div class="contact-icon">↗</div><div><small>JOB POSTING</small><strong>Honorardozenten · Wirtschaft &amp; Medien</strong><span>Hochschule Fresenius · Köln</span></div><b>↗</b></a>
+</div>
+<div class="signature-panel"><img src="../assets/logo/ali-signature.png" alt="Ali Soleimani signature"></div>
+</div></section>
 </main>
-<footer><div class="container">© 2026 Ali Soleimani · Cologne, Germany</div></footer>
+<footer><div class="container">© 2026 Ali Soleimani · Köln, Germany</div></footer>
 </body></html>
