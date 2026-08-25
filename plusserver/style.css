@@ -234,6 +234,12 @@
   object-fit:contain;
   margin:0 auto 2px;
 }
+.signature-name{
+  font-size:11px;
+  font-weight:800;
+  color:#53625a;
+  letter-spacing:.04em;
+}
 .signature-wrap{display:none!important}
 @media(max-width:600px){
   .signature-panel{padding:23px 18px 18px;margin-top:30px}
@@ -313,63 +319,3 @@ footer{
 .fit,.developing{display:inline-flex;align-items:center;padding:5px 9px;border-radius:99px;font-size:10px;font-weight:900;letter-spacing:.05em}
 .fit{background:#dff2e7;color:#087f4e}.developing{background:#fff0c5;color:#8a6510}
 @media(max-width:700px){.requirement-table{display:block;overflow-x:auto;white-space:normal}.application-target{max-width:100%}}
-
-
-/* CRF Honorardozent V1 — teaching/application additions */
-.application-target{margin-top:18px;display:inline-flex;flex-direction:column;gap:3px;padding:13px 16px;border-left:3px solid var(--green);background:#e9f2ed;border-radius:0 12px 12px 0}
-.application-target span{font-size:9px;font-weight:900;letter-spacing:.14em;color:var(--green)}
-.application-target strong{font-size:13px;color:#153c2b}
-.application-target small{font-size:10px;color:#69766f}
-
-/* onomao application — master CV content */
-.application-target{margin-top:18px;display:inline-flex;flex-direction:column;gap:3px;padding:13px 16px;border-left:3px solid var(--green);background:#e9f2ed;border-radius:0 12px 12px 0}
-.application-target span{font-size:9px;font-weight:900;letter-spacing:.14em;color:var(--green)}
-.application-target strong{font-size:13px;color:#153c2b}
-.application-target small{font-size:10px;color:#69766f}
-.match-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.match-card{background:#fff;border:1px solid #d6e1da;border-radius:18px;padding:21px;min-height:190px;display:flex;flex-direction:column;box-shadow:0 7px 20px rgba(0,40,25,.04)}
-.match-card .num{font-size:10px;font-weight:900;color:var(--green);letter-spacing:.08em}
-.match-card h3{font-size:16px;margin:25px 0 8px;color:#15241d}
-.match-card p{font-size:12px;line-height:1.65;color:#69766f;margin:0}
-.match-card b{margin-top:auto;padding-top:14px;font-size:9px;letter-spacing:.08em;color:var(--green)}
-.role-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
-.role-card{background:#fff;border:1px solid #d6e1da;border-radius:18px;padding:22px}
-.role-card .period{font-size:10px;font-weight:900;letter-spacing:.1em;color:var(--green)}
-.role-card h3{font-size:17px;margin:8px 0 3px}
-.role-card .company{font-size:11px;color:#738078;margin-bottom:14px}
-.role-card ul{margin:0;padding-left:17px;color:#5f6d65;font-size:12px;line-height:1.7}
-.metric-grid{grid-template-columns:repeat(6,1fr)}
-.skill-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-.skill-strip>div{background:#fff;border:1px solid #d6e1da;border-radius:18px;padding:21px;min-height:155px}
-.skill-strip h3{font-size:15px;margin:0 0 10px}
-.skill-strip p{font-size:11px;line-height:1.7;color:#69766f;margin:0}
-.language-row{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:14px}
-.language-row div{background:#e9f2ed;border:1px solid #d6e1da;border-radius:14px;padding:12px}
-.language-row strong{display:block;font-size:12px}
-.language-row span{display:block;font-size:10px;color:#68766e;margin-top:4px}
-.company-note{display:grid;grid-template-columns:1.1fr .9fr;gap:22px;align-items:stretch}
-.company-note>div{background:#e9f2ed;border:1px solid #d6e1da;border-radius:20px;padding:24px}
-.company-note h3{margin:0 0 9px;font-size:18px}
-.company-note p{margin:0;color:#627068;font-size:12px;line-height:1.7}
-.company-note .fit-list{margin:12px 0 0;padding-left:17px;color:#5f6d65;font-size:12px;line-height:1.8}
-.contact-large{background:#0b1712;color:#fff;padding:88px 0}
-.contact-heading h2{color:#fff;font-size:clamp(40px,5vw,62px);line-height:1;letter-spacing:-.05em;margin:9px 0 15px}
-.contact-heading p{color:#b8c9c0;max-width:650px;font-size:14px}
-.contact-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:30px}
-.contact-card{min-height:150px;background:#fff;color:#142019;border:1px solid #d8e4dd;border-radius:20px;padding:22px;display:grid;grid-template-columns:48px 1fr 18px;gap:13px;align-items:center}
-.contact-icon{width:48px;height:48px;border-radius:13px;background:#e8f3ed;color:var(--green);display:grid;place-items:center;font-weight:900}
-.contact-card small,.contact-card span{display:block;color:#75827a;font-size:10px}
-.contact-card strong{display:block;font-size:13px;margin:4px 0;overflow-wrap:anywhere}
-.contact-card>b{color:var(--green)}
-@media(max-width:900px){
- .metric-grid{grid-template-columns:repeat(3,1fr)}
- .match-grid,.role-grid,.company-note{grid-template-columns:1fr}
- .skill-strip{grid-template-columns:1fr 1fr}
- .language-row{grid-template-columns:repeat(3,1fr)}
- .contact-cards{grid-template-columns:1fr}
-}
-@media(max-width:600px){
- .metric-grid{grid-template-columns:1fr 1fr}
- .skill-strip,.language-row{grid-template-columns:1fr 1fr}
- .match-grid{grid-template-columns:1fr}
-}
