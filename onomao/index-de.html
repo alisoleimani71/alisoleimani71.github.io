@@ -2,126 +2,90 @@
 <html lang="de">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Ali Soleimani — International Management student in Köln with 10+ years of procurement and industrial project experience.">
-<title>Ali Soleimani | Einkauf · Projektkoordination · International Management</title>
+<meta name="description" content="Ali Soleimani — Bewerbungsportfolio für Werkstudent Einkauf & Supply Chain Management bei onomao in Köln.">
+<title>Ali Soleimani · onomao · Werkstudent Einkauf & Supply Chain</title>
 <link rel="stylesheet" href="style.css">
-
-<script>
-(function () {
-  const saved = localStorage.getItem('site-language');
-  const path = window.location.pathname.toLowerCase();
-  const isGermanPage = path.endsWith('/index-de.html') || path.endsWith('index-de.html');
-
-  // Respect a visitor's explicit language choice.
-  if (saved === 'en' && isGermanPage) {
-    window.location.replace('index.html');
-    return;
-  }
-  if (saved === 'de' && !isGermanPage) {
-    window.location.replace('index-de.html');
-    return;
-  }
-
-  // On first visit, prefer German for visitors whose browser is German
-  // or whose device timezone is Europe/Berlin (the normal Germany signal).
-  const browserIsGerman = /^de(-|_)/i.test(navigator.language || '');
-  let berlinTimezone = false;
-  try {
-    berlinTimezone = Intl.DateTimeFormat().resolvedOptions().timeZone === 'Europe/Berlin';
-  } catch (e) {}
-
-  if (!saved && !isGermanPage && (browserIsGerman || berlinTimezone)) {
-    window.location.replace('index-de.html');
-  }
-
-  // Language switch links explicitly set the user's preference.
-  document.addEventListener('click', function (event) {
-    const link = event.target.closest('a');
-    if (!link) return;
-    const href = (link.getAttribute('href') || '').toLowerCase();
-    if (href === 'index-de.html' || href.endsWith('/index-de.html')) {
-      localStorage.setItem('site-language', 'de');
-    } else if (href === 'index.html' || href.endsWith('/index.html')) {
-      localStorage.setItem('site-language', 'en');
-    }
-  });
-})();
-</script>
-
 </head>
 <body>
 <header class="site-header"><div class="container nav">
 <a class="brand" href="#top">ALI SOLEIMANI</a>
-<nav><a href="#what-i-bring">Was ich einbringe</a><a href="#experience">Berufserfahrung</a><a href="#skills">Kenntnisse</a><a href="#certifications">Zertifikate</a><a href="#publication">Publikation</a><a href="#contact">Kontakt</a></nav>
+<nav><a href="#experience">Erfahrung</a><a href="#match">Passung</a><a href="#skills">Skills</a><a href="#contact">Kontakt</a></nav>
 <div class="header-actions"><a class="nav-link" href="index.html">EN</a><span>/</span><a class="nav-link active" href="index-de.html">DE</a></div>
 </div></header>
 
 <main id="top">
-<section class="hero">
-<div class="container hero-grid">
-<div class="hero-copy">
-<h1>Praxis in Einkauf &amp; Supply Chain</h1>
-<p class="hero-intro">International-Management-Student in Köln mit mehr als 10 Jahren Praxiserfahrung in Einkauf, Supply Chain und Projektkoordination.</p><div class="application-target"><span>BEWERBUNGSFOKUS</span><strong>Honorardozent · Fachbereich Wirtschaft &amp; Medien</strong><small>Köln · International Management · Projektmanagement · Supply Chain · Business Analytics</small></div>
+<section class="hero"><div class="container hero-grid"><div class="hero-copy">
+<div class="green-kicker">BEWERBUNG · WERKSTUDENT EINKAUF & SUPPLY CHAIN</div>
+<h1>Erfahrung trifft International Management.</h1>
+<p class="hero-intro">International-Management-Student in Köln mit mehr als 10 Jahren Erfahrung in Einkauf, internationalem Geschäft, Supply-Chain-Koordination und Industrieprojekten.</p>
+<div class="application-target"><span>BEWERBUNGSFOKUS</span><strong>Werkstudent:in · Einkauf & Supply Chain Management</strong><small>onomao · Köln-Ehrenfeld · B2B-Auftragsmanagement · Excel · Lieferantenkoordination</small></div>
 
 <div class="hero-cards">
-<article class="info-card">
-<div class="card-icon university-logo"><img src="assets/logo/HSF.webp" alt="Hochschule Fresenius"></div>
-<div><small>Aktuelles Studium</small><strong>M.A. International Management</strong><span>Hochschule Fresenius · Köln</span></div>
-</article>
-<article class="info-card">
-<div class="card-icon study-icon"><svg viewBox="0 0 64 64" aria-hidden="true">
-<path d="M10 25 32 15l22 10-22 10L10 25Z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
-<path d="M18 30v12c7 6 21 6 28 0V30M54 25v13" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-<path d="M27 48h10" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-</svg></div>
-<div><small>Aktueller Notendurchschnitt</small><strong>1.2</strong><span>Aktueller Notendurchschnitt</span></div>
-</article>
-<article class="info-card">
-<div class="card-icon cathedral-icon"><svg viewBox="0 0 64 64" aria-hidden="true">
-<path d="M11 52h42M15 48V26l8-7v8l9-18 9 18v-8l8 7v22M23 48V34h18v14M29 48V37h6v11M20 26l3-5 3 5M38 26l3-5 3 5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-</svg></div>
-<div><small>Standort &amp; Arbeitsstatus</small><strong>Köln · Deutschland</strong><span>Für studentische / Teilzeitstellen verfügbar</span></div>
-</article>
-<article class="info-card">
-<div class="card-icon experience-icon"><svg viewBox="0 0 64 64" aria-hidden="true">
-<rect x="10" y="20" width="44" height="31" rx="4" fill="none" stroke="currentColor" stroke-width="2.5"/>
-<path d="M23 20v-5h18v5M10 31h44M28 31v5h8v-5" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-</svg></div>
-<div><small>Berufserfahrung</small><strong>10+ years</strong><span>Einkauf, Projekte &amp; Industrie</span></div>
-</article>
+<article class="info-card"><div class="card-icon study-icon"><span style="font-size:1.25rem;font-weight:850">M.A.</span></div><div><small>Aktuelles Studium</small><strong>International Management</strong><span>Hochschule Fresenius · Köln</span></div></article>
+<article class="info-card"><div class="card-icon study-icon"><span style="font-size:1.2rem;font-weight:850">1.2</span></div><div><small>Aktueller Notenschnitt</small><strong>GPA 1,2</strong><span>Schwerpunkt Project Management</span></div></article>
+<article class="info-card"><div class="card-icon study-icon"><span style="font-size:1.2rem;font-weight:850">€</span></div><div><small>Einkaufsportfolio</small><strong>€10M+</strong><span>8 nationale Großprojekte</span></div></article>
+<article class="info-card"><div class="card-icon experience-icon"><span style="font-size:1.05rem;font-weight:850">30+</span></div><div><small>Internationale Lieferanten</small><strong>Europa &amp; Asien</strong><span>Lieferanten- &amp; OEM-Koordination</span></div></article>
 </div>
 
-<div class="industry-row"><span>Branchen</span><div><b>Oil &amp; Gas</b><b>Petrochemical</b><b>Metals &amp; Mining</b><b>Industrial Automation</b><b>Energy</b><b>EPC</b></div></div>
-<div class="hero-actions"><a class="btn btn-primary" href="#experience">Berufserfahrung ansehen</a><a class="btn btn-ghost" href="https://www.linkedin.com/in/alisoleimani-de/" target="_blank" rel="noopener">LinkedIn ↗</a></div>
+<div class="industry-row"><span>KERNKOMPETENZEN</span><div><b>Einkauf</b><b>Supply Chain</b><b>Advanced Excel</b><b>International Business</b><b>Projektkoordination</b></div></div>
+<div class="hero-actions"><a class="btn btn-primary" href="#match">Profil ansehen</a><a class="btn btn-ghost" href="https://onomao.com/pages/werkstudent-in-im-bereich-einkauf-supply-chain-management" target="_blank" rel="noopener">Stellenanzeige ↗</a></div>
 </div>
-<div class="hero-side">
-<img class="portrait" src="assets/ali-soleimani-portrait.jpeg" alt="Ali Soleimani">
-<div class="availability"><span class="status-dot"></span><div><strong>Offen für studentische Positionen in NRW</strong><small>Einkauf · Supply Chain · PMO · Projektkoordination</small></div></div>
-</div>
-</div>
-</section>
 
-<section class="metrics"><div class="container metric-grid">
-<div><strong>10+</strong><span>Jahre Berufserfahrung</span></div>
-<div><strong>€10M+</strong><span>Betreutes Einkaufsvolumen</span></div>
-<div><strong>30+</strong><span>Internationale Lieferanten</span></div>
-<div><strong>8</strong><span>Nationale EPC- &amp; Industrieprojekte</span></div>
-<div><strong>~10%</strong><span>Senkung der Beschaffungskosten</span></div>
-<div><strong>~50%</strong><span>Verbesserung von Einkaufseffizienz &amp; Reporting</span></div>
+<div class="hero-side"><img class="portrait" src="assets/ali-portrait.png" alt="Ali Soleimani"><div class="availability"><span class="status-dot"></span><div><strong>Für studentische Arbeit in Köln verfügbar</strong><small>Einkauf · Supply Chain · B2B Operations</small></div></div></div>
 </div></section>
 
-<section class="section" id="what-i-bring"><div class="container"><div class="section-head"><div><div class="section-kicker">WARUM ONOMAO</div><h2>Erfahrung, die direkt zum operativen Einkauf passt.</h2></div></div><div class="bring-grid">
-<article><span>01</span><h3>Einkauf &amp; Supply Chain</h3><p>10+ Jahre Erfahrung in Beschaffung, Lieferantenkoordination und projektbezogener Supply Chain.</p></article>
-<article><span>02</span><h3>B2B &amp; Auftragsmanagement</h3><p>Erfahrung mit Kunden, Lieferanten, Bestellungen, RFQ-to-PO-Prozessen und internationaler Koordination.</p></article>
-<article><span>03</span><h3>Excel &amp; Reporting</h3><p>Advanced Excel, KPI-Reporting, Kostenanalysen und strukturierte Entscheidungsunterstützung.</p></article>
-<article><span>04</span><h3>Internationale Partner</h3><p>Langjährige Zusammenarbeit mit internationalen Lieferanten und Geschäftspartnern.</p></article>
+<section class="metrics"><div class="container metric-grid"><div><strong>10+</strong><span>Jahre Berufserfahrung</span></div><div><strong>€10M+</strong><span>Betreute Einkaufsportfolios</span></div><div><strong>30+</strong><span>Internationale Lieferanten</span></div><div><strong>8</strong><span>Nationale EPC- & Industrieprojekte</span></div><div><strong>~10%</strong><span>Beschaffungskosten reduziert</span></div><div><strong>~50%</strong><span>Effizienz & Reporting verbessert</span></div></div></section>
+
+<section class="section"><div class="container"><div class="section-head"><div><div class="section-kicker">WAS ICH EINBRINGE</div><h2>Erfahrung, die direkt zu den täglichen Aufgaben bei onomao passt.</h2></div></div><div class="bring-grid">
+<article><span>01</span><h3>Einkauf</h3><p>End-to-end Procurement, RFQs, Sourcing, Lieferantenkommunikation, kaufmännische Bewertung, Verhandlungen und Bestellkoordination.</p></article>
+<article><span>02</span><h3>Supply Chain</h3><p>Lieferanten-Follow-up, Lieferterminverfolgung, Logistik-Schnittstellen, Inspektion, Versanddokumentation und Materialversorgung.</p></article>
+<article><span>03</span><h3>Excel &amp; Daten</h3><p>Advanced Excel, Einkaufsanalysen, Kostenanalysen, strukturierte Dokumentation und Reporting aus Einkauf und Engineering.</p></article>
+<article><span>04</span><h3>Internationale Partner</h3><p>Mehr als 10 Jahre Zusammenarbeit mit internationalen Lieferanten, OEMs, Kunden und Projektbeteiligten in Europa und Asien.</p></article>
 </div></div></section>
 
-<section class="section alt" id="experience"><div class="container">
-<div class="section-head"><div><div class="section-kicker">BERUFSERFAHRUNG &amp; AUSBILDUNG</div><h2>Berufserfahrung and education in one chronological timeline.</h2></div></div>
-<div class="timeline">
-<div class="timeline-line"></div>
-</section>
+<section class="section alt" id="match"><div class="container"><div class="section-head"><div><div class="section-kicker">PROFILE MATCH</div><h2>Wie die Anforderungen der Stelle zu meinem Profil passen.</h2></div></div>
+<div class="match-grid">
+<article class="match-card"><span class="num">01</span><h3>Studium</h3><p>M.A. International Management an der Hochschule Fresenius mit relevanten Kursen in Supply Chain Management, Project Management, Data Analysis, Strategic Management und International Business.</p><b>STARK</b></article>
+<article class="match-card"><span class="num">02</span><h3>Zahlen &amp; Excel</h3><p>Advanced Excel sowie Erfahrung mit Einkaufsanalysen, Kostenanalysen, wirtschaftlichen Bewertungen und Reporting.</p><b>STARK</b></article>
+<article class="match-card"><span class="num">03</span><h3>Englisch</h3><p>Englisch auf C1-Niveau mit TOEFL iBT 101/120; internationale Kommunikation mit Lieferanten, OEMs und Geschäftspartnern.</p><b>STARK</b></article>
+<article class="match-card"><span class="num">04</span><h3>Einkauf &amp; Supply Chain</h3><p>10+ Jahre Erfahrung in Ausschreibungen, RFQs, Sourcing, Verhandlungen, Lieferantenmanagement, Inspektion, Versand und Lieferung.</p><b>STARK</b></article>
+<article class="match-card"><span class="num">05</span><h3>Arbeitsweise</h3><p>Strukturierte und eigenständige Koordination von Einkauf, Lieferanten, Engineering, Logistik, Kunden und Baustellenteams.</p><b>STARK</b></article>
+<article class="match-card"><span class="num">06</span><h3>B2B-Auftragsmanagement</h3><p>Direktes B2B-Auftragsmanagement ist im Master-CV nicht als eigener Schwerpunkt ausgewiesen. Einkaufs-, Kunden- sowie Bestell- und Lieferkoordination sind jedoch unmittelbar übertragbar.</p><b>ÜBERTRAGBAR</b></article>
+</div>
+<div class="note" style="margin-top:22px"><b>Transparenz:</b> Die Bewerbung übertreibt keine direkte B2B-Auftragsmanagement-Erfahrung. Die dokumentierte Erfahrung in internationalem Einkauf, Kunden-/Stakeholder-Management sowie Bestell- und Lieferkoordination bildet jedoch eine starke Grundlage für die Aufgaben bei onomao.</div>
+</div></section>
+
+<section class="section" id="experience"><div class="container"><div class="section-head"><div><div class="section-kicker">BERUFSERFAHRUNG</div><h2>Berufspraxis hinter dem Bewerbungsprofil.</h2></div></div>
+<div class="role-grid">
+<article class="role-card"><div class="period">Apr 2026 — heute</div><h3>Working Student</h3><div class="company">Flink Expansion 28 GmbH · Köln</div><ul><li>Unterstützung täglicher operativer und logistischer Aktivitäten in einem schnelllebigen, multikulturellen Umfeld.</li><li>Zusammenarbeit im Team bei gleichzeitiger Sicherstellung von Genauigkeit und operativer Effizienz.</li></ul></article>
+<article class="role-card"><div class="period">Dec 2017 — Feb 2026</div><h3>Procurement Manager &amp; Executive Coordinator</h3><div class="company">Petro Sanat Lidoma · Teheran, Iran</div><ul><li>Einkaufs- und Sourcing-Leitung für 8 nationale EPC- und Industrieprojekte mit Portfolios über €10M.</li><li>Internationale Beschaffung von Ausschreibung und Verhandlung bis Inspektion, Versand und Lieferung.</li><li>Verhandlungen mit 30+ internationalen Lieferanten sowie Koordination von Engineering, Fertigung, Logistik, Kunden und Baustellen.</li></ul></article>
+<article class="role-card"><div class="period">Jun 2016 — Nov 2017</div><h3>Procurement Specialist</h3><div class="company">Petro Sanat Lidoma · Teheran, Iran</div><ul><li>End-to-end Procurement, technische und kaufmännische Bewertungen, Verhandlungen, INCOTERMS sowie OEM-, Logistik- und Site-Koordination.</li><li>Unterstützung bei Fertigung und Lieferung von Control Panels, elektrischen Systemen und Prozessautomatisierung.</li></ul></article>
+<article class="role-card"><div class="period">Jan 2016 — Mai 2016</div><h3>Research Assistant</h3><div class="company">IUST · Teheran, Iran</div><ul><li>Forschung, wirtschaftliche Bewertung und MS-Excel-Training für Studierende.</li></ul></article>
+</div>
+
+<div style="margin-top:22px" class="company-note"><div><div class="section-kicker">WARUM ONOMAO?</div><h3>Eine praxisnahe Schnittstelle aus Einkauf, internationalen Partnern und B2B.</h3><p>onomao verbindet modernes Design mit traditionellem Handwerk und arbeitet eng mit Manufakturen in Portugal. Der Vertrieb erfolgt über Online-Shop, Laden, Pop-Ups und den B2B-Bereich. Die ausgeschriebene Rolle verbindet genau diese operative Schnittstelle mit Einkauf und Supply Chain.</p></div><div><div class="section-kicker">MEIN BEITRAG</div><p>Aus meinem Master-CV bringe ich die zentralen Bausteine für die Stelle mit: Einkauf, internationale Lieferanten, Bestell- und Lieferverfolgung, Excel, Logistikkoordination und eigenständige Arbeitsweise.</p><ul class="fit-list"><li>Advanced Excel</li><li>International supplier coordination</li><li>Procurement & logistics experience</li><li>Current M.A. International Management</li></ul></div></div>
+</div></section>
+
+<section class="section alt" id="skills"><div class="container"><div class="section-head"><div><div class="section-kicker">SKILLS</div><h2>Kompetenzen für Einkauf, Supply Chain und operative Koordination.</h2></div></div>
+<div class="skill-strip"><div><h3>Procurement &amp; Supply Chain</h3><p>Strategic Sourcing · Procurement Planning &amp; Operations · Tender &amp; RFQ Management · Supplier Qualification · Supplier Performance Management · International Purchasing · Commercial Bid Evaluation · Cost Optimization · Procurement Analytics</p></div>
+<div><h3>International Business</h3><p>International Business Coordination · Export / Import Coordination · International Partner &amp; OEM Coordination · Commercial Correspondence · Contract Negotiation · INCOTERMS · Shipping &amp; Logistics Coordination</p></div>
+<div><h3>Project &amp; Technical Coordination</h3><p>EPC Project Delivery · Engineering Coordination · Scheduling &amp; Planning · Manufacturing Coordination · Project Documentation · Risk Management · Cross-functional Collaboration</p></div>
+<div><h3>Software</h3><p>Microsoft Excel (Advanced) · MS Project · PowerPoint · Visio · Outlook · R · RStudio · GitHub · Aspen HYSYS · MATLAB / Simulink</p></div></div>
+<div class="language-cards"><h3>Sprachen</h3><div class="language-row"><div><strong>Persisch</strong><span>Muttersprache</span></div><div><strong>Englisch</strong><span>C1 · TOEFL 101/120</span></div><div><strong>Deutsch</strong><span>A2 · improving</span></div><div><strong>Türkisch</strong><span>A2</span></div><div><strong>Arabisch</strong><span>A1</span></div></div></div>
+</div></section>
+
+<section class="section"><div class="container"><div class="section-head"><div><div class="section-kicker">EDUCATION & ENGAGEMENT</div><h2>Aktuelles Studium und Engagement in Köln.</h2></div></div>
+<div class="role-grid">
+<article class="role-card"><div class="period">MAR 2026 — PRESENT</div><h3>M.A. International Management – Project Management</h3><div class="company">Hochschule Fresenius · Köln · Current GPA 1.2</div><ul><li>Relevante Kurse: Project Management, Supply Chain Management, Data Analysis for Decision-Making, Strategic Management und International Business.</li><li>Nominierung für das Ludwig Fresenius Talent Network (LFTN).</li></ul></article>
+<article class="role-card"><div class="period">APR 2026 — PRESENT</div><h3>Course Representative &amp; International Student Mentor</h3><div class="company">Hochschule Fresenius · Köln</div><ul><li>Schnittstelle zwischen Studierenden und Hochschule bei akademischen und administrativen Themen.</li><li>Unterstützung neu eingeschriebener internationaler Studierender als erste Anlaufstelle und Peer-Mentor.</li></ul></article>
+</div></div></section>
+
+<section class="contact contact-large" id="contact"><div class="container"><div class="contact-heading"><div class="section-kicker">KONTAKT</div><h2>Bereit, das Einkaufsteam von onomao praktisch zu unterstützen.</h2><p>Ich studiere aktuell International Management in Köln und bewerbe mich gezielt für die Werkstudentenstelle im Bereich Einkauf &amp; Supply Chain Management. Ich bringe praktische Einkaufserfahrung, Advanced Excel, internationale Lieferantenkoordination und eine strukturierte Arbeitsweise mit.</p></div>
+<div class="contact-cards">
+<a class="contact-card" href="mailto:hello@onomao.com?subject=Application%20%E2%80%93%20Working%20Student%20Einkauf%20%26%20Supply%20Chain%20Management"><div class="contact-icon">✉</div><div><small>EMAIL</small><strong>hello@onomao.com</strong><span>Direkte Bewerbung an onomao</span></div><b>↗</b></a>
+<a class="contact-card" href="https://www.linkedin.com/in/alisoleimani-de/" target="_blank" rel="noopener"><div class="contact-icon">in</div><div><small>LINKEDIN</small><strong>linkedin.com/in/alisoleimani-de</strong><span>Berufliches Profil</span></div><b>↗</b></a>
+<a class="contact-card" href="https://onomao.com/pages/werkstudent-in-im-bereich-einkauf-supply-chain-management" target="_blank" rel="noopener"><div class="contact-icon">↗</div><div><small>STELLENANZEIGE</small><strong>Werkstudent · Einkauf &amp; Supply Chain</strong><span>onomao · Köln-Ehrenfeld</span></div><b>↗</b></a>
+</div></div></section>
 </main>
-<footer><div class="container">© 2026 Ali Soleimani · Köln, Deutschy</div></footer>
+<footer><div class="container">© 2026 Ali Soleimani · Cologne, Germany · onomao application</div></footer>
 </body></html>
