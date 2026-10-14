@@ -307,3 +307,7 @@ footer{
   .language-grid{grid-template-columns:1fr 1fr}
   .language-card{min-height:82px}
 }
+
+/* Lecturer role: subtle emphasis within existing timeline */
+.timeline-item.lecturer-item .timeline-label{color:var(--green)}
+.timeline-item.lecturer-item .role-description{margin-top:8px;max-width:690px;line-height:1.6;color:#52665a}
